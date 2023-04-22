@@ -1,0 +1,142 @@
+﻿Imports System.Data
+Imports System.IO
+Imports Excel = Microsoft.Office.Interop.Excel
+
+Partial Class Frm_empleados_excel
+    Inherits System.Web.UI.Page
+
+    Public nombre_objeto As String = "Empleado"
+    Public pagina_grilla As String = "Grilla_Empleados.aspx"
+    Public msg_ok As String = ""
+    Public msg_err As String = ""
+    Public system_name As String = ConfigurationManager.AppSettings("system_name").ToString()
+
+    ReadOnly Property pk As String
+        Get
+            If IsNothing(Request.Params("id")) Then
+                Return ""
+            End If
+            Return Request.Params("id")
+        End Get
+    End Property
+
+    ReadOnly Property es_alta As Boolean
+        Get
+            Return (pk = "")
+        End Get
+    End Property
+
+    ReadOnly Property titulo As String
+        Get
+
+            If (es_alta) Then
+                Return "Nuevo " & nombre_objeto
+            Else
+                Return "Modificación de " & nombre_objeto
+            End If
+
+        End Get
+    End Property
+
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        errores_excel.Visible = False
+    End Sub
+
+
+
+    Private Sub btn_subir_procesar_Click(sender As Object, e As EventArgs) Handles btn_subir_procesar.Click
+        Dim errores_en_excel As String = Nothing
+
+
+
+        If (FileUploadControl.HasFile) Then
+
+            Try
+
+                'Guardamos el archivo en el servidor
+                Dim stamp = CLng(DateTime.UtcNow.Subtract(New DateTime(1970, 1, 1)).TotalMilliseconds)
+
+
+                Dim ext As String = Path.GetExtension(FileUploadControl.FileName)
+
+
+                Dim filename As String = Path.GetFileName(FileUploadControl.FileName).Replace(ext, "_" & stamp & "_empresa_" & cls_security.usuario_actual.empresa_id & ext) 'coloco stamo e id de la empresa a nombre del archivo
+
+
+                Dim archivo_destino As String = Server.MapPath("~/_importados/") + filename
+
+                cls_utils.Log(archivo_destino)
+
+                If copiar_archivo(archivo_destino) = True Then
+                    cls_utils.Log("copiado ok")
+
+                    'procesamos el archivo
+                    Dim importador_empleados As New cls_importador_empleados(archivo_destino)
+                    cls_utils.Log("importar emple ok")
+
+
+                    errores_en_excel = importador_empleados.procesar()
+                    cls_utils.Log("errores_en_excel")
+
+                    If Not errores_en_excel Is Nothing Then
+
+                    If Not errores_en_excel Is Nothing Then
+                        cls_utils.Log("no error excel")
+                        errores_excel.Visible = True
+
+                        cls_utils.Log("Visible")
+                        errores_excel_span.InnerHtml = errores_en_excel
+
+
+
+                        errores_excel_span.InnerText = errores_en_excel
+
+                    End If
+
+                    msg_ok = "El archivo fue importado correctamente al sistema."
+
+                End If
+
+            Catch ex As Exception
+                msg_err = "Se produjo un error al importar el archivo: " & ex.Message
+            End Try
+
+        End If
+
+
+
+
+
+        If errores_en_excel Is Nothing Then
+
+            cls_utils.Log("zas")
+            ScriptManager.RegisterStartupScript(Me, Me.Page.GetType, "log", "console.log('antes de redireccionar con leyenda de esta todo ok')", True)
+            cls_utils.redirect_msg(Response, "Grilla_Empleados.aspx", "Se ha dado de alta a los Empleados contenidos en el Archivo Excel")
+        Else
+            cls_utils.Log("zas2")
+            ScriptManager.RegisterStartupScript(Me, Me.Page.GetType, "log", "console.log('hay errores en excel')", True)
+        End If
+    End Sub
+
+
+    Public Function copiar_archivo(aux_archivo_destino As String) As Boolean
+        Try
+
+            FileUploadControl.SaveAs(aux_archivo_destino)
+            FileUploadControl.Dispose()
+
+
+            Return True
+
+        Catch ex As Exception
+            msg_err = "Se produjo un error al copiar el archivo: " & ex.Message
+            Return False
+        End Try
+
+    End Function
+
+
+
+
+End Class

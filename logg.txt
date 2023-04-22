@@ -1,0 +1,18 @@
+1    <----  20/6/2022 2:11:51 p. m.
+          -               -               -             
+-1    <----  20/6/2022 2:11:51 p. m.
+          -               -               -             
+- - - - - - - - - - - - - - -    <----  20/6/2022 2:11:51 p. m.
+          -               -               -             
+user:     <----  20/6/2022 2:11:51 p. m.
+          -               -               -             
+pass:     <----  20/6/2022 2:11:51 p. m.
+          -               -               -             
+- - - - - - - - - - - - - - -    <----  20/6/2022 2:11:51 p. m.
+          -               -               -             
+---------    <----  20/6/2022 2:18:48 p. m.
+sers\usuario\Documents\Visual Studio 2015\Projects\cape\capeX\empleado_index.aspx.vb:línea 50
+   en empleado_index.Page_Load(Object sender, EventArgs e) en C:\Users\usuario\Documents\Visual Studio 2015\Projects\cape\capeX\empleado_index.aspx.vb:línea 28    <----  20/6/2022 2:18:48 p. m.
+          -               -               -             
+---------    <----  20/6/2022 2:18:48 p. m.
+          -               -               -             

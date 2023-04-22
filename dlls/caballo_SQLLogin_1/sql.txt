@@ -1,0 +1,8 @@
+workstation id=1611ELCAPESTORE.mssql.somee.com;
+packet size=4096;
+user id=caballo_SQLLogin_1;
+pwd=aepqkahruk;
+aepqkahruk
+data source=1611ELCAPESTORE.mssql.somee.com;
+persist security info=False;
+initial catalog=1611ELCAPESTORE

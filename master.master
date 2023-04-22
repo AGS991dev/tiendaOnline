@@ -1,0 +1,574 @@
+﻿<%@ Master Language="VB" CodeFile="master.master.vb" Inherits="master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= title_name %></title>
+
+    <link rel = "stylesheet" href="static/img/logo.png" />
+        <link rel="icon" type="image/png" href="static/img/supermercado.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="static/img/supermercado.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="static/img/supermercado.png" sizes="96x96">
+    <link href="static/css/material-icon.css" rel="stylesheet">
+    <link href="static/css/efectos_elementos.css" rel="stylesheet">
+
+    <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/css/animate.min.css" />
+    <link rel="stylesheet" href="static/css/mstepper.min.css" />
+    <link rel="stylesheet" href="static/css/materialize.min.css" />
+    <link rel="stylesheet" href="static/css/materialize.custom.css" />
+    <link rel="stylesheet" href="static/css/materialUiSweetAlert.css">
+    <link rel="stylesheet" href="static/css/jquery.dataTables.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--google font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!--google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"><!--google font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"  /><!--owl.carousel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+
+    <script type="text/javascript" src="static/js/main.js"></script>
+
+
+
+    <link href="static/fontawesome/css/all.css" rel="stylesheet" type="text/css" />
+            
+    <link href="static/fontawesome/css/courier-new.css" rel="stylesheet" type="text/css" />
+
+    
+    <script src="static/js/sweetalert2.js"></script>
+     <script type="text/javascript" src="static/js/mstepper.min.js"></script>
+
+      <link rel="stylesheet" href="static/css/main.css" />
+      <link rel="stylesheet" href="static/css/theAppGuruz.css" />
+      <link rel = "stylesheet" href="static/css/main_FA.css" />
+
+
+    <asp:ContentPlaceHolder ID="contenido_css" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <nav class="nav nav_master">
+    <div class="nav-wrapper">
+        <span class="iconos_nav" style="display:none">
+                <a href="shop.aspx" ><img class="img_open swing tooltipped" src="static/img/open.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height:50px; margin-top:3px;margin-right:30px; width:auto;" /></a>
+                <% If page_name = "shop.aspx" Then%>
+                    <a href="https://www.instagram.com/familiarmenteok/"><img class="rubberBand shadow tooltipped" src="static/img/instagram.png"  data-position='bottom' data-tooltip="Ir al Instagram" style="filter: invert(1);height: 35px; margin-top: 3px; margin-right: 20px; width: 35px; position: relative; top: -22px;" /></a>
+                    <a href="https://www.facebook.com/FamiliarMentered/" ><img class="rubberBand shadow tooltipped" src="static/img/facebook.png"  data-position='bottom' data-tooltip="Ir al Facebook" style="filter: invert(1);height: 35px; margin-top: 3px; margin-right: 20px; width: 35px; position: relative; top: -22px;" /></a>
+                <%End If%>
+        </span>
+
+          <ul id="nav-mobile" class="right">
+        <% If page_name <> "login.aspx" Then%>
+                      <ul id="slide-out" class="sidenav" style="background: white;border-right: solid 1px #fff;">
+                                          
+                                                  <% If Not cls_security.usuario_actual Is Nothing Then%>
+                                          <li>
+                                              <%If HttpContext.Current.Request.Url.AbsoluteUri.Contains("login") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("asistente") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("access_recovery") = False Then %>
+                                              <div class="user-view">
+                                          <!--<div class="background">
+                                              <img src="static/img/logo.png" / width="100%">
+                                          </div>-->
+                                          <a href="#user"><% If system_name = "san_antonio" Then %> <!--DEBERIA SER  SYSTEM_NAME = A SANANTONIO--><img  class="circle" src="static/img/familiarmente.png" style="border-radius: 5px;height:55px; width:auto;filter: invert(1)" /><% End If %><% If system_name = "firma_nativa" Then %> <!--DEBERIA SER  SYSTEM_NAME = A SANANTONIO--><img  class="circle" src="static\img\sun.png" style="border-radius: 20px;height:50px; margin-top:5px; width:auto" /><% End If %></a>
+                                                    <a href="#name"><span class="white-text name"><%=cls_security.usuario_actual.nombre%> <%=cls_security.usuario_actual.apellido%></span></a>
+                                                  
+                                                  <% If cls_security.usuario_actual.legajo = "---" Then %>
+                                                  <% else %>
+                                                  <!--<a href="#legajo"><span class="white-text legajo">Legajo: <%=cls_security.usuario_actual.legajo%></span></a>-->
+                                                  <% End If %>
+                                                 
+                                          <a href="#email"><span class="white-text email"><%if cls_security.usuario_actual.es_supervisor Then%>Supervisor: <%else%>Empleado: <%end if %><%=cls_security.usuario_actual.cuil%></span></a>
+                                        </div>
+                                          </li>
+                                            <% End If %>
+                           <% End If %>
+                          <% if empresas_de_empleados.Count > 0 And empresas_de_empleados_flag = True%>
+                         <% for index_empresa_empleado = 0 To empresas_de_empleados.Count - 1 %>
+                            <li style="height: 45px;position: relative;bottom: -10px;"><a style="position: relative;bottom: 10px;font-size: 12px;" onclick="btn_empresa(this)" class="li_empresas tooltipped" data-position="top" data-tooltip="<%= empresas_de_empleados(index_empresa_empleado)%>"  empresa_id="<%= empresa_btn_id(index_empresa_empleado) %>"><%If empresas_de_empleados(index_empresa_empleado).Length > 45 Then  %><%= empresas_de_empleados(index_empresa_empleado).Substring(0, 20) %>...<%Else %><%= empresas_de_empleados(index_empresa_empleado)%><%End if %><% if badgeCount(index_empresa_empleado) > 0 Then %><span style="display: inline;padding: 5px 10px;border-radius: 20px;" class="badge colorBadge tooltipped" data-position='right' data-tooltip="Tenés <%= badgeCount(index_empresa_empleado) %> documentos sin firmar"  data-badge-caption=""><span style="position:relative; bottom:2px"><%= badgeCount(index_empresa_empleado) %></span></span><% End if %></a></li>
+                          
+                        <% Next%>
+                          <%End if %>
+                              <% if Not cls_security.usuario_actual is Nothing Then  %>
+                                <li><a class="logout" runat="server" href="supervisor_index.aspx"><img style="width: 35px; position: relative; top: 15px; right: 8px;" src="./static/img/admin.png" alt=""><span style="margin-left:10px;">ADMINISTRADOR</span></a></li>
+                              <% End If %>
+                          <div class="phone" style="width:290px;display:none">
+                          <div style="display:flex;justify-content:center"><!--TELEFONO EN MENÚ-->
+                              <span class="cantidad_cesta " style="font-family: 'Bangers', cursive; font-size: 25px; color: black;margin-right:15px">0</span><span style="color: black; font-size: 20px; font-family: 'Bangers', cursive;"> Productos</span>
+                          </div>
+                              
+                          <!--  -->
+                          <div class="bg-secondary mb-3" style="margin-left: 15px;padding: 8px;border-radius: 20px;background: #fff;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
+                            <div class="col-12 row ml-1 pt-2 pb-1" style="position: relative;border-top-left-radius: 15px;border-top-right-radius: 15px;background: #ededed;margin: 0 0px;">
+                              <div style="position: relative; top: 20px; color: black; left: 12px;"><img style="width: 100px; position: relative; top: -10px; border-radius: 15px;"  src="./static/img/FAMILIARMENTE.png" alt=""><span style="position: relative; top: -20px; left: 10px;">GONZALO LOPEZ</span></div>
+                            </div>
+                            <div class="waChat ">
+                              <div class="chat" style="width: 100%; height: 350px; padding: 15px; position: relative; left: -10px;">
+
+                                  <table class="table_telefono_virtual">
+                                    <thead class="thead">
+
+                                    </thead>
+                                    <tbody class="tbody tbody_refresh">
+
+                                    </tbody>
+                                    </table>
+
+                              </div>
+                            </div>
+                                <div style="text-align: center;">
+                                    <span style="font-size: 25px; padding: 5px 0px 0px 0px; color: #222; right: 15px; position: relative;font-family: bangers;">Total: </span><span class="total" tot="0" style="color: #222;font-size: 35px;font-family: bangers;">$0</span>
+                                </div>
+                          </div>
+                          <!---->
+                          <div id="enviar_whatsapp" class="enviar_whatsapp tooltipped"  data-position='bottom' data-tooltip='Enviar Whatsapp con pedido' ><img src="static/img/send.png" style="position: relative; width: 55px; top: 20px; left: 24px;"/></div>
+                          <p style="text-align: center; position: relative; top: 15px; font-weight: 600;">ENVIAR</p>           
+
+                          </div>
+                          
+                            <li class="compartir_store" style="margin-top:20px"><a class="pulse" style="position: relative; left: -20px;"><img src="static/img/share.png" class="tooltipped" data-position='bottom' data-tooltip="Compartir por Whataspp" style="height: 28px; width: auto; position: relative; top: 7px; margin-left: 16px;" /><span style="margin-left: 20px;">COMPARTIR TIENDA</span></a></li>
+                            <li><a class="logout" runat="server" href="login.aspx?logout=true"> <img src="static/img/key.png"  width="30px" style="position: relative; top: 10px; left: -5px;" /><span style="margin-left:15px">LOGIN</span></a></li>
+                      </ul>
+              <div class="btn_menu_mobile" id="btn_menu_mobile" style="display:none" runat="server" visible="false">
+                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped burbuja_wp zoomInLeft" style="display:none"
+                         data-position='bottom' data-tooltip="PEDIDO">
+                            <span class="cantidad_cesta cantidad_cesta_nav" style="text-shadow:2px 2px 0px grey;font-family: 'Bangers', cursive; background: #2bb14000; position: relative; left: -10px; z-index: 1; bottom: 15px; font-size: 30px;">0</span>
+                           <img class="img_wp" src="static/img/shopping-bag.png" / style="width:50px;position: relative; top: -2px;">
+                      </a>
+              </div>    
+
+
+              <div  class="btn_menu_desktop" id="btn_menu_desktop" runat="server">
+                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped "
+                         data-position='bottom' data-tooltip="Menú"
+                         style="height: 55px;position: relative;top: 5px;width: 55px;border-radius: 10px;">
+                           <span class="fa-solid fa-bars menu_barras"></span>
+                      </a>
+              </div>
+        <%End If%>
+           <!--<li><a class="logout" runat="server" href="login.aspx?logout=true">CERRAR SESIÓN</a></li>-->
+
+          </ul>
+    </div>
+  </nav>
+        <% If empresas_de_empleados_flag = True Then %>
+        <nav class="nav" id="nav_empleado_con_varias_empresas">
+            <div class="nav-wrapper">
+                  <ul id="nav-empresa" class="right">
+                <% for index_empresa_empleado = 0 To empresas_de_empleados.Count - 1 %>
+                     <li style="height: 45px;position: relative;bottom: -10px;"><a style="position: relative;bottom: 10px;" onclick="btn_empresa(this)" class="li_empresas" empresa_id="<%= empresa_btn_id(index_empresa_empleado) %>"><%= empresas_de_empleados(index_empresa_empleado) %><% if badgeCount(index_empresa_empleado) > 0 Then %><span style="display: inline;padding: 5px 10px;border-radius: 20px;" class="badge colorBadge" data-badge-caption=""><span><%= badgeCount(index_empresa_empleado) %></span></span><% End if %></a></li>
+                <% Next%>
+                  </ul>
+            </div>
+          </nav>
+    <br /><br /><br />
+        <%End If %>
+
+            
+
+    <% If page_name <> "login_aspx" And page_name <> "inicio_aspx" Then%>
+    <nav id="nav_pages">
+    <div class="nav-wrapper nav_wrapper_css">
+
+      <div class="col s12">
+            <asp:ContentPlaceHolder ID="contenido_nav" runat="server" />
+      </div>
+
+    </div>
+  </nav>
+    <%End If%>
+
+
+
+    <div class="main animated fadeIn" style="margin-bottom:100px;">
+        <asp:ContentPlaceHolder ID="contenido_body" runat="server" />
+    </div>
+
+
+    <!-- SLAPS MODALS --->
+    <div id="slap-modal" style="display:none" class="modal">
+        <div class="modal-content center">
+            <h5 id="slap-modal-text"></h5>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" id="slap-modal-btn-cancelar" class="modal-close waves-effect waves-green btn-flat">CANCELAR</a>
+            <a onclick="slap_modal_aceptar()" id="slap-modal-btn-aceptar" class="waves-effect waves-blue btn">ACEPTAR</a>
+        </div>
+    </div>
+
+    <div id="slap-modal-loading"  style="display:none"  class="modal" style="width: 400px">
+        <div class="modal-content loading_content center">
+            <h5 id="slap-modal-loading-text"></h5>
+            <br />
+            <div ><img src="./static/img/loading5.gif" class="gif_loading"/></div>
+            <br />
+        </div>
+
+    </div>
+
+    <div id="loading" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content loading_content">
+
+                    <div class="modal-body" style="display: flex;justify-content: space-around;overflow: hidden;">
+                        <h5 style="color:black;font-size: 16px;">Espere por favor...🕐 Esta acción puede demorar un minuto</h5>
+                        <div ><img src="./static/img/loading5.gif" class="gif_loading"/></div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+
+    
+    <div id="loading_gif1" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content loading_content">
+
+                    <div class="modal-body" style="display: flex;justify-content: space-around;overflow: hidden;">
+                        <h5 style="color:black;font-size: 16px;">Espere por favor...🕐 Esta acción puede demorar un minuto</h5>
+                        <div ><img src="./static/img/loading5.gif" class="gif_loading"/></div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+
+        <div id="loading2" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog"  role="document">
+                <div class="modal-content loading_content" >
+
+                    <div class="modal-body" style="display: flex;justify-content: space-around;overflow: hidden;">
+                        <h6 style="color:black;font-size: 16px;">Leyendo Excel...<span> 🕐 Esta acción <b>puede durar varios minutos</b> de acuerdo a la cantidad de empleados contenidos. Espere por favor.</span></h6>
+                        <div ><img src="./static/img/loading5.gif" class="gif_loading"/></div>    
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+                    
+
+        <div id="espere"  class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content loading_content" >
+
+                    <div class="modal-body" style="display: flex;justify-content: space-around;overflow: hidden;">
+                        <h5 style="color:black;font-size: 16px;">Espere Por Favor ... 🕐 Esta acción puede demorar un instante</h5>
+                        <div ><img src="./static/img/loading5.gif" class="gif_loading"/></div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+
+    <style>
+        .menu_barras {
+            font-size:30px;
+            color:white;
+            margin-right:10px
+        }
+        .menu_barras:hover {
+            font-size:30px;
+            color:white;
+            margin-right:10px;
+            filter: invert(1)
+        }
+    .burbuja_wp{
+    position: fixed !important;
+    right: 0px;
+    padding: 10px 10px 0px 20px;
+    border-radius: 15px;
+    top: 22px;
+    height: 67px !important;
+    box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+    padding-left: 24px;
+    background: #00b1ff;
+        }
+        .burbuja_wp:hover{
+    position: fixed !important;
+    right: 0px;
+    padding: 10px 10px 0px 20px;
+    border-radius: 15px;
+    top: 22px;
+    height: 67px !important;
+    box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+    padding-left: 24px;
+    background: #00b1ff;
+        }
+        .img_open:hover{
+        animation:1.00s cubic-bezier(.36,.07,.19,.97) both;
+        }
+    .loading_content{
+    height: 100px;
+    overflow: hidden;
+    }
+    .gif_loading{
+        width:50px;
+        height:50px;
+    }
+    .current {
+            background-color: #000000b5 !important;
+    }
+    .modal{
+              border-radius:3px;
+          }
+.img_producto_telefono_virtual{
+    position:relative;
+    top:3px;
+}
+    @media screen and (max-width: 501px) {
+    .img_producto_telefono_virtual {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #dedede;
+    border-radius: 50px;
+    position: relative;
+    top: 8px !important;
+    right: 2px;
+    }
+    .loading_content{
+        height: 120px;
+        overflow: hidden;
+    }
+    .gif_loading{
+        top:15px;
+        position:relative;
+        width:50px;
+        height:50px;
+    }
+    .preloader-wrapper{
+        width: 80px;
+        height: 35px;
+        top: 10px;
+        }
+    }
+
+.shadow:hover{
+    filter: invert(0) !important;
+}
+    </style>
+
+    <%--axios--%>
+    <%--<script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>--%>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('<script src="static/js/jquery-3.4.1.min.js"><\/script>')</script>
+    <script type="text/javascript" src="static/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.slap.modals.js"></script>
+    <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
+
+     <%--<script type="text/javascript" src="static/js/main.js"></script>--%>
+    
+    <script type="text/javascript" src="static/js/jquery.maskedinput.js" ></script>
+    <script type="text/javascript" src="static/js/jquery.form.min.js"></script>
+    <script type="text/javascript" src="static/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="static/js/jszip.min.js"></script>
+    <script type="text/javascript" src="static/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+    <%--<script type="text/javascript" src="static/js/jquery.inputmask.bundle.js"></script>--%>
+    <script src="static/js/cleave.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    
+    <script type="text/javascript">
+
+
+
+        $(document).ready(function () {
+            $('.btn_menu_mobile').click(function () {
+                //$('.sidenav-overlay').css()
+            })
+
+            $('.burbuja_wp').show(200)
+            $('.iconos_nav').show(1000)
+
+            $('label').click(function () {
+                var attr_for = $(this).attr('for')
+                var input = "#contenido_body_" + attr_for
+                $(input).focus();
+            })
+            //close_loadings()
+            var URLactual = window.location;
+            if (URLactual.href.includes("login") == false || URLactual.href.includes("asistente") == false || URLactual.href.includes("access_recovery") == false) {
+            if ("<%=perfil%>" == 2){
+            //detectar mas de una ventana abierta
+
+            const bc = new BroadcastChannel("my-awesome-site");
+            bc.onmessage = (event) => {
+                if (event.data === `Am I the first?`) {
+                    bc.postMessage(`No you're not.`);
+                    //console.log(`Another tab of this site just got opened`);
+                    show_alert("Multiple pestaña detectada", "No se admite operar el sistema en multiples pestañas", "warning")
+                } 
+                if (event.data === `No you're not.`) {
+                    //console.log(`An instance of this site is already running`);
+                    window.location.href = "multiple_pestaña_error.aspx";
+                }
+            };
+            bc.postMessage(`Am I the first?`);
+                //correccion click labels
+                    }
+            }
+
+            <%If HttpContext.Current.Request.Url.AbsoluteUri.Contains("login") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("asistente") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("access_recovery") = False Then %>
+            <% If Not cls_security.usuario_actual Is Nothing Then%>
+            var empleado_id = "<%=cls_security.usuario_actual.id%>"
+            var nombre = "<%=cls_security.usuario_actual.nombre%>"
+            var apellido = "<%=cls_security.usuario_actual.apellido%>"
+            var cuilSinGuiones = "<%=cls_security.usuario_actual.cuil%>"
+            var certificado_vigente_id = "<%=cls_security.usuario_actual.certificado_vigente_id%>"
+            var empresa_id = "<%=cls_security.usuario_actual.empresa_id%>"
+            var empresa_cuil = "<%=cls_security.usuario_actual.empresa_cuil%>"
+            // para debug
+            //console.log({ empleado_id: empleado_id, nombre: nombre, apellido: apellido, cuilSinGuiones: cuilSinGuiones, certificado_vigente_id: certificado_vigente_id, empresa_id: empresa_id, empresa_cuil: empresa_cuil, });
+            <%  End If%>
+            <%end If%>
+            
+            
+            function loading() {
+                $('#loading2').modal({ dismissible: false });
+                $('#loading2').modal('open');
+            }
+
+            function loading_gif1() {
+                $('#loading_gif1').modal({ dismissible: false });
+                $('#loading_gif1').modal('open');
+            }
+
+            $('.sidenav').sidenav();
+
+            var selector = $('.striped')
+            //inicializar_grilla(selector);
+            //console.log(selector)
+
+            //var user = Session("usuario_actual")
+            //procesar_toast(user, "success");
+
+
+            <% If Session("msg_toast") <> "" Then %>
+
+            var msg = '<%= Session("msg_toast")%>';
+            procesar_toast(msg,"success")
+            <% Session("msg_toast") = "" %>
+
+            <% End If %>
+
+            <% If Session("msg_toast_error") <> "" Then %>
+
+            var msg = '<%= Session("msg_toast_error")%>';
+            procesar_toast(msg,"error")
+            <% Session("msg_toast_error") = "" %>
+
+            <% End If %>
+
+                if (sessionStorage.msg_confirm != null) {//detectar toast para ocaciones javascript
+                    var msg = sessionStorage.msg_confirm
+                    var icon = sessionStorage.icon
+                    //console.logconsole.log(msg, icon)
+                    procesar_toast(msg, icon);
+                    sessionStorage.clear()
+                }
+
+
+            $('select').formSelect();
+            $('.tooltipped').tooltip();
+
+            $('.perfil').click(function () {
+                $('.detalles').toggle(500);
+            });
+
+            css_empresa_li()
+
+        }); 
+
+        
+        function btn_empresa(obj) { //esta funcion se encarga q funcione la nav entre empresas
+            var empresa_id = $(obj).attr("empresa_id")
+            var result;
+            var cuilSinGuiones
+            <%If HttpContext.Current.Request.Url.AbsoluteUri.Contains("login") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("asistente") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("access_recovery") = False Then %>
+
+            cuilSinGuiones = "<% If Not cls_security.usuario_actual Is Nothing Then%><%=cls_security.usuario_actual.cuil%><% End If %>"<% End if%>
+           $.ajax({//me fijo si ya existe este cuil
+               type: "POST",
+               url: "empleado_index.aspx/recargar_usuario",
+               data: '{cuil: "' + cuilSinGuiones + '", empresa_id: "' + empresa_id + '" }',
+               async: false,
+               contentType: "application/json; charset=utf-8",
+               dataType: "json",
+               success: function (response) {
+                   result = response.d;
+                   if (result == 0) {
+                       show_alert("Hubo un Problema al cargar la Empresa seleccionada", "Vuelve a intentar.", "warning");
+                       return false
+                   }
+               }
+           });
+
+
+           var legajo
+           var perfil
+            <%If HttpContext.Current.Request.Url.AbsoluteUri.Contains("login") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("asistente") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("access_recovery") = False Then %>
+                <% If Not cls_security.usuario_actual Is Nothing Then%>
+                    legajo = '<%= cls_security.usuario_actual.legajo%>'
+                    perfil = '<%= cls_security.usuario_actual.perfil.codigo%>'
+            <% End If %>
+            <% End If %>
+            //console.log(legajo)
+            //console.log(perfil)
+            
+            if (legajo == "---") {
+                window.location.href = "/supervisor_index.aspx";
+                return result == 1;
+            }
+            if (perfil == "3") {
+                window.location.href = "/empleado_index.aspx";
+                return result == 1;
+            }
+            if (perfil == "2") {
+                window.location.href = "/supervisor_index.aspx";
+                return result == 1;
+            }
+            if (perfil == "1") {
+                window.location.href = "/admin_index.aspx";
+                return result == 1;
+            }
+           
+        }
+
+
+        function css_empresa_li() { //esta funcion pinta el border de la empresa seleccionada
+            var empresa_id
+            <%If HttpContext.Current.Request.Url.AbsoluteUri.Contains("login") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("asistente") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("access_recovery") = False Then %>
+            <% If Not cls_security.usuario_actual Is Nothing Then%>
+            empresa_id = "<%=cls_security.usuario_actual.empresa_id%>"
+            <% End If %>
+            <%End If%>
+            var empresas = $('a[empresa_id]')
+            for (i = 0; i < empresas.length; i++) {
+                var emp_id_tag = empresas[i]
+                var emp_id = $(emp_id_tag).attr("empresa_id")
+                var li_empresa = emp_id_tag.parentElement
+                if (empresa_id == emp_id) {
+                    $(li_empresa).css("border", "1px solid white")
+                    $(li_empresa).css("color", "white")
+                }
+            }
+        }
+    
+    </script>
+    <asp:ContentPlaceHolder ID="contenido_js" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+
+
+
+</html>
+
