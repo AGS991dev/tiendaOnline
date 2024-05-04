@@ -57,10 +57,10 @@ Partial Class shop
         table = dt
         Dim grilla As New cls_grid(dt, formulario)
         If grilla.dt.Rows.Count > 0 Then
-            'GV_shop.DataSource = dt
-            'GV_shop.DataBind()
-            'GV_shop.HeaderRow.TableSection = TableRowSection.TableHeader
-            'panel_shop.Update()
+            GV_shop.DataSource = dt
+            GV_shop.DataBind()
+            GV_shop.HeaderRow.TableSection = TableRowSection.TableHeader
+            panel_shop.Update()
 
         Else
             Dim tabla = "<br/><center><h4>No hay Resultados para esta Búsqueda</h4></center><br/>"
@@ -128,6 +128,4 @@ Partial Class shop
         Return pedido_id.ToString + "|" + redaccion_mensaje + "%0A %0A 🧾​​​​ N°PEDIDO - " + pedido_id.ToString '+ celular.ToString + " es el número de " + nombre_cliente.ToString
 
     End Function
-
-
 End Class

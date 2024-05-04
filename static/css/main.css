@@ -65,10 +65,10 @@ progress::-moz-progress-bar {
   /* style rules */
 }
 .dataTables_wrapper .dataTables_filter {
-    float: right;
+/*    float: right;
     text-align: left;
     width: 100%;
-    padding: 0px;
+    padding: 0px;*/
 }
 .tarjetaUsuario{
     border: 1px solid;
@@ -326,12 +326,12 @@ th:nth-child(6){
     min-width:120px
 }
 .dataTables_wrapper .dataTables_filter {
-    position: relative;
+ /*   position: relative;
     text-align: left;
     width: 100%;
     padding: 0px;
     left: -8px;
-    float: none;
+    float: none;*/
 }
 
 @media screen and (max-width: 400px) {

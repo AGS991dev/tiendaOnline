@@ -1,54 +1,69 @@
 ﻿
 /* FirmaNativa */
-.user-view{
-    background:#009ee3;
+.buttons-excel {
+    background: #29357d !important;
+    color: white !important;
+    border-radius: 5px !important;
+    border: 1px #ffffff00 solid !important;
 }
-        .badge{
-            color:white !important;
-            border-radius:10px;
-        }
+
+.user-view {
+    background: #29357d;
+}
+
+.badge {
+    color: white !important;
+    border-radius: 10px;
+}
+
 .tabs .indicator {
-    background-color: #009ee3 !important;
+    background-color: #000000 !important;
 }
+
 .tab a.active {
     background-color: transparent;
-    color: #009ee3 !important;
+    color: black !important;
 }
-  .nav_wrapper_css{
-      background: #10b1f7;
-  }
-  .btn{
-    background-color: #009ee3 !important;
-  }
-  .i_supervisor_index{
-      color: #232323;
-  }
-      .btn_background{
-        background: #009ee3;
-    }
-.swal2-confirm{
-    background: #009ee3 !important;
+
+.nav_wrapper_css {
+    background: #ed3446;
+}
+
+.i_supervisor_index {
+    color: #232323;
+}
+
+.btn_background {
+    background: #29357d;
+}
+
+.swal2-confirm {
+    background: #29357d !important;
     border-radius: 15px;
 }
+
 .icono_credenciales {
-    color: #009ee3;
+    color: #29357d;
     position: relative;
     top: -3px;
 }
-.firma_disconforme{
-        padding: 5px;
+
+.firma_disconforme {
+    padding: 5px;
     text-align: center;
     top: -7px;
     border-radius: 3px;
-    background: #009ee3;
+    background: #29357d;
     color: white;
     box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
 }
-.txt_disconforme{
-color: #ff5722;
+
+.txt_disconforme {
+    color: #ff5722;
 }
-.box_restriccion{
-    background: #009ee3bl;
+
+.box_restriccion {
+    background: #29357d;
     color: white;
     padding: 30px;
     margin: 50px;
@@ -80,9 +95,9 @@ color: #ff5722;
     letter-spacing: .5px;
     border: none;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-    background-color: #009ee3 !important;
+    background-color: #29357d !important;
     top: -20px
-    }
+}
 
     .btn-add > i.fas {
         color: white;
@@ -91,24 +106,35 @@ color: #ff5722;
 i.fas {
     color: #222;
 }
+
 .dataTables_filter {
     width: 100%;
-    }
-.tabla_vacia{
+}
+
+.tabla_vacia {
     color: white !important;
-    background: #009ee3 !important;
+    background: #29357d !important;
     padding: 10px;
-    margin-top:  50px;
+    margin-top: 50px;
     box-shadow: RGB(0 0 0 / 35%) 0px 5px 15px;
     border-radius: 5px;
 }
-.card_color{
-    background:#009ee3 !important;
-    color:white;
+
+.card_color {
+    background: #29357d !important;
+    color: white;
 }
-    .colorBadge{
-        background: red;
-    }
-  nav{
-      background-color: #009ee3 !important;
-  }
+
+.colorBadge {
+    background: red;
+}
+/* 01 05 24*/
+.nav_master {
+    background: #29357d !important;
+    height: 50px;
+    padding: 0px 10px;
+}
+.navegacion_local {
+    height: 50px;
+    padding-left: 20px;
+}

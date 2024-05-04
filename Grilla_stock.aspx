@@ -10,8 +10,8 @@
     <h1 style="text-align:center">Menu de Stock</h1>
     <div class="container">
         <div class="p_botones_stock">
-            <a href="frm_<%=Titulo %>.aspx" class="btn_agregar_articulo tooltipped boton_stock ZoomIn" data-position='bottom' data-tooltip='Agregá un nuevo artículo'><img src="static/img/delivery-box.png"/ width="50px"></a>
-            <a href="grilla_categorias.aspx" class="btn_agregar_articulo tooltipped boton_stock ZoomIn" data-position='bottom' data-tooltip='Agregá una nueva categoría' ><img src="static/img/categorias.png"/ width="50px"></a>
+            <a href="frm_<%=Titulo %>.aspx" class="btn_agregar_articulo tooltipped boton_stock" data-position='bottom' data-tooltip='Agregá un nuevo artículo'><img src="static/img/delivery-box.png"/ width="50px"></a>
+            <a href="grilla_categorias.aspx" class="btn_agregar_articulo tooltipped boton_stock" data-position='bottom' data-tooltip='Agregá una nueva categoría' ><img src="static/img/categorias.png"/ width="50px"></a>
         </div>
         <br />
         <div >
@@ -54,14 +54,14 @@
                                                     <li class="tab"><a href="#myChart-2" style="display:flex;"><img src="static/img/bar.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRÁFICO BARRAS</span></a></li>
                                                   </ul>
                                                   <br />
-                                                  <div id="grilla" class="zoomIn">
+                                                  <div id="grilla">
                                                     <asp:UpdatePanel ID="Update_grilla" runat="server" UpdateMode="Conditional">
                                                         <ContentTemplate>
                                                             <%=tabla %>
                                                         </ContentTemplate> 
                                                     </asp:UpdatePanel>
                                                   </div>
-                                                   <div id="grilla_imagen" class="zoomIn">
+                                                   <div id="grilla_imagen">
                                                         <center>
                                                             <h4>Artírculos</h4>
                                                         </center>
@@ -114,12 +114,12 @@
                                                             </div> <%-- fin tab--%>
                                                     </div>
 
-                                                  <div id="myChart-1" class="zoomIn">
+                                                  <div id="myChart-1">
                                                      <div class="box_myChart barras" style="width:90%;margin:auto"><br />
                                                         <canvas id="myChart"></canvas>
                                                     </div>
                                                   </div>
-                                                  <div id="myChart-2" class="zoomIn">
+                                                  <div id="myChart-2">
                                                     <div class="box_myChart dona" style="width:70%;margin:auto"><br />
                                                         <canvas id="myChart_2"></canvas>
                                                     </div>

@@ -35,7 +35,7 @@ Partial Class master
 
         inicializar_variables()
 
-        If Request.Url.ToString.Contains("shop.aspx") Then
+        If Request.Url.ToString.Contains("shopStore.aspx") Then
             btn_menu_mobile.Visible = True
         Else
             btn_menu_desktop.visible = True
@@ -56,7 +56,7 @@ Partial Class master
 
             Return
         End If
-        If page_name = "shop.aspx" Then
+        If page_name = "shop.aspx" Or page_name = "shopstore.aspx" Then
 
             Return
         End If

@@ -16,7 +16,7 @@
     <%Else %>
     <center>
         <br/>
-    <img src="./static/img/familiarmente.png" style="width: 250px;"/>
+    <img src="./static/img/mercadoshop.png" style="width: 250px;"/>
     </center>
     <br />
     <h4 style="margin: 30px 20px ; text-align: center;display:none"><%=cls_security.usuario_actual.razon_social%></h4>
@@ -42,7 +42,7 @@
 
 
             <div class="col m4 s6 zoom">
-                <a href="./shop.aspx">
+                <a href="./shopStore.aspx">
                     <div class="card-panel card-menu center white-text hoverable">
                         <img src="./static/img/supermercado.png" style="width: 60px;"/>
                        <p>Tienda Online</p>

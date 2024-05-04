@@ -25,7 +25,7 @@
                                         <div style="margin:20px">
                                             <div class="card" style="min-height:70vh;padding: 30px;">
                                                     <div style="display:flex;">
-                                                    <div class="contenedor_filtros" style="display: flex;margin: auto;flex-wrap: wrap;">
+                                                    <div class="contenedor_filtros" style="display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%;">
                                                         <div class="inputs_filtros_css" >
                                                             <label for="cbo_ticket" class="cbo_ticket" style="min-width: 90px;margin: 8px;position: relative;top: 5px;">Ticket:</label>
                                                             <div style="position:relative;top:17px">
@@ -52,7 +52,7 @@
 
                                                     <asp:UpdatePanel ID="panel_btn_filtrar" runat="server" UpdateMode="Conditional">
                                                         <ContentTemplate>
-                                                            <asp:Button AutoPostBack="true" style="margin: 20px; position: relative; top: 22px; height: 34px;" ID="btn_filtrar" runat="server" name="btn_filtrar" CssClass="btn btn-primary btn_filtrar" Text="Consultar" />
+                                                            <asp:Button AutoPostBack="true" style="margin: 20px; position: relative; top: 22px; height: 34px;background:#29357d;" ID="btn_filtrar" runat="server" name="btn_filtrar" CssClass="btn btn_filtrar" Text="Consultar" />
                                                         </ContentTemplate>
                                                     </asp:UpdatePanel>
                                                       </div>
@@ -67,7 +67,7 @@
                                                 </div>
 
                                                 <br />
-                                                    <asp:UpdatePanel ID="panel_consultas" runat="server" style="width: 50%;margin: auto;min-width: 380px;" UpdateMode="Conditional">
+                                                    <asp:UpdatePanel ID="panel_consultas" runat="server" style="margin: auto;min-width: 380px;" UpdateMode="Conditional">
                                                     <ContentTemplate>
                                                        <% If tabla_vacia = True Then %>
                                                         <div>

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="static/css/animate.min.css" />
     <link rel="stylesheet" href="static/css/mstepper.min.css" />
     <link rel="stylesheet" href="static/css/materialize.min.css" />
-    <link rel="stylesheet" href="static/css/materialize.custom.css" />
+    <%--<link rel="stylesheet" href="static/css/materialize.custom.css" />--%>
     <link rel="stylesheet" href="static/css/materialUiSweetAlert.css">
     <link rel="stylesheet" href="static/css/jquery.dataTables.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
@@ -46,24 +46,23 @@
       <link rel="stylesheet" href="static/css/main.css" />
       <link rel="stylesheet" href="static/css/theAppGuruz.css" />
       <link rel = "stylesheet" href="static/css/main_FA.css" />
-
+    <%-- USA EL CSS QUE LE DIGAS DE LOS DE MAIN ... PARA TEMAS DISTINTOS --%>
 
     <asp:ContentPlaceHolder ID="contenido_css" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
 
+
+
+
     <nav class="nav nav_master">
     <div class="nav-wrapper">
         <span class="iconos_nav" style="display:none">
-                <a href="shop.aspx" ><img class="img_open swing tooltipped" src="static/img/open.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height:50px; margin-top:3px;margin-right:30px; width:auto;" /></a>
-                <% If page_name = "shop.aspx" Then%>
-                    <a href="https://www.instagram.com/familiarmenteok/"><img class="rubberBand shadow tooltipped" src="static/img/instagram.png"  data-position='bottom' data-tooltip="Ir al Instagram" style="filter: invert(1);height: 35px; margin-top: 3px; margin-right: 20px; width: 35px; position: relative; top: -22px;" /></a>
-                    <a href="https://www.facebook.com/FamiliarMentered/" ><img class="rubberBand shadow tooltipped" src="static/img/facebook.png"  data-position='bottom' data-tooltip="Ir al Facebook" style="filter: invert(1);height: 35px; margin-top: 3px; margin-right: 20px; width: 35px; position: relative; top: -22px;" /></a>
-                <%End If%>
+                <a href="shopStore.aspx" ><img class="img_open swing tooltipped" src="static/img/laptop.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height: 40px; margin: 3px 0px 0px 15px;" /></a>
         </span>
 
-          <ul id="nav-mobile" class="right">
+          <ul id="nav-mobile" class="right" style="position: relative;top: -5px;">
         <% If page_name <> "login.aspx" Then%>
                       <ul id="slide-out" class="sidenav" style="background: white;border-right: solid 1px #fff;">
                                           
@@ -74,7 +73,7 @@
                                           <!--<div class="background">
                                               <img src="static/img/logo.png" / width="100%">
                                           </div>-->
-                                          <a href="#user"><% If system_name = "san_antonio" Then %> <!--DEBERIA SER  SYSTEM_NAME = A SANANTONIO--><img  class="circle" src="static/img/familiarmente.png" style="border-radius: 5px;height:55px; width:auto;filter: invert(1)" /><% End If %><% If system_name = "firma_nativa" Then %> <!--DEBERIA SER  SYSTEM_NAME = A SANANTONIO--><img  class="circle" src="static\img\sun.png" style="border-radius: 20px;height:50px; margin-top:5px; width:auto" /><% End If %></a>
+                                          <a href="#user"><% If system_name = "san_antonio" Then %> <!--DEBERIA SER  SYSTEM_NAME = A SANANTONIO--><img  class="circle" src="static/img/mercadoshop.png" style="border-radius: 5px;height:55px; width:auto;filter: invert(1)" /><% End If %><% If system_name = "firma_nativa" Then %> <!--DEBERIA SER  SYSTEM_NAME = A SANANTONIO--><img  class="circle" src="static\img\sun.png" style="border-radius: 20px;height:50px; margin-top:5px; width:auto" /><% End If %></a>
                                                     <a href="#name"><span class="white-text name"><%=cls_security.usuario_actual.nombre%> <%=cls_security.usuario_actual.apellido%></span></a>
                                                   
                                                   <% If cls_security.usuario_actual.legajo = "---" Then %>
@@ -104,7 +103,7 @@
                           <!--  -->
                           <div class="bg-secondary mb-3" style="margin-left: 15px;padding: 8px;border-radius: 20px;background: #fff;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
                             <div class="col-12 row ml-1 pt-2 pb-1" style="position: relative;border-top-left-radius: 15px;border-top-right-radius: 15px;background: #ededed;margin: 0 0px;">
-                              <div style="position: relative; top: 20px; color: black; left: 12px;"><img style="width: 100px; position: relative; top: -10px; border-radius: 15px;"  src="./static/img/FAMILIARMENTE.png" alt=""><span style="position: relative; top: -20px; left: 10px;">GONZALO LOPEZ</span></div>
+                              <div style="position: relative; top: 20px; color: black; left: 12px;"><img style="width: 100px; position: relative; top: -10px; border-radius: 15px;"  src="./static/img/mercadoshop.png" alt=""><span style="position: relative; top: -20px; left: 10px;">GONZALO LOPEZ</span></div>
                             </div>
                             <div class="waChat ">
                               <div class="chat" style="width: 100%; height: 350px; padding: 15px; position: relative; left: -10px;">
@@ -137,7 +136,7 @@
                       <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped burbuja_wp zoomInLeft" style="display:none"
                          data-position='bottom' data-tooltip="PEDIDO">
                             <span class="cantidad_cesta cantidad_cesta_nav" style="text-shadow:2px 2px 0px grey;font-family: 'Bangers', cursive; background: #2bb14000; position: relative; left: -10px; z-index: 1; bottom: 15px; font-size: 30px;">0</span>
-                           <img class="img_wp" src="static/img/shopping-bag.png" / style="width:50px;position: relative; top: -2px;">
+                           <img class="img_wp" src="static/img/cesta.png" / style="width:50px;position: relative; top: -2px;">
                       </a>
               </div>    
 
@@ -145,7 +144,7 @@
               <div  class="btn_menu_desktop" id="btn_menu_desktop" runat="server">
                       <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped "
                          data-position='bottom' data-tooltip="Menú"
-                         style="height: 55px;position: relative;top: 5px;width: 55px;border-radius: 10px;">
+                         style="height: 55px;position: relative;top: 3px;width: 55px;border-radius: 10px;">
                            <span class="fa-solid fa-bars menu_barras"></span>
                       </a>
               </div>
@@ -171,10 +170,10 @@
             
 
     <% If page_name <> "login_aspx" And page_name <> "inicio_aspx" Then%>
-    <nav id="nav_pages">
+    <nav id="nav_pages" style="height:55px">
     <div class="nav-wrapper nav_wrapper_css">
 
-      <div class="col s12">
+      <div class="navegacion_local">
             <asp:ContentPlaceHolder ID="contenido_nav" runat="server" />
       </div>
 
@@ -266,7 +265,7 @@
 
     <style>
         .menu_barras {
-            font-size:30px;
+            font-size:20px;
             color:white;
             margin-right:10px
         }
@@ -277,27 +276,16 @@
             filter: invert(1)
         }
     .burbuja_wp{
-    position: fixed !important;
-    right: 0px;
+position: fixed !important;
+    right: -16px;
     padding: 10px 10px 0px 20px;
-    border-radius: 15px;
-    top: 22px;
+    border-radius: 50px 0 0px 0;
     height: 67px !important;
-    box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
     padding-left: 24px;
-    background: #00b1ff;
+    bottom: 10px;
+    background: #29357d;
         }
-        .burbuja_wp:hover{
-    position: fixed !important;
-    right: 0px;
-    padding: 10px 10px 0px 20px;
-    border-radius: 15px;
-    top: 22px;
-    height: 67px !important;
-    box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
-    padding-left: 24px;
-    background: #00b1ff;
-        }
+
         .img_open:hover{
         animation:1.00s cubic-bezier(.36,.07,.19,.97) both;
         }
@@ -382,6 +370,8 @@
 
 
         $(document).ready(function () {
+
+
             $('.btn_menu_mobile').click(function () {
                 //$('.sidenav-overlay').css()
             })

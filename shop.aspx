@@ -14,7 +14,7 @@
 
             <br />
             <div style="display:flex;justify-content:center;gap:10px">
-                <img class="tada logo_inicio" src="./static/img/familiarmente.png" style="width:25vw"/>
+                <img class="tada logo_inicio" src="./static/img/mercadoshop.png" style="width:25vw"/>
             </div>
             <br />
             <br />
@@ -101,7 +101,7 @@
                           <div class="bg-secondary mb-3" style="padding: 8px;border-radius: 20px;background: #fff;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
                             <div class="col-12 row ml-1 pt-2 pb-1" style="position: relative; border-top-left-radius: 15px; border-top-right-radius: 15px; background: #ededed; margin: 0 0px; padding-left: 15px;">
                               <div class="col-3"><img width="45px" src="images/navbar.jpeg" alt="" style="border-radius: 50px;"></div>
-                              <img style="width: 100px; position: relative; top: -10px; border-radius: 15px;"  src="./static/img/FAMILIARMENTE.png" alt=""><span style="position: relative; top: -20px; left: 10px;">GONZALO LOPEZ</span>
+                              <img style="width: 100px; position: relative; top: -10px; border-radius: 15px;"  src="./static/img/mercadoshop.png" alt=""><span style="position: relative; top: -20px; left: 10px;">GONZALO LOPEZ</span>
                             </div>
                             <div class="waChat ">
                               <div class="chat">

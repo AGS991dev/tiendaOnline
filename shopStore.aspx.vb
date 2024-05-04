@@ -1,6 +1,6 @@
 ﻿Imports System.Data
 
-Partial Class shop
+Partial Class shopStore
     Inherits System.Web.UI.Page
 
     Public sp As String = "SP_stock_GRILLA"
@@ -48,7 +48,7 @@ Partial Class shop
     End Function
 
 
-    Sub llenar_grilla()
+    Public Function llenar_grilla()
 
         Dim sql As New cls_db
         Dim dt As New DataTable
@@ -57,15 +57,15 @@ Partial Class shop
         table = dt
         Dim grilla As New cls_grid(dt, formulario)
         If grilla.dt.Rows.Count > 0 Then
-            'GV_shop.DataSource = dt
-            'GV_shop.DataBind()
-            'GV_shop.HeaderRow.TableSection = TableRowSection.TableHeader
-            'panel_shop.Update()
+            GV_shopStore.DataSource = dt
+            GV_shopStore.DataBind()
+            GV_shopStore.HeaderRow.TableSection = TableRowSection.TableHeader
+            panel_shop.Update()
 
         Else
             Dim tabla = "<br/><center><h4>No hay Resultados para esta Búsqueda</h4></center><br/>"
         End If
-    End Sub
+    End Function
     <System.Web.Services.WebMethod(EnableSession:=True)> Public Shared Function registrar_pedido(ByVal articulos As String) As String
         Dim sql As New cls_db
         Dim array_articulos As Array
@@ -128,6 +128,5 @@ Partial Class shop
         Return pedido_id.ToString + "|" + redaccion_mensaje + "%0A %0A 🧾​​​​ N°PEDIDO - " + pedido_id.ToString '+ celular.ToString + " es el número de " + nombre_cliente.ToString
 
     End Function
-
 
 End Class
