@@ -1,4 +1,7 @@
 ﻿Imports System.Data
+Imports System.IO
+Imports System.Drawing
+Imports System.Drawing.Imaging
 
 Partial Class Frm_stock
     Inherits System.Web.UI.Page
@@ -44,8 +47,149 @@ Partial Class Frm_stock
 
     End Sub
 
+    Sub btnGuardarImagenes()
+        If imgInput1.PostedFile IsNot Nothing AndAlso imgInput1.PostedFile.ContentLength > 0 Then
+            Try
+                Dim nombreCarpetaSave As String = "App1"
+                ' Obtener la ruta de la carpeta donde se guardará la imagen
+                Dim rutaCarpeta As String = Server.MapPath("~/static/Articulos/" & nombreCarpetaSave)
+
+                ' Verificar si la carpeta existe, si no, crearla
+                If Not Directory.Exists(rutaCarpeta) Then
+                    Directory.CreateDirectory(rutaCarpeta)
+                End If
+
+                ' Obtener el nombre de la imagen
+                Dim nombreImagen1 As String = Path.GetFileName(imgInput1.PostedFile.FileName)
+                Dim rutaImagen1 As String = Path.Combine(rutaCarpeta, nombreImagen1)
+
+                ' Convertir la imagen a PNG y ajustar su tamaño
+                Using imagenOriginal As Image = Image.FromStream(imgInput1.PostedFile.InputStream)
+                    ' Calcular el nuevo tamaño manteniendo la relación de aspecto
+                    Dim newWidth As Integer = 400
+                    Dim newHeight As Integer = CInt((imagenOriginal.Height / imagenOriginal.Width) * newWidth)
+
+                    ' Crear una nueva imagen con el nuevo tamaño
+                    Using imagenRedimensionada As New Bitmap(newWidth, newHeight)
+                        ' Dibujar la imagen original en la nueva imagen con el nuevo tamaño
+                        Using g As Graphics = Graphics.FromImage(imagenRedimensionada)
+                            g.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
+                            g.DrawImage(imagenOriginal, 0, 0, newWidth, newHeight)
+                        End Using
+
+                        ' Guardar la imagen redimensionada como PNG
+                        imagenRedimensionada.Save(rutaImagen1, ImageFormat.Png)
+
+                        ' Mostrar la ruta de la imagen guardada en el TextBox
+                        txt_ruta_imagen1.Text = rutaImagen1
+                    End Using
+                End Using
+
+            Catch ex As Exception
+                ' Manejar cualquier excepción que pueda ocurrir durante la carga de la imagen
+                ' Puedes mostrar un mensaje de error o registrar la excepción en un registro
+            End Try
+        Else
+            ' Si no se seleccionó ningún archivo, asignar una cadena vacía al TextBox
+            txt_ruta_imagen1.Text = ""
+        End If
+
+        If imgInput2.PostedFile IsNot Nothing AndAlso imgInput2.PostedFile.ContentLength > 0 Then
+            Try
+                Dim nombreCarpetaSave As String = "App1"
+                ' Obtener la ruta de la carpeta donde se guardará la imagen
+                Dim rutaCarpeta As String = Server.MapPath("~/static/Articulos/" & nombreCarpetaSave)
+
+                ' Verificar si la carpeta existe, si no, crearla
+                If Not Directory.Exists(rutaCarpeta) Then
+                    Directory.CreateDirectory(rutaCarpeta)
+                End If
+
+                ' Obtener el nombre de la imagen
+                Dim nombreImagen1 As String = Path.GetFileName(imgInput2.PostedFile.FileName)
+                Dim rutaImagen1 As String = Path.Combine(rutaCarpeta, nombreImagen1)
+
+                ' Convertir la imagen a PNG y ajustar su tamaño
+                Using imagenOriginal As Image = Image.FromStream(imgInput2.PostedFile.InputStream)
+                    ' Calcular el nuevo tamaño manteniendo la relación de aspecto
+                    Dim newWidth As Integer = 400
+                    Dim newHeight As Integer = CInt((imagenOriginal.Height / imagenOriginal.Width) * newWidth)
+
+                    ' Crear una nueva imagen con el nuevo tamaño
+                    Using imagenRedimensionada As New Bitmap(newWidth, newHeight)
+                        ' Dibujar la imagen original en la nueva imagen con el nuevo tamaño
+                        Using g As Graphics = Graphics.FromImage(imagenRedimensionada)
+                            g.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
+                            g.DrawImage(imagenOriginal, 0, 0, newWidth, newHeight)
+                        End Using
+
+                        ' Guardar la imagen redimensionada como PNG
+                        imagenRedimensionada.Save(rutaImagen1, ImageFormat.Png)
+
+                        ' Mostrar la ruta de la imagen guardada en el TextBox
+                        txt_ruta_imagen1.Text = rutaImagen1
+                    End Using
+                End Using
+
+            Catch ex As Exception
+                ' Manejar cualquier excepción que pueda ocurrir durante la carga de la imagen
+                ' Puedes mostrar un mensaje de error o registrar la excepción en un registro
+            End Try
+        Else
+            ' Si no se seleccionó ningún archivo, asignar una cadena vacía al TextBox
+            txt_ruta_imagen2.Text = ""
+        End If
+        If imgInput3.PostedFile IsNot Nothing AndAlso imgInput3.PostedFile.ContentLength > 0 Then
+            Try
+                Dim nombreCarpetaSave As String = "App1"
+                ' Obtener la ruta de la carpeta donde se guardará la imagen
+                Dim rutaCarpeta As String = Server.MapPath("~/static/Articulos/" & nombreCarpetaSave)
+
+                ' Verificar si la carpeta existe, si no, crearla
+                If Not Directory.Exists(rutaCarpeta) Then
+                    Directory.CreateDirectory(rutaCarpeta)
+                End If
+
+                ' Obtener el nombre de la imagen
+                Dim nombreImagen1 As String = Path.GetFileName(imgInput3.PostedFile.FileName)
+                Dim rutaImagen1 As String = Path.Combine(rutaCarpeta, nombreImagen1)
+
+                ' Convertir la imagen a PNG y ajustar su tamaño
+                Using imagenOriginal As Image = Image.FromStream(imgInput3.PostedFile.InputStream)
+                    ' Calcular el nuevo tamaño manteniendo la relación de aspecto
+                    Dim newWidth As Integer = 400
+                    Dim newHeight As Integer = CInt((imagenOriginal.Height / imagenOriginal.Width) * newWidth)
+
+                    ' Crear una nueva imagen con el nuevo tamaño
+                    Using imagenRedimensionada As New Bitmap(newWidth, newHeight)
+                        ' Dibujar la imagen original en la nueva imagen con el nuevo tamaño
+                        Using g As Graphics = Graphics.FromImage(imagenRedimensionada)
+                            g.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
+                            g.DrawImage(imagenOriginal, 0, 0, newWidth, newHeight)
+                        End Using
+
+                        ' Guardar la imagen redimensionada como PNG
+                        imagenRedimensionada.Save(rutaImagen1, ImageFormat.Png)
+
+                        ' Mostrar la ruta de la imagen guardada en el TextBox
+                        txt_ruta_imagen1.Text = rutaImagen1
+                    End Using
+                End Using
+
+            Catch ex As Exception
+                ' Manejar cualquier excepción que pueda ocurrir durante la carga de la imagen
+                ' Puedes mostrar un mensaje de error o registrar la excepción en un registro
+            End Try
+        Else
+            ' Si no se seleccionó ningún archivo, asignar una cadena vacía al TextBox
+            txt_ruta_imagen3.Text = ""
+        End If
+    End Sub
+
+
 
     Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+        btnGuardarImagenes()
         guardar()
     End Sub
 
@@ -67,21 +211,26 @@ Partial Class Frm_stock
             txt_tamaño.Text = row("tamaño")
             cbo_categoria.SelectedValue = row("categoria")
             txt_color.Text = row("color")
-            txt_ruta_imagen1.Text = row("ruta_imagen")
-            If Not row("ruta_imagen_2") Is DBNull.Value Then
-                txt_ruta_imagen2.Text = row("ruta_imagen_2")
-            End If
-            If Not row("ruta_imagen_3") Is DBNull.Value Then
-                txt_ruta_imagen3.Text = row("ruta_imagen_3")
-            End If
             txt_precio.Text = row("precio")
-        End If
+            txt_precio_costo.Text = row("precio_costo")
 
+            If Not row("ruta_imagen") Is DBNull.Value Then txt_ruta_imagen1.Text = row("ruta_imagen")
+            If Not row("ruta_imagen_2") Is DBNull.Value Then txt_ruta_imagen2.Text = row("ruta_imagen_2")
+            If Not row("ruta_imagen_3") Is DBNull.Value Then txt_ruta_imagen3.Text = row("ruta_imagen_3")
+            If Not String.IsNullOrEmpty(row("ruta_imagen")) Then img1.Src = row("ruta_imagen")
+            If Not String.IsNullOrEmpty(row("ruta_imagen_2")) Then img2.Src = row("ruta_imagen_2")
+            If Not String.IsNullOrEmpty(row("ruta_imagen_3")) Then img3.Src = row("ruta_imagen_3")
+        End If
     End Sub
 
 
     Function insertar() As Boolean
         Dim sql As New cls_db
+        Dim app As String = "App1"
+
+        Dim path1 As String = IIf(imgInput1.Value.ToString = "", img1.Src, imgInput1.Value.ToString)
+        Dim path2 As String = IIf(imgInput2.Value.ToString = "", img2.Src, imgInput2.Value.ToString)
+        Dim path3 As String = IIf(imgInput3.Value.ToString = "", img3.Src, imgInput3.Value.ToString)
 
         sql.parametros.Add("nombre", txt_nombre.Text)
         sql.parametros.Add("descripcion", txt_descripcion.Text)
@@ -89,11 +238,12 @@ Partial Class Frm_stock
         sql.parametros.Add("tamaño", txt_tamaño.Text)
         sql.parametros.Add("categoria", cbo_categoria.SelectedValue)
         sql.parametros.Add("color", txt_color.Text)
-        sql.parametros.Add("ruta_imagen", txt_ruta_imagen1.Text)
-        sql.parametros.Add("ruta_imagen_2", txt_ruta_imagen2.Text)
-        sql.parametros.Add("ruta_imagen_3", txt_ruta_imagen3.Text)
+        sql.parametros.Add("ruta_imagen", IIf(imgInput1.Value.ToString = "", img1.Src, "static\Articulos\" & app & "\" & path1))
+        sql.parametros.Add("ruta_imagen_2", IIf(imgInput2.Value.ToString = "", img2.Src, "static\Articulos\" & app & "\" & path2))
+        sql.parametros.Add("ruta_imagen_3", IIf(imgInput3.Value.ToString = "", img3.Src, "static\Articulos\" & app & "\" & path3))
         sql.parametros.Add("codigo_barra", txt_codigo_barra.Text)
         sql.parametros.Add("precio", txt_precio.Text)
+        sql.parametros.Add("precio_costo", txt_precio_costo.Text)
 
 
         Dim dt As DataTable = sql.ejecutar_sp("SP_stock_INSERT")
@@ -102,6 +252,12 @@ Partial Class Frm_stock
 
     Function actualizar() As Boolean
         Dim sql As New cls_db
+        Dim app As String = "App1"
+
+        Dim path1 As String = IIf(imgInput1.Value.ToString = "", img1.Src, imgInput1.Value.ToString)
+        Dim path2 As String = IIf(imgInput2.Value.ToString = "", img2.Src, imgInput2.Value.ToString)
+        Dim path3 As String = IIf(imgInput3.Value.ToString = "", img3.Src, imgInput3.Value.ToString)
+
         sql.parametros.Add("id", pk)
         sql.parametros.Add("nombre", txt_nombre.Text)
         sql.parametros.Add("descripcion", txt_descripcion.Text)
@@ -109,15 +265,18 @@ Partial Class Frm_stock
         sql.parametros.Add("tamaño", txt_tamaño.Text)
         sql.parametros.Add("categoria", cbo_categoria.SelectedValue)
         sql.parametros.Add("color", txt_color.Text)
-        sql.parametros.Add("ruta_imagen", txt_ruta_imagen1.Text)
-        sql.parametros.Add("ruta_imagen_2", txt_ruta_imagen2.Text)
-        sql.parametros.Add("ruta_imagen_3", txt_ruta_imagen3.Text)
+        sql.parametros.Add("ruta_imagen", IIf(imgInput1.Value.ToString = "", img1.Src, "static\Articulos\" & app & "\" & path1))
+        sql.parametros.Add("ruta_imagen_2", IIf(imgInput2.Value.ToString = "", img2.Src, "static\Articulos\" & app & "\" & path2))
+        sql.parametros.Add("ruta_imagen_3", IIf(imgInput3.Value.ToString = "", img3.Src, "static\Articulos\" & app & "\" & path3))
         sql.parametros.Add("codigo_barra", txt_codigo_barra.Text)
         sql.parametros.Add("precio", txt_precio.Text)
-
+        sql.parametros.Add("precio_costo", txt_precio_costo.Text)
 
 
         sql.ejecutar_sp("SP_stock_UPDATE")
+
+        btnGuardarImagenes()
+
         Return True
 
     End Function

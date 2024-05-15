@@ -2,6 +2,14 @@
 var GRILLA_OFF = false;
 var myChart
 var myChart_2
+// Función para cargar imágenes de forma diferida
+function lazyLoad() {
+    $(".lazy").each(function () {
+        if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+            $(this).attr("src", $(this).data("src")).removeClass("lazy");
+        }
+    });
+}
 
 function inicializar_grilla(selector, callback, primer_columna_visible) {
 
@@ -14,6 +22,7 @@ function inicializar_grilla(selector, callback, primer_columna_visible) {
         "info": true,
         "order": [[0, 'desc']],
         "bLengthChange": true,
+        "pageLength": 50,
         "drawCallback": function (settings) {
             var pagination = $(this).closest('.dataTables_wrapper').find('.dataTables_paginate');
             pagination.toggle(this.api().page.info().pages > 1);
@@ -50,6 +59,7 @@ function inicializar_grilla_asc(selector, callback, primer_columna_visible) {
         "info": true,
         "order": [[0, 'asc']],
         "bLengthChange": true,
+        "pageLength": 50,
         "drawCallback": function (settings) {
             var pagination = $(this).closest('.dataTables_wrapper').find('.dataTables_paginate');
             pagination.toggle(this.api().page.info().pages > 1);
@@ -60,6 +70,50 @@ function inicializar_grilla_asc(selector, callback, primer_columna_visible) {
             div.find("input[type='search']").focus();
             if (callback != undefined) callback();
         }
+    });
+}
+function inicializar_grilla_orderBy(selector, callback, primer_columna_visible, orderByNcolumn, orderDirection) {
+
+    if (primer_columna_visible == undefined) primer_columna_visible = true;
+    if (selector == undefined) selector = 'striped';
+    if (GRILLA_OFF == true) return;
+
+    var orderDir = orderDirection === 'desc' ? 'desc' : 'asc';
+
+    GRILLA_ACTUAL = $(selector).dataTable({
+        "language": { "url": "table_spanish.txt" },
+        "columnDefs": [{ "targets": [0], "visible": primer_columna_visible, "searchable": true }],
+        "info": true,
+        "order": [[orderByNcolumn, orderDir]],
+        "bLengthChange": true,
+        "pageLength": 50,
+        "drawCallback": function (settings) {
+            var pagination = $(this).closest('.dataTables_wrapper').find('.dataTables_paginate');
+            pagination.toggle(this.api().page.info().pages > 1);
+        },
+        "initComplete": function (settings, json) {
+            slap_loading_hide();
+            div = $(selector).closest("div")
+            div.find("input[type='search']").focus();
+            if (callback != undefined) callback();
+        }
+    });
+}
+function mostrarPopup(nombre,celular, direccion) {
+    var contenido = '<img src="./static/img/man.png" style="width: 60px; float: left;margin:0px 10px 10px 45px;">' +
+        '<div style="text-align:left">' +
+            '<b>Nombre:</b> ' + nombre + '<br>' +
+            '<b>Celular:</b> ' + celular + '<br>' +
+            '<b>Dirección:</b> ' + direccion; +
+        '</div>'
+
+
+    Swal.fire({
+        title: 'Información de Contacto',
+        html: contenido,
+        showCloseButton: true,
+        showConfirmButton: false,
+        focusConfirm: false
     });
 }
 function contador_empleados_en_excel(n){
@@ -107,6 +161,7 @@ function inicializar_grilla2(selector, callback, primer_columna_visible) {
         "columnDefs": [{ "targets": [0], "visible": primer_columna_visible, "searchable": true }],
         "info": true,
         "bLengthChange": false,
+        "pageLength": 50,
         "drawCallback": function (settings) {
             var pagination = $(this).closest('.dataTables_wrapper').find('.dataTables_paginate');
             pagination.toggle(this.api().page.info().pages > 1);
@@ -129,6 +184,7 @@ function inicializar_grilla_btn_excel(selector, callback, primer_columna_visible
         "info": true,
         "order": [[0, 'desc']],
         "bLengthChange": false,
+        "pageLength": 50,
         "bAutoWidth": false,
         "dom": 'Bfrtip',
         "buttons": [
@@ -638,8 +694,8 @@ function hora_valida(hora) {
 function fecha_valida(fecha) {
     return (Date.parse(fecha) != null)
 }
-function show_alert_confirm(title, descripcion,redirect) {
-      Swal.fire({
+function show_alert_confirm(title, descripcion, redirect) {
+    Swal.fire({
         title: title,
         confirmButtonText: 'OK',
         text: descripcion
@@ -647,9 +703,18 @@ function show_alert_confirm(title, descripcion,redirect) {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
             location.href = redirect
-        } 
+        }
     })
 }
+function show_alert_confirmCompra() {
+    Swal.fire({
+        title: 'Compra registrada con éxito',
+        icon: 'success',
+        showConfirmButton: true,
+        confirmButtonText: '¡Muchas gracias por tu compra!'
+    });
+}
+
 
 function show_alert(titulo, mensaje, icono) {
     Swal.fire({//necesita sweetAlert

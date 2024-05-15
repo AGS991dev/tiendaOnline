@@ -64,7 +64,7 @@ Partial Class c_movimientos
             GV_registros.DataSource = dt
             GV_registros.DataBind()
             GV_registros.HeaderRow.TableSection = TableRowSection.TableHeader
-            lbl_total.InnerText = dt(0)(6)
+            lbl_total.InnerText = dt(0)(6).ToString().Replace("$", "").Trim()
             Update_txt_desde.Update()
             Update_txt_hasta.Update()
             panel_consultas.Update()

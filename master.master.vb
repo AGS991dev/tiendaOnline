@@ -13,6 +13,7 @@ Partial Class master
     Public index_empresa_empleado As Integer
     Public badgeCount As New List(Of String)
     Public perfil As Integer
+    Public pedidos_pendientes As Integer
     Public numero_whatsapp As String
 
 
@@ -76,10 +77,18 @@ Partial Class master
         'empresas_de_empleado() 'Si se loguea correctame se verifica si trabaja para mas de una empresa
 
         'End If
-
+        'ObtenerNumPedidosPendientes()
 
     End Sub
+    Private Function ObtenerNumPedidosPendientes() As Integer
+        Dim sql As New cls_db
+        Dim dt As DataTable = sql.ejecutar_sp("SP_Pedidos_pendientes_contador")
+        Dim row As DataRow = dt.Rows(0)
+        pedidos_pendientes = CInt(row("pedidos_pendientes"))
+        Page.ClientScript.RegisterStartupScript(Me.GetType(), "ActualizarNumeroPedidos", "actualizarNumeroPedidos(" & pedidos_pendientes & ");", True)
 
+        'Return New Random().Next(0, 10)
+    End Function
     Sub inicializar_variables()
         Dim sql As New cls_db
         Dim dt As DataTable = sql.ejecutar_sp("SP_WHATSAPP_CONSUL")

@@ -48,20 +48,17 @@
                                 <!--class="striped"-->
                                 <asp:GridView ID="GV_shopStore" runat="server"  class="stripedShopStore" AutoGenerateColumns="false" CellSpacing='0' Width='100%'>
                                     <Columns>
-                                        <asp:TemplateField HeaderText="Articulos">
+                                        <asp:TemplateField HeaderText="Productos">
                                             <ItemTemplate>
                                                 <div style="box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px; margin: 1px; padding: 0 4px;">
-                                                    <div style="width: 170px; height: 260px;">
+                                                    <div style="width: 170px; height: 260px;"> <%--  class="img_producto" --%>
                                                         <div>
-                                                            <div>
+                                                            <div style="text-align: center;">
                                                                 <img src="<%#Eval("ruta_imagen")%>" width="150" height="150" alt="">
                                                                 <%--<img style="max-height: 200px;" class="activator img_producto" src="<%#Eval("ruta_imagen_2")%>" descripcion="<%#Eval("descripcion")%>" id="<%#Eval("id")%>" nombre="<%#Eval("nombre")%>" precio="<%#Eval("precio")%>" categoria="<%#Eval("categoria")%>" /><img style="max-height: 200px;" class="activator img_producto" src="<%#Eval("ruta_imagen_3")%>" descripcion="<%#Eval("descripcion")%>" id="<%#Eval("id")%>" nombre="<%#Eval("nombre")%>" precio="<%#Eval("precio")%>" categoria="<%#Eval("categoria")%>" />--%>
                                                             </div>
                                                             <div>
                                                                 <a href="#"><%#Eval("nombre")%> <b><%#Eval("categoria")%></b></a>
-                                                                <div>
-                                                                    <span style="color: white; padding: 0 5px; background: #29357d;"><b>$</b> <%#Eval("precio")%>.00</span>
-                                                                </div>
                                                                 <div>
                                                                     <span>Envío gratis</span>
                                                                 </div>
@@ -69,8 +66,8 @@
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <!-- BOTON AGREGAR MAS -->
-
+                                                        <!-- BOTON AGREGAR MAS Y PRECIO -->
+                                                        
                                                         <span id='btn_comprar' url='Grilla_carrito.aspx'
                                                             obj_id='<%#Eval("id")%>'
                                                             img="<%#Eval("ruta_imagen")%>"
@@ -78,10 +75,10 @@
                                                             precio="<%#Eval("precio")%>"
                                                             class="btn_mas_shopStore"
                                                             onclick='agregar_al_carrito_busqueda(this,"Producto agregado Correctamente");'>
-
+                                                            <span style="color: white; padding: 5px 10px; background: #29357d; position: absolute; left: -8px; font-family: cursive; font-size: large;"><b>$</b> <%#Eval("precio")%>.00</span>
                                                             <span class='tooltipped' data-position='right' data-tooltip='Agregar'>
                                                                 <!-- IMAGEN MAS -->
-                                                                <img class="zoom css_cesta" src="./static/img/cesta4.png" style="width: 35px;" />
+                                                                <img class="zoom css_cesta lazy" src="./static/img/cesta4.png" style="width: 35px;" />
                                                             </span>
                                                         </span>
                                                     </div>
@@ -97,59 +94,6 @@
 
                 </div>
 
-
-                <!--ARRIBA EL WORK-->
-                <!--abajo EL futuro carrito-->
-
-                <div class="col s12 m3 col_table phone_table" style="display: none; justify-content: center">
-
-
-                    <div style="display: flex; flex-direction: column; align-items: center;" class="flipInY phone_contender">
-                        <div class="center_cesta_padre">
-                            <div class="center_cestas">
-                                <div class="phone_productos" style="display: flex; justify-content: center; position: relative; left: -10px"><span class="cantidad_cesta " style="font-family: 'Bangers', cursive; font-size: 25px; color: black; margin-right: 15px">0</span><span style="color: black; font-size: 20px; font-family: 'Bangers', cursive; padding-top: 3px;"> Productos</span></div>
-                                <img src="./static/img/shopping-cart.png" class="img_carrito" style="width: 80px;" />
-                            </div>
-                        </div>
-
-                        <div class="phone" style="width: 290px;">
-                            <p style="text-align: center">
-                                <img width="30px" src="./static/img/wp.png" alt="">
-                                <span style="position: relative; top: -10px; left: 5px;">Pedí por WhatsApp</span>
-                            </p>
-                            <!--  -->
-                            <div class="bg-secondary mb-3" style="padding: 8px; border-radius: 20px; background: #fff; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
-                                <div class="col-12 row ml-1 pt-2 pb-1" style="position: relative; border-top-left-radius: 15px; border-top-right-radius: 15px; background: #ededed; margin: 0 0px; padding-left: 15px;">
-                                    <div class="col-3">
-                                        <img width="45px" src="images/navbar.jpeg" alt="" style="border-radius: 50px;">
-                                    </div>
-                                    <img style="width: 100px; position: relative; top: -10px; border-radius: 15px;" src="./static/img/mercadoshop.png" alt=""><span style="position: relative; top: -20px; left: 10px;">GONZALO LOPEZ</span>
-                                </div>
-                                <div class="waChat ">
-                                    <div class="chat">
-                                        <table class="table_telefono_virtual">
-                                            <thead class="thead"></thead>
-                                            <tbody class="tbody tbody_refresh"></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div style="text-align: center;">
-                                    <span style="font-size: 25px; padding: 5px 0px 0px 0px; color: #222; right: 15px; position: relative; font-family: bangers;">Total: </span><span class="total" tot="0" style="color: #222; font-size: 35px; font-family: bangers;">$0</span>
-                                </div>
-                            </div>
-                            <!---->
-                            <div id="enviar_whatsapp" class="enviar_whatsapp tooltipped" data-position='bottom' data-tooltip='Enviar Whatsapp con pedido'>
-                                <img src="static/img/send.png" style="position: relative; width: 55px; top: 20px; left: 24px;" />
-                            </div>
-                            <p style="text-align: center; position: relative; top: 25px; font-weight: 600;">ENVIAR</p>
-                        </div>
-
-                    </div>
-
-
-
-
-                </div>
 
             </div>
 
@@ -178,6 +122,10 @@
     <br />
 
     <style>
+        .btn_menu_mobile nav ul a:hover {
+           border-radius: 5px !important;
+           background: #e9eaf2 !important;
+        }
         .btn_mas_shopStore {
             display: flex;
             justify-content: end;
@@ -592,6 +540,7 @@
 <asp:Content runat="server" ContentPlaceHolderID="contenido_js">
     <script type="text/javascript">
 
+
         function phone_fixed() {
             var width_screen
             var altura = $('.phone_contender').offset().top;
@@ -629,9 +578,12 @@
         $('document').ready(function () {
 
 
-            phone_fixed()
-            setInterval(mover_cartelito, 15000)
+            //phone_fixed()
+            $('.img_open').hide();
+            $('.footer').show();
+            $('.phone').show();
 
+            //'setInterval(mover_cartelito, 15000)
             //$("div").find("li").css("z-index", 2147483647).remove();
 
             function mover_cartelito() {
@@ -693,7 +645,7 @@
 
 
             $('.compartir_store').click(function () {
-                compartir_tienda_por_wpp("http://www.storeelcape.somee.com/shop.aspx")
+                compartir_tienda_por_wpp("https://w340207.ferozo.com/projectos/shopStore.aspx")
             })
 
 
@@ -710,7 +662,7 @@
                     img: img
                 }
                 var carrito = sessionStorage.getItem("carrito")
-                if (carrito == null) {
+                if (carrito == null || carrito == "null" || carrito == "") {
                     carrito = []
                 } else {
                     carrito = JSON.parse(carrito)
@@ -730,24 +682,10 @@
             $('.enviar_whatsapp').click(function () {
                 var carrito = sessionStorage.getItem("carrito")
                 carrito = JSON.parse(carrito)
-                if (carrito == null) {
+                if (carrito == null || carrito == "null" || carrito == "") {
                     show_alert("Tu carrito de pedidos esta vacío", "Agregá productos al carrito", "error")
                     return false
                 }
-                var nombre_cliente = ""// $('.class_txt_nombre').val()
-                var celular = ""//$('.class_txt_celular').val()
-                var calle = ""//$('.class_txt_calle').val()
-                var calle_numero = ""//$('.class_txt_calle_numero').val()
-                var info_pedido = []
-                info_pedido.push(nombre_cliente)
-                info_pedido.push(celular)
-                info_pedido.push(calle)
-                info_pedido.push(calle_numero)
-                registrar_pedido(carrito, info_pedido)
-                sessionStorage.setItem("carrito", "")
-                show_alert_confirm('¡Pedido generado con éxito!', 'Haz sido reenviado a whatsapp con tu pedido adjunto ¡Haz click en enviar! Recibirás una confirmación de tu pedido por el mismo medio.', 'shopStore.aspx')
-                return false
-                //Pedido de gonzalo de no pedir datos
                 Swal.fire({
                     title: '<strong>Completá tu pedido</strong>',
                     html: celular_interfaz,
@@ -757,16 +695,16 @@
                     confirmButtonText: 'Enviar Pedido',
                     cancelButtonText: 'Cancelar',
                 }).then((result) => {
-                    /* Read more about isConfirmed, isDenied below */
                     if (result.isConfirmed) {
+                        //VARIABLES DE POPUP
                         var info_pedido = []
                         var nombre_cliente = $('.class_txt_nombre').val()
                         var celular = $('.class_txt_celular').val()
                         var calle = $('.class_txt_calle').val()
                         var calle_numero = $('.class_txt_calle_numero').val()
                         var lever = $('.lever').val()
-                        console.log(lever)
 
+                        //PREGUNTA DATOS DE CONTACTO EN POPUP
                         if (lever == "domicilio") {
                             if (nombre_cliente == "" || celular == "" || calle == "" || calle_numero == "") {
                                 Swal.fire('¡Pedido Incompleto!', 'Completá los campos vacios.', 'error')
@@ -779,17 +717,14 @@
                                 return false
                             }
                         }
-
+                        //CARGA RESPUESTAS EN INFO PEDIDO
                         info_pedido.push(nombre_cliente)
                         info_pedido.push(celular)
                         info_pedido.push(calle)
                         info_pedido.push(calle_numero)
-
+                        //REGISTA COMPRA/PEDIDO
                         registrar_pedido(carrito, info_pedido)
-                        sessionStorage.setItem("carrito", "")
-                        show_alert_confirm('¡Pedido generado con éxito!', 'Haz sido reenviado a whatsapp con tu pedido adjunto ¡Haz click en enviar! Recibirás una confirmación de tu pedido por el mismo medio.', 'shopStore.aspx')
-                        //calcular_total()
-
+                        
                     } else if (result.isDenied) {
                         Swal.fire('No se realizo el pedido', '', 'warning')
                     } else if (result.dismiss == 'cancel') {
@@ -811,10 +746,28 @@
             $('#contenido_body_GV_shopStore tbody').css({
                 'display': 'flex',
                 'flex-wrap': 'wrap',
-                'margin-left': '10px'
+                'margin-left': '10px',
+                'justify-content': 'space-around',
+
             });
 
+
+            // Cargar las imágenes visibles al cargar la página
+            lazyLoad();
+
+            // Cargar imágenes al hacer scroll
+            $(window).scroll(function () {
+                lazyLoad();
+            });
         });// fin doc ready
+
+        function reiniciar_phone_para_nuevas_compras() {
+            sessionStorage.setItem("carrito", null)
+            $('.cantidad_cesta').html(0)
+            $('.total').text('$0');
+            $('td[tot]').attr('tot', 0)
+            $('td[tot]').html("$0")
+        }
 
         function agregar_al_carrito_busqueda(datos) {
             var _articulo = datos
@@ -829,12 +782,13 @@
                 img: img
             }
             var carrito = sessionStorage.getItem("carrito")
-            if (carrito == null) {
+            if (carrito == null || carrito == "null" || carrito == "") {
                 carrito = []
             } else {
                 carrito = JSON.parse(carrito)
             }
             // si el articulo ya existe en el changuito
+            
             if (si_ya_existe_el_articulo_en_el_carrito(carrito, articulo) == false) {
                 return
             }
@@ -849,6 +803,18 @@
             $('.click').prop("volume", 0.3);
             $(".click")[0].play();
             animaciones_al_agregar_producto()
+            guardar_en_articulos_visitados(art_id)
+        }
+
+        function guardar_en_articulos_visitados(art_id) {
+            $.ajax({
+                type: "POST",
+                url: "shopStore.aspx/articulo_visitado",
+                data: '{art_id: "' + art_id + '" }',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {}
+            });
         }
 
         function si_ya_existe_el_articulo_en_el_carrito(carrito, articulo) {
@@ -944,10 +910,10 @@
         function enviar_whatsapp(msg) {
             var msgEnChat = ""
             msg = msg.split(" ").join("%20");
-            console.log(msg);
+            //console.log(msg);
             var href = 'https://api.whatsapp.com/send?phone=54' +<%=numero_whatsapp%>+'&text='
             href = href + msg;
-            console.log(href)
+            //console.log(href)
             $('#whatsappMsg').attr('href', href);
             $('.waMsg').val('');
             $("<p class='textoEnviado'>" + msgEnChat + "</p>").appendTo(".chat");
@@ -1012,10 +978,10 @@
             $('.tbody_refresh').html("")
             for (i = 0; i < carrito.length; i++) {
                 //console.log("dibujando..."+i, carrito[i])
-                $('.tbody_refresh').append("<tr class='fila_table'><td class='td_virtual_phone'>" + carrito[i].articulo + "</td><td style='width: 70px;' class='td_virtual_phone'><div style='display:flex;'><div class='flechas' style='display: flex; flex-direction: column; position: relative; left: -5px; top: -1px;'><img class='flecha_arriba' onclick='flecha_arriba(this)' style='filter: grayscale(1);width:25px;transform: rotateZ(90deg);margin:3px 0' src='static/img/arrow.png' /><img class='flecha_abajo' onclick='flecha_abajo(this)' style='filter: grayscale(1);width:25px;transform: rotateZ(270deg)' src='static/img/arrow.png' /></div><input style='border-bottom: 0px; width: 60px; font-size: 30px; text-align: center; font-family: bangers; position: relative; top: 7px; color: #383838; left: -10px; cursor:pointer' type='number' art_id='" + carrito[i].articulo + "' precio_unitario='" + carrito[i].precio + "' onChange='telefono_virtual_actualizar_precio_respecto_a_cantidad(this)' value='" + carrito[i].cantidad + "' readOnly/></div></td><td class='articulo_de_telefono_virtual td_virtual_phone' art_id='" + carrito[i].articulo + "' precio_unitario='" + carrito[i].precio + "'img='" + carrito[i].img + "' cantidad='" + carrito[i].cantidad + "' onclick='quitar_producto_de_celular(this)'><img class='img_producto_telefono_virtual' src='" + carrito[i].img + "' style='width: 60px; height: 60px; border: 1px solid #dedede; border-radius: 20px; position: relative; top: 2px; right: 2px;' class='table_ruta_imagen' id='txt_ruta_imagen'/></td><td class='td_virtual_phone'><span style='font-size: 20px;color:#383838; font-family: bangers; padding-left: 10px;'>$" + carrito[i].precio + ".00</span></td></tr>")
+                $('.tbody_refresh').append("<tr class='fila_table'><td class='td_virtual_phone'>" + carrito[i].articulo + "</td><td style='width: 70px;' class='td_virtual_phone'><div style='display:flex;'><div class='flechas' style='display: flex; flex-direction: column; position: relative; left: -5px; top: -1px;'><img class='flecha_arriba' onclick='flecha_arriba(this)' style='filter: grayscale(1);width:25px;transform: rotateZ(90deg);margin:3px 0' src='static/img/arrow.png' /><img class='flecha_abajo' onclick='flecha_abajo(this)' style='filter: grayscale(1);width:25px;transform: rotateZ(270deg)' src='static/img/arrow.png' /></div><input style='border-bottom: 0px; width: 60px; font-size: 30px; text-align: center; font-family: bangers; position: relative; top: 7px; color: #383838; left: -10px; cursor:pointer' type='number' art_id='" + carrito[i].articulo + "' precio_unitario='" + carrito[i].precio + "' onChange='telefono_virtual_actualizar_precio_respecto_a_cantidad(this)' value='" + carrito[i].cantidad + "' readOnly/></div></td><td class='articulo_de_telefono_virtual td_virtual_phone' art_id='" + carrito[i].articulo + "' precio_unitario='" + carrito[i].precio + "'img='" + carrito[i].img + "' cantidad='" + carrito[i].cantidad + "' onclick='quitar_producto_de_celular(this)'><img class='img_producto_telefono_virtual' src='" + carrito[i].img + "' class='table_ruta_imagen' id='txt_ruta_imagen'/></td><td class='td_virtual_phone'><span style='color: #383838; position: relative; font-size: 20px; font-weight: 500; }'>$" + carrito[i].precio + ".00</span></td></tr>")
             }
         }
-
+        
 
 
 
@@ -1054,13 +1020,13 @@
             articulos.push(info_pedido[2])// le sumo el monto al final del array para registrar la compra
             articulos.push(info_pedido[3])// le sumo el monto al final del array para registrar la compra
             articulos.push(monto)// le sumo el monto al final del array para registrar la compra
-            console.log("articulos", articulos)
+            //console.log("articulos", articulos)
             articulos = articulos.toString()
 
             //console.log(articulos)
             $.ajax({
                 type: "POST",
-                url: "shop.aspx/registrar_pedido",
+                url: "shopStore.aspx/registrar_pedido",
                 data: '{articulos: "' + articulos + '" }',
                 async: false,
                 contentType: "application/json; charset=utf-8",
@@ -1069,9 +1035,9 @@
                     if (response) {
                         if (response.d) {
                             var redaccion = []
-                            console.log("QQQ", response.d)
+                            //console.log("QQQ", response.d)
                             redaccion = response.d.split("|")
-                            console.log(redaccion)
+                            //console.log(redaccion)
                             enviar_whatsapp(redaccion[1])
 
                             $('.monedas').prop("volume", 0.3);
@@ -1079,10 +1045,9 @@
                             $('.tbody_refresh').html("")
                             var carrito = []
                             sessionStorage.carrito = JSON.stringify(carrito)
-                            $('td[tot]').attr('tot', 0)
-                            $('td[tot]').html("$0")
-                            $('.cantidad_cesta').html(0)
                             procesar_toast("Venta n°" + redaccion[0] + " registrada", "success")
+                            reiniciar_phone_para_nuevas_compras()
+                            show_alert_confirmCompra()
                         }
                         return false
                     }

@@ -4,12 +4,15 @@ Partial Class c_pedido_lista
     Inherits System.Web.UI.Page
 
     Public tabla As String
-    Public sp As String = "SP_pedidos_lista_GRILLA"
+    Public sp As String = "SP_pedido_lista_GRILLA"
     Public formulario As String = "Frm_ticket.aspx"
     Public Titulo As String = "Ticket"
     Public total_text As String = ""
     Public precio_total As Integer
     Public cantidad As Integer
+    Public nombre As String
+    Public celular As String
+    Public direccion As String
 
     ReadOnly Property pk As String
         Get
@@ -64,6 +67,9 @@ Partial Class c_pedido_lista
         Dim row As DataRow = dt(0)
         precio_total = row("Precio Total")
         cantidad = row("Cantidad Total")
+        nombre = row("nombre_cliente")
+        celular = row("celular")
+        direccion = row("Dirección")
         If grilla.dt.Rows.Count > 0 Then
             GV_pedido.DataSource = dt
             GV_pedido.DataBind()

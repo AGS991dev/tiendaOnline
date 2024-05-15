@@ -83,7 +83,7 @@
                                                        <ASP:BoundField DataField = "monto" htmlencode="false" HeaderText="Monto 💲" />
                                                         <ASP:TemplateField HeaderText = "VER TICKET" >
                                                             <ItemTemplate>
-                                                                <a href='c_ticket.aspx?id=<%#Eval("Ticket")%>'><span class='waves-effect waves-light btn-small tooltipped card_color' data-position='top' data-tooltip='Ver ticket' style="border-radius:50px"  ><i class='material-icons tada'>👁️</i></a>
+                                                                <a href='c_ticket.aspx?id=<%#Eval("Ticket")%>'><span data-position='top' data-tooltip='Ver ticket'><i style="font-size:30px" class='material-icons tada'>📄</i></a>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
 

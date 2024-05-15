@@ -40,17 +40,6 @@
             <div class="row">
             <div class="col m10 l8 offset-l2 offset-m1 s12">
 
-
-            <div class="col m4 s6 zoom">
-                <a href="./shopStore.aspx">
-                    <div class="card-panel card-menu center white-text hoverable">
-                        <img src="./static/img/supermercado.png" style="width: 60px;"/>
-                       <p>Tienda Online</p>
-                    </div>
-
-                </a>
-            </div>
-
             <div class="col m4 s6 zoom">
                 <a href="./Grilla_Stock.aspx">
                     <div class="card-panel card-menu center white-text hoverable">
@@ -76,6 +65,16 @@
                 </a>
             </div>
             
+            <div class="col m4 s6 zoom">
+                <a href="./shopStore.aspx">
+                    <div class="card-panel card-menu center white-text hoverable">
+                        <img src="./static/img/laptop.png" style="width: 60px;"/>
+                       <p>Tienda Online</p>
+                    </div>
+
+                </a>
+            </div>
+
             <div class="col m4 s6 zoom">
                 <a href="./Grilla_caja.aspx">
                     <div class="card-panel card-menu center white-text hoverable">
@@ -147,6 +146,16 @@
                 </a>
             </div>
 
+            <div class="col m4 s6 zoom tooltipped" " data-position="top" data-tooltip="Productos más visitados">
+                <a href="./grilla_mas_visitados.aspx">
+                    <div class="card-panel card-menu center white-text hoverable">
+                        <img src="./static/img/amor.png" style="width: 60px;"/>
+                       <p>Productos más visitados</p>
+                    </div>
+
+                </a>
+            </div>
+
 
             </div>
             </div>
@@ -157,7 +166,7 @@
 
 <style>
     .badge_pendientes{
-    background: #ff4f42;
+    background: #ed3446;
     position: absolute;
     padding: 0px 18px 0px  15px;
     border-radius: 25px;
@@ -165,6 +174,18 @@
     box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
     color:white;
     font-family:'Bangers', cursive;
+    }
+    .badge_pendientes_nav{
+    background: #ed3446;
+    border-radius: 25px;
+    font-size: 20px;
+    box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+    color: white;
+    font-family: 'Bangers', cursive;
+    padding: 8px 10px 8px 6px;
+    position: relative;
+    bottom: 12px;
+    left: 5px;
     }
     
         .logo_empresas{

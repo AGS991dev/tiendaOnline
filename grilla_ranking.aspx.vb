@@ -50,10 +50,17 @@ Partial Class grilla_ranking
     Sub filldata()
         Dim sql As New cls_db
         Dim desde As String = "" ' txt_desde.Text
-        Dim hasta As String = "" 'txt_hasta.Text
+        Dim hasta As String = "" ' txt_hasta.Text
         sql.parametros.Add("categoria_id", cbo_categoria.SelectedValue)
 
         Dim dt As DataTable = sql.ejecutar_sp("SP_RANKING_FILTRAR", sql.parametros)
+
+        ' Modificar la columna "puesto" según las condiciones requeridas
+        For Each row As DataRow In dt.Rows
+            If row("puesto").ToString() = "1°" Then row("puesto") = "<b style='font-size: 26px;'>1° 🏆</b>"
+            If row("puesto").ToString() = "2°" Then row("puesto") = "<span style='font-size: 24px;'>2° 🥈</span>"
+            If row("puesto").ToString() = "3°" Then row("puesto") = "<span style='font-size: 22px;'>3° 🥉</span>"
+        Next
 
         Dim grilla As New cls_grid(dt, formulario)
         If grilla.dt.Rows.Count > 0 Then
@@ -69,7 +76,7 @@ Partial Class grilla_ranking
             tabla_vacia = True
             tabla = "<br/><center><h4>No hay Resultados para esta Búsqueda</h4></center><br/>"
         End If
-
     End Sub
+
 End Class
 

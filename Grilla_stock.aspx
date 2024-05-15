@@ -22,14 +22,24 @@
                                             
                                     <div id="tab_grafico" style="padding-right: 20px;" >
 
-                                    <div style="position:relative;">
+                                                                                         
+                                            <ul id="tabs-swipe-demo" class="tabs center">
+                                            <li class="tab"><a class="active" href="#myChart-2" style="display:flex;"><img src="static/img/bar.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRÁFICO BARRAS</span></a></li>
+                                            <li class="tab"><a href="#grilla_imagen" style="display:flex;"><img src="static/img/imagen.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>IMAGEN</span></a></li>
+                                            <li class="tab"><a href="#grilla" style="display:flex;"><img src="static/img/mesa.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRILLA</span></a></li>
+                                            <li class="tab"><a href="#myChart-1" style="display:flex;"><img src="static/img/dona.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRÁFICO CIRCULAR</span></a></li>
+                                            </ul>
+                                            <br />
+                                           <div style="position:relative;">
+                                               <div style="display:flex;justify-content:space-between">
+                                                    <p style="margin-left:10px">FILTRÁ LOS ARTÍCULOS POR CATEGORÍAS</p>
+                                                    <asp:Button ID="btn_filter" runat="server" Text="FILTRAR 🔍" CssClass="btn btn_refrescar_grafico" Style="position: relative;top: 5px;"/>
+                                                </div>
+                                                <br />
                                                 <div class="card menu_filtro" style="padding-bottom: 10px;padding: 15px 15px;">
-                                                    <div class="header" style="display:flex">
-                                                        <h6 style="margin-left:10px">FILTRÁ LOS ARTÍCULOS POR CATEGORÍAS</h6><asp:Button ID="btn_filter" runat="server" Text="FILTRAR 🔍" CssClass="btn btn_refrescar_grafico" Style="margin: 0px 20px;"/>
-                                                    </div>
                                                     <br />
                                             
-                                                    <div style="display:flex">
+                                                    <div style="display:flex;justify-content: center;">
                                                         <div class="combos_articulos">
                                                                 <% for index_categoria = 0 To categorias.Count - 1 %>
                                                                 <% if not categorias(index_categoria) Is Nothing Then%>
@@ -41,19 +51,11 @@
                                                                 </p>
                                                                 <% End if %>
                                                                 <% Next %>
+                                                        
                                                         </div>
-                                                                
                                                     </div>
                                                 </div>
                                             </div>
-                                                  <br />
-                                                  <ul id="tabs-swipe-demo" class="tabs center">
-                                                    <li class="tab"><a class="active" href="#grilla" style="display:flex;"><img src="static/img/mesa.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRILLA</span></a></li>
-                                                    <li class="tab"><a href="#grilla_imagen" style="display:flex;"><img src="static/img/imagen.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>IMAGEN</span></a></li>
-                                                    <li class="tab"><a href="#myChart-1" style="display:flex;"><img src="static/img/dona.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRÁFICO CIRCULAR</span></a></li>
-                                                    <li class="tab"><a href="#myChart-2" style="display:flex;"><img src="static/img/bar.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRÁFICO BARRAS</span></a></li>
-                                                  </ul>
-                                                  <br />
                                                   <div id="grilla">
                                                     <asp:UpdatePanel ID="Update_grilla" runat="server" UpdateMode="Conditional">
                                                         <ContentTemplate>
@@ -72,32 +74,41 @@
                                                                 <ASP:GridView ID ="GV_empresas" runat="server" class="striped grilla_tabla" AutoGenerateColumns="false"  CellSpacing='0' Width='100%'>
                                                                 <Columns>
 
-                                                                   <ASP:TemplateField HeaderText = "Articulo" >
+                                                                   <ASP:TemplateField HeaderText ="" >
                                                                         <ItemTemplate>
-                                                                            <div  style="width: 350px;">
-                                                                                  <div class="card" style="box-shadow:none !important">
-                                                                                    <div class="card-image waves-effect waves-block waves-light">
-                                                                                        <div class="owl-carousel owl-theme">
-                                                                                            <img class="activator" style="max-height:350px;" src="<%#Eval("ruta_imagen")%>">
-                                                                                            <img class="activator" style="max-height:350px;" src="<%#Eval("ruta_imagen_2")%>">
-                                                                                            <img class="activator" style="max-height:350px;" src="<%#Eval("ruta_imagen_3")%>">
+                                                                        <div style="box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px; margin: 1px; padding: 0 4px;">
+                                                                            <div style="width: 170px; height: 260px;"> <%--  class="img_producto" --%>
+                                                                                <div>
+                                                                                    <div style="text-align: center;">
+                                                                                        <img src="<%#Eval("ruta_imagen")%>" width="150" class="lazy" height="150" alt="">
+                                                                                        <%--<img style="max-height: 200px;" class="activator img_producto" src="<%#Eval("ruta_imagen_2")%>" descripcion="<%#Eval("descripcion")%>" id="<%#Eval("id")%>" nombre="<%#Eval("nombre")%>" precio="<%#Eval("precio")%>" categoria="<%#Eval("categoria")%>" /><img style="max-height: 200px;" class="activator img_producto" src="<%#Eval("ruta_imagen_3")%>" descripcion="<%#Eval("descripcion")%>" id="<%#Eval("id")%>" nombre="<%#Eval("nombre")%>" precio="<%#Eval("precio")%>" categoria="<%#Eval("categoria")%>" />--%>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <a href="#"><%#Eval("nombre")%> <b><%#Eval("categoria")%></b></a>
+                                                                                        <div>
+                                                                                            <span><b><%#Eval("cantidad")%> Unidades</b></span>
+                                                                                            <!--<span><b><%#Eval("categoria")%></b></span>
+                                                                                            <span><b><%#Eval("tamaño")%></b></span>
+                                                                                            <span><b><%#Eval("color")%></b></span>-->
                                                                                         </div>
                                                                                     </div>
-
-                                                                                    <div class="card-content">
-                                                                                      <p><b><%#Eval("cantidad")%> Unidades.</b></p>
-                                                                                      <span class="card-title activator grey-text text-darken-4"><%#Eval("nombre")%></span>
-                                                                                      <p><%#Eval("categoria")%></p>
-                                                                                    </div>
-                                                                                      <div class="card-action" style="display: flex;justify-content: space-around;">
-                                                                                          <a style="position: relative; top: 12px;" href='Frm_stock.aspx?id=<%#Eval("id")%>' ><span class='waves-effect waves-light btn-small tooltipped card_color' data-position='top' data-tooltip='Editar <%#Eval("nombre")%>' ><i class='material-icons'>edit</i></a>
-                                                                                          <span style="font-family:Bangers;font-size:40px;position: relative;right: 15px;">$<%#Eval("precio")%>.00</span>
-                                                                                          <span style="position: relative; top: 12px;" id='btn_delete' url='Grilla_stock.aspx' obj_id='<%#Eval("id")%>' onclick='eliminar_registro(this,"Registro Eliminado Correctamente");' ><span class='waves-effect waves-light red btn-small tooltipped' data-position='top' data-tooltip='Eliminar <%#Eval("nombre")%>' ><i class='material-icons'>delete</i></span>
-                                                                                      </div>
-
-                                                                                  </div>
+                                                                                </div>
                                                                             </div>
-                                                    
+                                                                            <div>
+                                                                                <!-- BOTON AGREGAR MASY PRECIO -->
+                                                        
+                                                                                <span id='btn_comprar' url='Grilla_carrito.aspx'
+                                                                                    obj_id='<%#Eval("id")%>'
+                                                                                    img="<%#Eval("ruta_imagen")%>"
+                                                                                    art_id="<%#Eval("id")%>"
+                                                                                    precio="<%#Eval("precio")%>"
+                                                                                    class="btn_mas_shopStore lazy"
+                                                                                    onclick='agregar_al_carrito_busqueda(this,"Producto agregado Correctamente");'>
+                                                                                    <span style="background: #ed3446 !important; color: white; padding: 4px 10px; border-radius: 2px; position: relative; left: -10px; font-family: cursive; font-size: large; bottom: 10px;"><b>$</b> <%#Eval("precio")%>.00</span>
+                                                                                    <a style="position: relative; top: -14px;background: #ed3446 !important" href='Frm_stock.aspx?id=<%#Eval("id")%>' ><span class='waves-effect waves-light btn-small tooltipped card_color' syule="padding: 0px 20px 0px 20px;height: 35px;background: #ed3446 !important;" data-position='top' data-tooltip='Editar <%#Eval("nombre")%>' ><i class='material-icons'>edit</i></a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
                                                     
                                                                         </ItemTemplate>
                                                                     </asp:TemplateField>                                
@@ -120,7 +131,7 @@
                                                     </div>
                                                   </div>
                                                   <div id="myChart-2">
-                                                    <div class="box_myChart dona" style="width:70%;margin:auto"><br />
+                                                    <div class="box_myChart dona"><br />
                                                         <canvas id="myChart_2"></canvas>
                                                     </div>
                                                   </div>
@@ -139,34 +150,39 @@
         </div>
 
     <style>
+        [type="checkbox"].filled-in:checked+span:not(.lever):after {
+            border: 2px solid #29357d !important;
+            background-color: #29357d !important;
+        }
+        td:nth-child(1), th:nth-child(1), td:nth-child(2), th:nth-child(2), td:nth-child(5), th:nth-child(5), td:nth-child(6), th:nth-child(6), td:nth-child(7), th:nth-child(7) {
+            text-align: center;
+        }
 
-        td:nth-child(1), th:nth-child(1),td:nth-child(2), th:nth-child(2),td:nth-child(5), th:nth-child(5),td:nth-child(6), th:nth-child(6),td:nth-child(7), th:nth-child(7) {
-        text-align:center;
+        .grilla_tabla > tbody {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .grilla_tabla > tbody{
-             display: flex;
-             flex-wrap: wrap;
-             justify-content: center;
-        }
-        .combos_articulos{
+
+        .combos_articulos {
             display: flex;
             flex-wrap: wrap;
             width: max-content;
         }
-        .boton_stock{
+
+        .boton_stock {
             box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
             width: max-content;
             padding: 10px 10px 5px 10px;
             border-radius: 6px;
             margin: 3px;
-            cursor:pointer;
-        }
-        .p_botones_stock{
-            display:flex;
-            justify-content:flex-start;
+            cursor: pointer;
         }
 
-
+        .p_botones_stock {
+            display: flex;
+            justify-content: flex-start;
+        }
     </style>
     
 </asp:Content>
@@ -226,7 +242,7 @@
             var img_art_busqueda = $('.img_art_busqueda')
             for (i = 0; i < img_art_busqueda.length; i++) {
                 var blob = $(img_art_busqueda[i]).attr("img")
-                console.log("img",blob)
+                //console.log("img",blob)
             }
             
 
@@ -280,12 +296,21 @@
                         }
                     }
                 }
-                console.log("Hi_string ->", hi_string)
+                //console.log("Hi_string ->", hi_string)
                 $('#<%=hi_categoria_filter.ClientID%>').val(hi_string);
             })
 
-        inicializar_graficos()
+            inicializar_graficos()
+            // Cargar las imágenes visibles al cargar la página
+            lazyLoad();
+
+            // Cargar imágenes al hacer scroll
+            $(window).scroll(function () {
+                lazyLoad();
+            });
+
         on_postback_end(recargar_postback)
+
         });// FIN ON READY
 
         function inicializar_graficos() {
@@ -298,7 +323,7 @@
                 success: function (data) {
                     var _data = data.d
                     _data = _data.split('/');
-                    console.log("_data", _data)
+                    //console.log("_data", _data)
                     var _categorias = _data[0]
                     _categorias = _categorias.split(",");
                     var _cantidades = _data[1]
@@ -328,115 +353,115 @@
 
         function actualizar_graficos() {
             var hi_categoria = $('#<%=hi_categoria_filter.ClientID%>').val();
-            $.ajax({
-                type: "POST",
-                url: "grilla_stock.aspx/recarga_grafico",
-                data: '{hi_categoria: "' + hi_categoria + '" }',
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (data) {
-                    var _data = data.d
-                    _data = _data.split('/');
-                    console.log("_data", _data)
-                    var _categorias = _data[0]
-                    _categorias = _categorias.split(",");
-                    var _cantidades = _data[1]
-                    _cantidades = _cantidades.split(",");
+                                           $.ajax({
+                                               type: "POST",
+                                               url: "grilla_stock.aspx/recarga_grafico",
+                                               data: '{hi_categoria: "' + hi_categoria + '" }',
+                                               contentType: "application/json; charset=utf-8",
+                                               dataType: "json",
+                                               success: function (data) {
+                                                   var _data = data.d
+                                                   _data = _data.split('/');
+                                                   //console.log("_data", _data)
+                                                   var _categorias = _data[0]
+                                                   _categorias = _categorias.split(",");
+                                                   var _cantidades = _data[1]
+                                                   _cantidades = _cantidades.split(",");
 
-                    myChart.destroy()
-                    myChart_2.destroy()
-                    
-                    var ctx = document.getElementById('myChart')
-                    myChart = new Chart(ctx, {
-                        type: 'doughnut',//'horizontalBar', 'doughnut','bar','line','radar','polarArea','bubble',
-                        data: {
-                            datasets: [{
-                                label: 'Stock de Productos',
-                                backgroundColor: ["#2778c4", "#a5dc86", "#ee6e73", "#f3d95a", "#b252c3", "#FF0000", "#808080", "#000000", "#C0C0C0", "#FFFF00", "#FF00FF", "#800080", "#000080"],
-                                borderColor: ['black'],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                y: {
-                                    beginAtZero: true
-                                }
-                            }
-                        }
-                    })
+                                                   myChart.destroy()
+                                                   myChart_2.destroy()
 
-                    var ctx_2 = document.getElementById('myChart_2')
-                    myChart_2 = new Chart(ctx_2, {
-                        type: 'bar',//'horizontalBar', 'doughnut','bar','line','radar','polarArea','bubble',
-                        data: {
-                            datasets: [{
-                                label: 'Stock de Productos',
-                                backgroundColor: ["#2778c4", "#a5dc86", "#ee6e73", "#f3d95a", "#b252c3", "#FF0000", "#808080", "#000000", "#C0C0C0", "#FFFF00", "#FF00FF", "#800080", "#000080"],
-                                borderColor: ['black'],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                y: {
-                                    beginAtZero: true
-                                }
-                            }
-                        }
-                    })
-                    
-                    for (i = 0; i < _categorias.length; i++) {
-                        try {
-                            myChart.data['labels'].push(_categorias[i])
-                            myChart.data['datasets'][0].data.push(_cantidades[i])
-                            myChart_2.data['labels'].push(_categorias[i])
-                            myChart_2.data['datasets'][0].data.push(_cantidades[i])
-                        } catch (e) {
-                        }
-                    }
+                                                   var ctx = document.getElementById('myChart')
+                                                   myChart = new Chart(ctx, {
+                                                       type: 'doughnut',//'horizontalBar', 'doughnut','bar','line','radar','polarArea','bubble',
+                                                       data: {
+                                                           datasets: [{
+                                                               label: 'Stock de Productos',
+                                                               backgroundColor: ["#2778c4", "#a5dc86", "#ee6e73", "#f3d95a", "#b252c3", "#FF0000", "#808080", "#000000", "#C0C0C0", "#FFFF00", "#FF00FF", "#800080", "#000080"],
+                                                               borderColor: ['black'],
+                                                               borderWidth: 1
+                                                           }]
+                                                       },
+                                                       options: {
+                                                           scales: {
+                                                               y: {
+                                                                   beginAtZero: true
+                                                               }
+                                                           }
+                                                       }
+                                                   })
 
-                        myChart.update()
-                        myChart_2.update()
-                }
-            });
+                                                   var ctx_2 = document.getElementById('myChart_2')
+                                                   myChart_2 = new Chart(ctx_2, {
+                                                       type: 'bar',//'horizontalBar', 'doughnut','bar','line','radar','polarArea','bubble',
+                                                       data: {
+                                                           datasets: [{
+                                                               label: 'Stock de Productos',
+                                                               backgroundColor: ["#2778c4", "#a5dc86", "#ee6e73", "#f3d95a", "#b252c3", "#FF0000", "#808080", "#000000", "#C0C0C0", "#FFFF00", "#FF00FF", "#800080", "#000080"],
+                                                               borderColor: ['black'],
+                                                               borderWidth: 1
+                                                           }]
+                                                       },
+                                                       options: {
+                                                           scales: {
+                                                               y: {
+                                                                   beginAtZero: true
+                                                               }
+                                                           }
+                                                       }
+                                                   })
 
-        }
+                                                   for (i = 0; i < _categorias.length; i++) {
+                                                       try {
+                                                           myChart.data['labels'].push(_categorias[i])
+                                                           myChart.data['datasets'][0].data.push(_cantidades[i])
+                                                           myChart_2.data['labels'].push(_categorias[i])
+                                                           myChart_2.data['datasets'][0].data.push(_cantidades[i])
+                                                       } catch (e) {
+                                                       }
+                                                   }
 
-        function recargar_postback() {
+                                                   myChart.update()
+                                                   myChart_2.update()
+                                               }
+                                           });
 
-            $(".owl-carousel").owlCarousel({
-                nav: false,
-                slideBy: 1,
-                items: 1,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 7000,
-                autoplayHoverPause: true
-            });
+                                       }
 
-        }
+                                       function recargar_postback() {
 
-        function destroy_myChart(myChart) {
-            if (myChart) {
-                myChart.destroy();
-            }
-        }
-        function refrescar_grafico_categorias(categoria, cantidad) {
-            if (myChart) {
-                myChart.destroy();
-            }
-            myChart = inicializar_grafico()
-            mostrar(myChart, categoria, cantidad)
-        }
+                                           $(".owl-carousel").owlCarousel({
+                                               nav: false,
+                                               slideBy: 1,
+                                               items: 1,
+                                               loop: true,
+                                               autoplay: true,
+                                               autoplayTimeout: 7000,
+                                               autoplayHoverPause: true
+                                           });
 
-        function refrescar_grafico_categorias_circular(categoria, cantidad) {
-            if (myChart_2) {
-                myChart_2.destroy();
-            }
-            myChart_2 = inicializar_grafico_circular()
-            mostrar(myChart_2, categoria, cantidad)
-        }
+                                       }
 
-     </script>
+                                       function destroy_myChart(myChart) {
+                                           if (myChart) {
+                                               myChart.destroy();
+                                           }
+                                       }
+                                       function refrescar_grafico_categorias(categoria, cantidad) {
+                                           if (myChart) {
+                                               myChart.destroy();
+                                           }
+                                           myChart = inicializar_grafico()
+                                           mostrar(myChart, categoria, cantidad)
+                                       }
+
+                                       function refrescar_grafico_categorias_circular(categoria, cantidad) {
+                                           if (myChart_2) {
+                                               myChart_2.destroy();
+                                           }
+                                           myChart_2 = inicializar_grafico_circular()
+                                           mostrar(myChart_2, categoria, cantidad)
+                                       }
+
+    </script>
 </asp:Content>

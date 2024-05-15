@@ -10,10 +10,27 @@
 
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
         ' Code that runs on application shutdown
+        ' Obtén la última excepción que ocurrió
+        Dim lastError As Exception = Server.GetLastError()
+
+        ' Loguea el error si es necesario
+        ' Logger.LogError(lastError)
+
+        ' Redirige a la página de error personalizada
+        'Response.Redirect("~/access_recovery.aspx")
     End Sub
 
     Sub Application_Error(ByVal sender As Object, ByVal e As EventArgs)
         ' Code that runs when an unhandled error occurs
+        Dim lastError As Exception = Server.GetLastError()
+
+        ' Loguea el error si es necesario
+        ' Logger.LogError(lastError)
+
+        ' Redirige a la página de error personalizada
+        cls_utils.Log("------------------- error --- " & lastError.ToString)
+
+        'Response.Redirect("~/access_recovery.aspx")
     End Sub
 
     Sub Session_Start(ByVal sender As Object, ByVal e As EventArgs)

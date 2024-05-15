@@ -1,18 +1,272 @@
-1    <----  20/6/2022 2:11:51 p. m.
+------------------- error --- System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Data.OleDb.OleDbException (0x80004005): Expiró el tiempo de espera de inicio de sesión
+   en System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.OleDb.OleDbConnection.Open()
+   en cls_db.conectar() en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\App_Code\cls_db.vb:línea 44
+   en cls_db.ejecutar_sp(String procedimiento, Dictionary`2 parametros) en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\App_Code\cls_db.vb:línea 160
+   en shopStore.llenar_grilla() en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\shopStore.aspx.vb:línea 55
+   en shopStore.Page_Load(Object sender, EventArgs e) en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\shopStore.aspx.vb:línea 15
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.shopstore_aspx.ProcessRequest(HttpContext context)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  12/5/2024 19:36:01
           -               -               -             
--1    <----  20/6/2022 2:11:51 p. m.
+------------------- error --- System.Web.HttpParseException (0x80004005): Etiqueta de servidor incorrecta. ---> System.Web.HttpException (0x80004005): Etiqueta de servidor incorrecta.
+   en System.Web.UI.TemplateParser.ProcessError(String message)
+   en System.Web.UI.TemplateParser.DetectSpecialServerTagError(String text, Int32 textPos)
+   en System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   en System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   en System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   en System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   en System.Web.UI.TemplateParser.ParseInternal()
+   en System.Web.UI.TemplateParser.Parse()
+   en System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   en System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   en System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   en System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   en System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   en System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  12/5/2024 21:45:55
           -               -               -             
-- - - - - - - - - - - - - - -    <----  20/6/2022 2:11:51 p. m.
+------------------- error --- System.Web.HttpException (0x80004005): El archivo '/storeShop.aspx' no existe.
+   en System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   en System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  12/5/2024 21:57:58
           -               -               -             
-user:     <----  20/6/2022 2:11:51 p. m.
+------------------- error --- System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'nombre'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en System.Web.UI.DataBinder.Eval(Object container, String expression)
+   en System.Web.UI.TemplateControl.Eval(String expression)
+   en ASP.grilla_pedidos_aspx.__DataBind__control11(Object sender, EventArgs e) en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\Grilla_pedidos.aspx:línea 46
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en Grilla_pedidos.llenar_grilla() en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\Grilla_pedidos.aspx.vb:línea 110
+   en Grilla_pedidos.Page_Load(Object sender, EventArgs e) en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\Grilla_pedidos.aspx.vb:línea 17
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.grilla_pedidos_aspx.ProcessRequest(HttpContext context)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  12/5/2024 22:03:53
           -               -               -             
-pass:     <----  20/6/2022 2:11:51 p. m.
+------------------- error --- System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' no contiene una propiedad con el nombre 'nombre'.
+   en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en System.Web.UI.DataBinder.Eval(Object container, String expression)
+   en System.Web.UI.TemplateControl.Eval(String expression)
+   en ASP.grilla_pedidos_aspx.__DataBind__control11(Object sender, EventArgs e) en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\Grilla_pedidos.aspx:línea 46
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en Grilla_pedidos.llenar_grilla() en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\Grilla_pedidos.aspx.vb:línea 110
+   en Grilla_pedidos.Page_Load(Object sender, EventArgs e) en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\Grilla_pedidos.aspx.vb:línea 17
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.grilla_pedidos_aspx.ProcessRequest(HttpContext context)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  12/5/2024 22:03:56
           -               -               -             
-- - - - - - - - - - - - - - -    <----  20/6/2022 2:11:51 p. m.
+------------------- error --- System.Web.HttpCompileException (0x80004005): C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\Grilla_pedidos.aspx(37): error BC30451: 'categorias' no está declarado. Puede que esté inaccesible debido a su nivel de protección.
+   en System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   en System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  13/5/2024 23:08:07
           -               -               -             
----------    <----  20/6/2022 2:18:48 p. m.
-sers\usuario\Documents\Visual Studio 2015\Projects\cape\capeX\empleado_index.aspx.vb:línea 50
-   en empleado_index.Page_Load(Object sender, EventArgs e) en C:\Users\usuario\Documents\Visual Studio 2015\Projects\cape\capeX\empleado_index.aspx.vb:línea 28    <----  20/6/2022 2:18:48 p. m.
+------------------- error --- System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Web.HttpException (0x80004005): El control 'hdn_perfil' de tipo 'HiddenField' debe colocarse dentro de una etiqueta de formulario con runat=server.
+   en System.Web.UI.Page.VerifyRenderingInServerForm(Control control)
+   en System.Web.UI.WebControls.HiddenField.Render(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   en ASP.master_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer)
+   en System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   en System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   en System.Web.UI.Control.Render(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   en System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   en System.Web.UI.Page.Render(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.login_aspx.ProcessRequest(HttpContext context)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  14/5/2024 20:39:37
           -               -               -             
----------    <----  20/6/2022 2:18:48 p. m.
+------------------- error --- System.ArgumentException: Método web consultar_pedidos desconocido.
+Nombre del parámetro: methodName
+   en System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   en System.Web.Handlers.ScriptModule.OnPostAcquireRequestState(Object sender, EventArgs eventArgs)
+   en System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  14/5/2024 20:40:12
+          -               -               -             
+------------------- error --- System.ArgumentException: Método web consultar_pedidos desconocido.
+Nombre del parámetro: methodName
+   en System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   en System.Web.Handlers.ScriptModule.OnPostAcquireRequestState(Object sender, EventArgs eventArgs)
+   en System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  14/5/2024 20:40:22
+          -               -               -             
+------------------- error --- System.ArgumentException: Método web consultar_pedidos desconocido.
+Nombre del parámetro: methodName
+   en System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   en System.Web.Handlers.ScriptModule.OnPostAcquireRequestState(Object sender, EventArgs eventArgs)
+   en System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  14/5/2024 20:40:32
+          -               -               -             
+------------------- error --- System.ArgumentException: Método web consultar_pedidos desconocido.
+Nombre del parámetro: methodName
+   en System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   en System.Web.Handlers.ScriptModule.OnPostAcquireRequestState(Object sender, EventArgs eventArgs)
+   en System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  14/5/2024 20:40:42
+          -               -               -             
+------------------- error --- System.Web.HttpCompileException (0x80004005): C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\supervisor_index.aspx.vb(33): error BC30180: La palabra clave no denomina un tipo.
+   en System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   en System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  14/5/2024 20:51:54
+          -               -               -             
+------------------- error --- System.Web.HttpCompileException (0x80004005): C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\supervisor_index.aspx.vb(34): error BC30180: La palabra clave no denomina un tipo.
+   en System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   en System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  14/5/2024 20:52:04
+          -               -               -             
+------------------- error --- System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Data.OleDb.OleDbException (0x80004005): Expiró el tiempo de espera de inicio de sesión
+   en System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.OleDb.OleDbConnection.Open()
+   en cls_db.conectar() en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\App_Code\cls_db.vb:línea 44
+   en cls_db.ejecutar_sp(String procedimiento, Dictionary`2 parametros) en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\App_Code\cls_db.vb:línea 160
+   en master.inicializar_variables() en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\master.master.vb:línea 94
+   en master.Page_Load(Object sender, EventArgs e) en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\master.master.vb:línea 37
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.login_aspx.ProcessRequest(HttpContext context)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  14/5/2024 21:22:46
           -               -               -             

@@ -22,6 +22,21 @@ Partial Class supervisor_index
         End If
 
     End Sub
+    <System.Web.Services.WebMethod()> Public Shared Function consultar_pedidos() As String
+        If cls_security.usuario_actual IsNot Nothing Then
+            If cls_security.usuario_actual.es_supervisor Then
+                Dim sql As New cls_db
+                Dim dt As DataTable = sql.ejecutar_sp("SP_Pedidos_pendientes_contador")
+                Dim row As DataRow = dt.Rows(0)
+                Dim pedidos_pendientes As String = row("pedidos_pendientes").ToString()
+                Return pedidos_pendientes
+            Else
+                Return "" ' O devuelve algún valor predeterminado si el usuario no es supervisor
+            End If
+        Else
+            Return "" ' O devuelve algún valor predeterminado si el usuario no es supervisor
+        End If
+    End Function
 
     <System.Web.Services.WebMethod()> Public Shared Function mis_documentos(ByVal codigo As String, objid As String) As String
         Dim sql As New cls_db

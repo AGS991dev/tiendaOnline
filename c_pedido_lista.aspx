@@ -10,14 +10,19 @@
     <br />
     <center>
         <p style="font-size: 35px;"> PEDIDO <%=pk %></p>
-        <p style="font-size:20px"><b><%=cantidad %></b> Artículos</p>
-        <p style="font-size:20px">Total pedido <b>$<%=precio_total%>.00</b></p>
+        <div class="container" style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
+            <p style="font-size:20px">Cliente: <b><%=nombre %></b></p>
+            <p style="font-size:20px">Celular: <%=celular %></p>
+            <p style="font-size:20px">Dirección: <%=direccion %></p>
+            <p style="font-size:20px"><b><%=cantidad %></b> Artículos</p>
+            <p style="font-size:20px">Total pedido <b>$<%=precio_total%>.00</b></p>
+        </div>
     </center>
         
     <br />
     <div class="container">
 
-        <div style="box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;margin:2vw;padding:2vw">
+        <div style="box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;padding:2vw">
         <form id="Form_fv_empresas" runat="server">
 
                                 <asp:ScriptManager runat="server" ID="ScriptManager_grilla_pedido"></asp:ScriptManager>

@@ -9,87 +9,137 @@
 
 <asp:Content runat="server" ContentPlaceHolderID="contenido_body">
 
-    <br /><br />
+    <br />
+    <br />
     <div class="container">
         <div class="card">
-        <div class="fadeInLeftBig" style="display:flex; padding:20px;justify-content:center">
-            <img src="./static/img/checklist.png" width="70px"/>
-            <p class="center-align" style="margin: 20px 20px;">Nuevo Producto </p>
-        </div>
+            <div class="fadeInLeftBig" style="display: flex; padding: 20px; justify-content: center">
+                <img src="./static/img/delivery-box.png" width="70px" />
+                <p class="center-align" style="margin: 20px 20px;">Nuevo Producto</p>
+            </div>
             <div class="card-content" style="background: white">
-            <form runat="server" class="form-horizontal">
-                <asp:ScriptManager runat="server"></asp:ScriptManager>
+                <form runat="server" class="form-horizontal">
+                    <asp:ScriptManager runat="server"></asp:ScriptManager>
 
+                    <div class="row">
+                        <div class="input-field col m4 s12">
+                            <asp:DropDownList ID="cbo_categoria" runat="server"></asp:DropDownList>
+                            <label for="cbo_categoria">Categoría</label>
+                        </div>
+                        <div class="input-field col m4 s12">
+                            <asp:TextBox ID="txt_nombre" runat="server"></asp:TextBox>
+                            <label for="txt_nombre">Nombre</label>
+                        </div>
+                        <div class="input-field col m4 s12">
+                            <asp:TextBox ID="txt_descripcion" runat="server"></asp:TextBox>
+                            <label for="txt_descripcion">Descripción</label>
+                        </div>
+                        <div class="input-field col m4 s12">
+                            <asp:TextBox ID="txt_codigo_barra" runat="server"></asp:TextBox>
+                            <label for="txt_codigo_barra">Código de Barras</label>
+                        </div>
+                        <div class="input-field col m4 s12">
+                            <asp:TextBox ID="txt_precio" runat="server"></asp:TextBox>
+                            <label for="txt_precio">Precio</label>
+                        </div>
+                        <div class="input-field col m4 s12">
+                            <asp:TextBox ID="txt_precio_costo" runat="server"></asp:TextBox>
+                            <label for="txt_precio_costo">Precio Costo</label>
+                        </div>
+                        <div class="input-field col m4 s12">
+                            <asp:TextBox ID="txt_cantidad" runat="server" type="number"></asp:TextBox>
+                            <label for="txt_cantidad" style="color: grey;">Cantidad</label>
+                        </div>
+                        <div class="input-field col m4 s12">
+                            <asp:TextBox ID="txt_tamaño" runat="server"></asp:TextBox>
+                            <label for="txt_tamaño">Tamaño</label>
+                        </div>
+                        <div class="input-field col m4 s12">
+                            <asp:TextBox ID="txt_color" runat="server"></asp:TextBox>
+                            <label for="txt_color">Color</label>
+                        </div>
+                        <div class="input-field col m12" >
+                             <div style="display: flex; flex-wrap: wrap; justify-content: space-between">
+                                <div>
+                                    <asp:TextBox ID="txt_ruta_imagen1" runat="server" Style="display: none"></asp:TextBox>
+                                    <label for="txt_ruta_imagen1">Imagen 1</label><br /><br />
+                                    <input type="file" id="imgInput1" class="imgInput1" runat="server"  style="max-width: 250px" />
+                                    <div class="vista-previa-1" style="max-width: 250px;margin-top: 20px;"></div>
+                                    <img id="img1" class="img1" runat="server" style="max-width: 250px" />
+                                </div>
 
-
-                <div class="row">
-                   <div class="col s6 ">
-                    <div class="input-field ">
-                        <asp:DropDownList ID="cbo_categoria" runat="server"></asp:DropDownList>
-                        <label for="cbo_categoria">Categoría</label>
-                    </div>
-                    <div class="input-field ">
-                        <p style="color:grey"">CANTIDAD</p>
-                        <asp:TextBox ID="txt_cantidad" runat="server" type="number"></asp:TextBox>
-                    </div>
-                    <div class="input-field ">
-                        <asp:TextBox ID="txt_nombre" runat="server"></asp:TextBox>
-                        <label for="txt_nombre">Nombre</label>
-                    </div>
-                    <div class="input-field ">
-                        <asp:TextBox ID="txt_descripcion" runat="server"></asp:TextBox>
-                        <label for="txt_descripcion">Descripcion</label>
-                    </div>
-                    <div class="input-field" style="display: flex;width: 98%;">
-                        <asp:TextBox ID="txt_codigo_barra" runat="server"></asp:TextBox>
-                        <label for="txt_codigo_barra">Código de Barras</label>
-                    </div>
-                    <div class="input-field ">
-                        <asp:TextBox ID="txt_precio" runat="server"></asp:TextBox>
-                        <label for="txt_precio">Precio</label>
+                                <div>
+                                    <asp:TextBox ID="txt_ruta_imagen2" runat="server" Style="display: none"></asp:TextBox>
+                                    <label for="txt_ruta_imagen2">Imagen 2</label><br /><br />
+                                    <input type="file" id="imgInput2" class="imgInput2" runat="server"  style="max-width: 250px" />
+                                    <div class="vista-previa-2" style="max-width: 250px;margin-top: 20px;"></div>
+                                    <img id="img2" class="img2" runat="server" style="max-width: 250px" />
+                                </div>
+                                <div>
+                                    <asp:TextBox ID="txt_ruta_imagen3" runat="server" Style="display: none"></asp:TextBox>
+                                    <label for="txt_ruta_imagen3">Imagen 3</label><br /><br />
+                                    <input type="file" id="imgInput3" class="imgInput3" runat="server"  style="max-width: 250px" />
+                                    <div class="vista-previa-3" style="max-width: 250px;margin-top: 20px;"></div>
+                                    <img id="img3" class="img3" runat="server" style="max-width: 250px" />
+                                </div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
 
-                   </div>
-
-                    <div class="col s6 ">
-
-                    <div class="input-field ">
-                        <asp:TextBox ID="txt_tamaño" runat="server"></asp:TextBox>
-                        <label for="txt_tamaño">Tamaño</label>
+                    <div class="center-align" style="margin-bottom: 50px; margin-top: 20px;">
+                        <asp:Button ID="btn_save" runat="server" Text="Guardar" CssClass="btn" OnClientClick="return validar_formulario()" />
                     </div>
-                    <div class="input-field ">
-                        <asp:TextBox ID="txt_color" runat="server"></asp:TextBox>
-                        <label for="txt_color">Color</label>
-                    </div>
-                    <div class="input-field ">
-                        <asp:TextBox ID="txt_ruta_imagen1" runat="server"></asp:TextBox>
-                        <label for="txt_ruta_imagen1">Ruta Imagen 1</label>
-                    </div>
-                    <div class="input-field ">
-                        <asp:TextBox ID="txt_ruta_imagen2" runat="server"></asp:TextBox>
-                        <label for="txt_ruta_imagen2">Ruta Imagen 2</label>
-                    </div>
-                    <div class="input-field ">
-                        <asp:TextBox ID="txt_ruta_imagen3" runat="server"></asp:TextBox>
-                        <label for="txt_ruta_imagen3">Ruta Imagen 3</label>
-                    </div>
-                   </div>
-                </div>
-                
-                <div class="center-align" style="margin-bottom: 50px; margin-top: 20px;">
-                    <asp:Button ID="btn_save" runat="server" Text="Guardar" CssClass="btn"  onclientclick="return validar_formulario()"  />
-                </div>
-
-            </form>
+                    <br />
+                </form>
             </div>
         </div>
     </div>
+
     <br />
 
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="contenido_js">
     <script type="text/javascript">
+        $(document).ready(function () {
+            $('.imgInput1').change(function (event) {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        // Muestra la imagen seleccionada en la vista previa
+                        $(".vista-previa-1").html('<img style="max-width: 250px" src="' + e.target.result + '">');
+                        $('.img1').hide();
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+            $('.imgInput2').change(function (event) {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        // Muestra la imagen seleccionada en la vista previa
+                        $(".vista-previa-2").html('<img style="max-width: 250px" src="' + e.target.result + '">');
+                        $('.img2').hide();
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+            $('.imgInput3').change(function (event) {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        // Muestra la imagen seleccionada en la vista previa
+                        $(".vista-previa-3").html('<img style="max-width: 250px" src="' + e.target.result + '">');
+                        $('.img3').hide();
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+
+        })
+
+
         function validar_formulario() {
             var nombre = $("#contenido_body_txt_nombre").val();
             var descripcion = $("#contenido_body_txt_descripcion").val();
@@ -138,5 +188,5 @@
             //    return false;
             //}
         }
-</script>
+    </script>
 </asp:Content>

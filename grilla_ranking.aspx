@@ -41,7 +41,7 @@
                                                       </div>
                                                 </div>
                                                 <br />
-                                                    <asp:UpdatePanel ID="panel_ranking" runat="server" style="width: 50%;margin: auto;min-width: 380px;" UpdateMode="Conditional">
+                                                    <asp:UpdatePanel ID="panel_ranking" runat="server" style="margin: 1em;min-width: 380px;" UpdateMode="Conditional">
                                                     <ContentTemplate>
                                                        <% If tabla_vacia = True Then %>
                                                         <div>
@@ -52,7 +52,10 @@
                                                         <Columns>
                                                            <ASP:BoundField DataField = "Puesto" htmlencode="false" HeaderText="PUESTO" />
                                                            <ASP:BoundField DataField = "producto" htmlencode="false" HeaderText="PRODUCTO" />
-                                                           <ASP:BoundField DataField = "cantidad" htmlencode="false" HeaderText="CANTIDAD VENDIDA" />
+                                                           <ASP:BoundField DataField = "Cantidad" htmlencode="false" HeaderText="CANTIDAD VENDIDA" />
+                                                           <ASP:BoundField DataField = "Precio" htmlencode="false" HeaderText="PRECIO" />
+                                                           <ASP:BoundField DataField = "Precio Costo" htmlencode="false" HeaderText="PRECIO COSTO" />
+                                                           <ASP:BoundField DataField = "Ganancia" htmlencode="false" HeaderText="GANANCIA" />
                                                         </Columns>
                                                      </asp:GridView>
                                                      <!---->
@@ -175,6 +178,15 @@
             transform: translate3d(4px, 0, 0);
             }
         }
+        /* Oculta la cuarta y quinta columna cuando el tamaño de la pantalla es menor a 600px (PRECIO Y PRECIO COSTO)*/ 
+        @media (max-width: 600px) {
+            table tr td:nth-child(4),
+            table tr th:nth-child(4),
+            table tr td:nth-child(5),
+            table tr th:nth-child(5) {
+                display: none;
+            }
+        }
 
     </style>
 </asp:Content>
@@ -189,7 +201,7 @@
 
             function refresh_filter() {
                 var selector = $('.table')
-                inicializar_grilla_asc(selector);
+                inicializar_grilla_orderBy(selector, console.log('Grilla Visitados'), true, 5, "desc")
             }
             refresh_filter()
 
@@ -461,5 +473,5 @@
         on_postback_end(refresh_filter)
 
         });
-     </script>
+    </script>
 </asp:Content>

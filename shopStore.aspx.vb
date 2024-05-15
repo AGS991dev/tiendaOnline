@@ -26,6 +26,7 @@ Partial Class shopStore
     End Sub
 
 
+
     Sub inicializar_variables()
         Dim sql As New cls_db
         Dim dt As DataTable = sql.ejecutar_sp("SP_WHATSAPP_CONSUL")
@@ -38,13 +39,11 @@ Partial Class shopStore
         'sql.ejecutar_sp("SP_Stock_COMPRAR")
         Return "true"
     End Function
-    <System.Web.Services.WebMethod(EnableSession:=True)> Public Shared Function articulo_consul(ByVal art_id As Integer) As String
-        'Dim sql As New cls_db
-        'sql.parametros.Add("id", art_id)
-        'Dim dt As DataTable = sql.ejecutar_sp("SP_stock_Consul_ID")
-        'Dim art_string As String = ""
-
-        'Return art_string
+    <System.Web.Services.WebMethod(EnableSession:=True)> Public Shared Function articulo_visitado(ByVal art_id As Integer) As String
+        Dim sql As New cls_db
+        sql.parametros.Add("id", art_id)
+        sql.ejecutar_sp("SP_stock_UPDATE_producto_visitado")
+        Return True
     End Function
 
 
@@ -72,19 +71,19 @@ Partial Class shopStore
         array_articulos = articulos.Split(",")
         Dim direccion_numero As Integer
         Dim monto As Integer = array_articulos(array_articulos.Length - 1)
-        'Dim nombre_cliente As String = array_articulos(array_articulos.Length - 5)
-        'Dim celular As Integer = array_articulos(array_articulos.Length - 4)
-        'Dim direccion_calle As String = array_articulos(array_articulos.Length - 3)
+        Dim nombre_cliente As String = array_articulos(array_articulos.Length - 5)
+        Dim celular As Integer = array_articulos(array_articulos.Length - 4)
+        Dim direccion_calle As String = array_articulos(array_articulos.Length - 3)
 
         If Not array_articulos(array_articulos.Length - 2) = "" Then
             direccion_numero = CInt(array_articulos(array_articulos.Length - 2))
         End If
         sql.parametros.Clear()
 
-        sql.parametros.Add("nombre_cliente", "nombre_cliente")
-        sql.parametros.Add("celular", 0)
-        sql.parametros.Add("direccion_calle", "direccion_calle")
-        sql.parametros.Add("direccion_numero", 0)
+        sql.parametros.Add("nombre_cliente", nombre_cliente)
+        sql.parametros.Add("celular", celular)
+        sql.parametros.Add("direccion_calle", direccion_calle)
+        sql.parametros.Add("direccion_numero", direccion_numero)
         sql.parametros.Add("monto", monto)
 
         Dim redaccion_mensaje As String = "Hola 👋🏻​ quiero hacerte el siguiente pedido... %0A"

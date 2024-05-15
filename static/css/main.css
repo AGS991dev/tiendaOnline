@@ -1,13 +1,15 @@
 ﻿.dropdown-content{
     top:0px !important;
 }
-
+td {
+    font-family: monospace !important;
+}
 body {
     min-height: 100vh;
     height: 100vh;
     color: #222;
     /*font-family: 'Bangers';*/
-
+    
 }
   .waChat {
     background: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
@@ -356,11 +358,11 @@ th:nth-child(6){
         contender{
             min-height:53vh;
         }
-        .btn_menu_mobile {
+/*        .btn_menu_mobile {
             display:block !important;
-        }
+        }*/
 
-        .phone {
+    /*        .phone {
             display:block !important;
         }
 
@@ -369,7 +371,7 @@ th:nth-child(6){
             right:15px;
             display:none;
         }
-
+    */
     .owl-carousel{
     width: 100% !important;
     margin:10px auto;
@@ -377,9 +379,9 @@ th:nth-child(6){
 
     }
 
-    .phone_table{
+/*    .phone_table{
     display:none
-    }
+    }*/
         .center_cestas{
     display: flex;
     justify-content: center;
@@ -525,3 +527,27 @@ th:nth-child(6){
   }
   }
   /*Efectos css*/
+
+/*BARRA desplazadora*/
+
+/* Estilo personalizado para la barra de desplazamiento */
+*::-webkit-scrollbar {
+    width: 5px; /* Ancho de la barra de desplazamiento */
+    height: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 4px; /* Borde redondeado para el pulgar */
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+}
+
+.btn, .btn-large:hover, .btn-small:hover {
+    background-color: #29357d;
+}
+    .btn:hover, .btn-large:hover, .btn-small:hover {
+        background-color: #375bba;
+    }

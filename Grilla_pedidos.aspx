@@ -18,6 +18,8 @@
         <br />
         <div >
         <form id="Form_fv_empresas" runat="server">
+            <!-- Definición del popup -->
+
             <center>
             <h1>Aquí verás los pedidos realizados a través de la web</h1>
             <h6>Los productos pedidos solo se descuentan del <b>Stock</b> si el <b>Status</b> es <b>ENTREGADO</b>.</h6>
@@ -28,26 +30,37 @@
 
                                     <asp:UpdatePanel ID="panel_pedidos" runat="server" UpdateMode="Conditional">
                                             <ContentTemplate>
+                                            <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; margin: 0 10px; padding: 10px 0px 0px 10px;; width: 100%; background: #f2f2f2; border-radius: 5px 5px 0px 0px;">
+                                                <span>Filtrá por Estado:</span>
+                                            </div>
+                                            <div style="display: flex;flex-wrap: wrap;margin: 0 0px 20px 10px;padding: 5px;width: 100%;background: #f2f2f2;border-radius: 0px 0px 5px 5px; }">
+                                                <span style="margin: 10px;background: #e1f0c4;color:black" class="btn btn_categoria_buscar" cat="ENTREGADO">ENTREGADO</span>
+                                                <span style="margin: 10px;background: #fff6cc;color:black" class="btn btn_categoria_buscar" cat="EN PROCESO">EN PROCESO</span>
+                                                <span style="margin: 10px;background: #ff000054;color:black" class="btn btn_categoria_buscar" cat="PENDIENTE">PENDIENTE</span>
+                                            </div>
                                         <!---->
                                         <ASP:GridView ID ="GV_pedidos" runat="server" AutoGenerateColumns="false"  CellSpacing='0' Width='100%'>
                                         <Columns>
                                 
-                                            <ASP:TemplateField HeaderText = "Pedidos" >
+                                           <ASP:TemplateField HeaderText="Pedidos">
                                                 <ItemTemplate>
-                                                      <div class="card" style="display:flex;width:230px;height: 285px;text-align:left;z-index:1">
+                                                    <div class="card" style="display: flex; width: 220px; height: 250px; z-index: 1;">
                                                         <div class="card-content">
-                                                          <a href='c_pedido_lista.aspx?id=<%#Eval("id")%>' style="display: flex; flex-direction: column; text-align: center; position: absolute;left: 25%;">
-                                                              <span class="activator grey-text text-darken-4" style="display:flex;"><span><img src="./static/img/pedido.png"style="width: 30px; position: relative;  left: -10px;"/></span> <p style="font-size: 22px;">Pedido <%#Eval("id")%></p> </span><br />
-                                                              <span class="activator grey-text text-darken-4" style="display:flex;"><span><img src="./static/img/calendar.png"style="width: 30px; position: relative; left: -10px;"/></span> <p style="font-size: 18px;"><%#Eval("fecha")%></p></span>
-                                                              <span class="activator grey-text text-darken-4" style="display:flex;"><span><img src="./static/img/pedido_desc.png"style="width: 30px; position: relative;  left: -10px;"/></span> <p style="font-size: 20px;"><%#Eval("Cantidad Total")%> Artículos</p> </span>
-                                                              <span class="activator grey-text text-darken-4" style="display:flex;"><span><img src="./static/img/money.png"style="width: 30px; position: relative;  left: -10px;"/></span> <b style="font-size: 20px;">$<%#Eval("monto")%>.00</b> </span><br />
-                                                          </a>
-                                                          <span pedido="<%#Eval("id")%>" class="pendiente activator grey-text text-darken-4 <%#Eval("s")%>" style="box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px; padding: 10px; border-radius: 3px; position: relative; left: 46%; bottom: -210px;"><%#Eval("status")%></span>
+                                                            <a href='c_pedido_lista.aspx?id=<%#Eval("id")%>' style="display: flex; flex-direction: column; position: absolute; left: 40px; top: 10px;">
+                                                                <span  style="display: flex; position: relative; left: -18px;">
+                                                                    <span  style="display: flex;"><span><img src="./static/img/pedido.png" style="width: 25px; position: relative; left: -10px;"/><span style="font-size: 18px;color:black" >Pedido <b><%#Eval("id")%></b></span><br />
+                                                                    <span  style="display: flex;"><span><img src="./static/img/man.png" style="width: 25px; position: relative; left: -10px;"/><span onclick="mostrarPopup('<%#Eval("nombre_cliente")%>', '<%#Eval("celular")%>', '<%#Eval("direccion")%>'); return false;" style="font-size: 18px;color:black" id="btnVerInfo" ><%#Eval("nombre_cliente")%></span><br />
+                                                                    <span  style="display: flex;"><span><img src="./static/img/calendar.png" style="width: 25px; position: relative; left: -10px;"/></span> <p style="font-size: 18px;color:black"><%#Eval("fecha")%></p></span>
+                                                                    <span  style="display: flex;"><span><img src="./static/img/pedido_desc.png" style="width: 25px; position: relative; left: -10px;"/></span> <p style="font-size: 18px;color:black"><%#Eval("Cantidad Total")%> Artículos</p></span>
+                                                                    <span  style="display: flex; position: relative; justify-content: center; top: 10px;"><span><img src="./static/img/money.png" style="width: 35px; position: relative; left: -10px; bottom: -2px;"/></span> <span style="font-size: 20px;color:black"><b>$<%#Eval("monto")%>.00</b></span></span><br />
+                                                                </span>
+                                                            </a>
+                                                            <span pedido="<%#Eval("id")%>" class="pendiente <%#Eval("s")%>" style="box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px; padding: 10px; border-radius: 3px; position: relative; left: 85px; bottom: -185px; color: black;"><%#Eval("status")%></span>
                                                         </div>
-                                                       </div>
-                                                       </a>
+                                                    </div>
                                                 </ItemTemplate>
-                                            </asp:TemplateField>                                
+                                            </asp:TemplateField>
+                         
 
                                         </Columns>
                                      </asp:GridView>
@@ -60,43 +73,48 @@
 
     <style>
         .activator {
-            margin-bottom:5px;
+            margin-bottom: 5px;
         }
-        span[dire=" 0"]{
-            display:none;
+
+        span[dire=" 0"] {
+            display: none;
         }
-        tbody{
+
+        tbody {
             background: #dcdcdc5c;
-            display:flex;
-            justify-content:center;
-            flex-wrap:wrap;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        .P{/*PENDIENTE*/
-            background:#ff000054;
+
+        .P { /*PENDIENTE*/
+            background: #ff000054;
         }
-        .E{/*ENTREGADO*/
-            background:#7ec0023b;
+
+        .E { /*ENTREGADO*/
+            background: #7ec0023b;
         }
-        .A{/*EN PROCESO*/
-            background:#ffd40033;
+
+        .A { /*EN PROCESO*/
+            background: #ffd40033;
         }
-        .pendiente{
-            cursor:pointer;
+
+        .pendiente {
+            cursor: pointer;
         }
         /*.swal2-cancel{
             background:blue !important;
         }*/
-        .swal2-styled.swal2-confirm{
-            background:#4caf50 !important;
+        .swal2-styled.swal2-confirm {
+            background: #4caf50 !important;
         }
-
-
     </style>
 </asp:Content>
 
 
 <asp:Content runat="server" ContentPlaceHolderID="contenido_js">
     <script type="text/javascript">
+
         $('document').ready(function () {
             var selector = $('#contenido_body_GV_pedidos')
             inicializar_grilla(selector)
@@ -150,7 +168,7 @@
                     }
                 })
             };
-            
+
             function mostrar_ventana_para_cambiar_status_del_pedido2(obj) {
                 var pedido = $(obj).attr('pedido')
                 Swal.fire({
@@ -167,7 +185,7 @@
                         $(obj).removeClass('A')
                         $(obj).addClass('E')
                         Swal.fire('¡Pedido cobrado, Stock descontado!', '', 'success')
-                    } 
+                    }
                 })
             };
 
@@ -192,12 +210,17 @@
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (response) {
-                        console.log('Pedido En Proceso')
+                        //console.log('Pedido En Proceso')
                     }
                 });
             }
 
+            $(".btn_categoria_buscar").click(function () {
+                var obj = this
+                var categoria_a_buscar = $(obj).attr("cat")
+                $('input[type="search"]').val(categoria_a_buscar).keyup();
+            })
         });
 
-     </script>
+    </script>
 </asp:Content>

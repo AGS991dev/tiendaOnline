@@ -9,29 +9,34 @@
     <title><%= title_name %></title>
 
     <link rel = "stylesheet" href="static/img/logo.png" />
-        <link rel="icon" type="image/png" href="static/img/supermercado.png" sizes="16x16">
-        <link rel="icon" type="image/png" href="static/img/supermercado.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="static/img/supermercado.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="static/img/laptop.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="static/img/laptop.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="static/img/laptop.png" sizes="96x96">
     <link href="static/css/material-icon.css" rel="stylesheet">
     <link href="static/css/efectos_elementos.css" rel="stylesheet">
 
     <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+    <!--<link rel="stylesheet" href="static/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="static/css/animate.min.css" />
     <link rel="stylesheet" href="static/css/mstepper.min.css" />
     <link rel="stylesheet" href="static/css/materialize.min.css" />
-    <%--<link rel="stylesheet" href="static/css/materialize.custom.css" />--%>
+    <!--<link rel="stylesheet" href="static/css/materialize.custom.css" />-->
     <link rel="stylesheet" href="static/css/materialUiSweetAlert.css">
-    <link rel="stylesheet" href="static/css/jquery.dataTables.css" type="text/css" />
+    <!--<link rel="stylesheet" href="static/css/jquery.dataTables.css" type="text/css" />-->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"><!--google font-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!--google font-->
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"><!--google font-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"  /><!--owl.carousel-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+
+    <link rel="stylesheet" type="text/css" href="static/css/jquery.dataTables.css">
+    <link href="static/css/select2.min.css" rel="stylesheet" />
+    <!--<link rel="preconnect" href="https://fonts.googleapis.com">google font-->
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>google font-->
+    <link href="static/css/banger.css" rel="stylesheet"><!--google font-->
+    <link rel="stylesheet" href="static/css/owl.carousel.css"  /><!--owl.carousel-->
+    <link rel="stylesheet" href="static/css/owl.theme.default.css" />
 
     <script type="text/javascript" src="static/js/main.js"></script>
+    <script type="text/javascript" src="static/js/lazysizes.min.js"></script>
 
 
 
@@ -41,6 +46,7 @@
 
     
     <script src="static/js/sweetalert2.js"></script>
+    <script src="static/js/FileSaver.min.js"></script>
      <script type="text/javascript" src="static/js/mstepper.min.js"></script>
 
       <link rel="stylesheet" href="static/css/main.css" />
@@ -61,6 +67,12 @@
         <span class="iconos_nav" style="display:none">
                 <a href="shopStore.aspx" ><img class="img_open swing tooltipped" src="static/img/laptop.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height: 40px; margin: 3px 0px 0px 15px;" /></a>
         </span>
+
+        <span class="nav_pedido" style="display:none">
+                <a href="Grilla_pedidos.aspx" ><img class="tooltipped" src="static/img/camion.png"  data-position='bottom' data-tooltip="Pedidos" style="height: 40px; margin: 3px 0px 0px 15px;" /><span class="badge_pendientes_nav rubberBand"><span class="n_pedido_nav"></span></span></a>
+        </span>
+        
+                
 
           <ul id="nav-mobile" class="right" style="position: relative;top: -5px;">
         <% If page_name <> "login.aspx" Then%>
@@ -96,7 +108,7 @@
                                 <li><a class="logout" runat="server" href="supervisor_index.aspx"><img style="width: 35px; position: relative; top: 15px; right: 8px;" src="./static/img/admin.png" alt=""><span style="margin-left:10px;">ADMINISTRADOR</span></a></li>
                               <% End If %>
                           <div class="phone" style="width:290px;display:none">
-                          <div style="display:flex;justify-content:center"><!--TELEFONO EN MENÚ-->
+                          <div style="display:flex;justify-content:center;"><!--TELEFONO EN MENÚ-->
                               <span class="cantidad_cesta " style="font-family: 'Bangers', cursive; font-size: 25px; color: black;margin-right:15px">0</span><span style="color: black; font-size: 20px; font-family: 'Bangers', cursive;"> Productos</span>
                           </div>
                               
@@ -106,7 +118,7 @@
                               <div style="position: relative; top: 20px; color: black; left: 12px;"><img style="width: 100px; position: relative; top: -10px; border-radius: 15px;"  src="./static/img/mercadoshop.png" alt=""><span style="position: relative; top: -20px; left: 10px;">GONZALO LOPEZ</span></div>
                             </div>
                             <div class="waChat ">
-                              <div class="chat" style="width: 100%; height: 350px; padding: 15px; position: relative; left: -10px;">
+                              <div class="chat" style="width: 100%; height: 350px; padding: 15px; position: relative; left:0px;">
 
                                   <table class="table_telefono_virtual">
                                     <thead class="thead">
@@ -124,33 +136,28 @@
                                 </div>
                           </div>
                           <!---->
-                          <div id="enviar_whatsapp" class="enviar_whatsapp tooltipped"  data-position='bottom' data-tooltip='Enviar Whatsapp con pedido' ><img src="static/img/send.png" style="position: relative; width: 55px; top: 20px; left: 24px;"/></div>
-                          <p style="text-align: center; position: relative; top: 15px; font-weight: 600;">ENVIAR</p>           
+                          <div id="enviar_whatsapp" class="enviar_whatsapp tooltipped"  data-position='bottom' data-tooltip='Enviar Whatsapp con pedido' ><img src="static/img/chat.png" style="position: relative; width: 55px; top: 20px; left: 24px;"/></div>
+                          <p style="text-align: center; position: relative; top: 15px; font-weight: 600;">ENVIAR PEDIDO</p>           
 
                           </div>
                           
                             <li class="compartir_store" style="margin-top:20px"><a class="pulse" style="position: relative; left: -20px;"><img src="static/img/share.png" class="tooltipped" data-position='bottom' data-tooltip="Compartir por Whataspp" style="height: 28px; width: auto; position: relative; top: 7px; margin-left: 16px;" /><span style="margin-left: 20px;">COMPARTIR TIENDA</span></a></li>
                             <li><a class="logout" runat="server" href="login.aspx?logout=true"> <img src="static/img/key.png"  width="30px" style="position: relative; top: 10px; left: -5px;" /><span style="margin-left:15px">LOGIN</span></a></li>
                       </ul>
-              <div class="btn_menu_mobile" id="btn_menu_mobile" style="display:none" runat="server" visible="false">
-                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped burbuja_wp zoomInLeft" style="display:none"
-                         data-position='bottom' data-tooltip="PEDIDO">
-                            <span class="cantidad_cesta cantidad_cesta_nav" style="text-shadow:2px 2px 0px grey;font-family: 'Bangers', cursive; background: #2bb14000; position: relative; left: -10px; z-index: 1; bottom: 15px; font-size: 30px;">0</span>
-                           <img class="img_wp" src="static/img/cesta.png" / style="width:50px;position: relative; top: -2px;">
-                      </a>
+              <div class="btn_menu_mobile" id="btn_menu_mobile" runat="server" visible="true">
+
               </div>    
 
 
               <div  class="btn_menu_desktop" id="btn_menu_desktop" runat="server">
                       <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped "
                          data-position='bottom' data-tooltip="Menú"
-                         style="height: 55px;position: relative;top: 3px;width: 55px;border-radius: 10px;">
+                         style="height: 55px;position: relative;width: 55px;border-radius: 10px;">
                            <span class="fa-solid fa-bars menu_barras"></span>
                       </a>
               </div>
         <%End If%>
            <!--<li><a class="logout" runat="server" href="login.aspx?logout=true">CERRAR SESIÓN</a></li>-->
-
           </ul>
     </div>
   </nav>
@@ -263,80 +270,124 @@
             </div>
         </div>
 
+    <footer class="footer" style="display:none; height: 0px; width: 100%; position: fixed; bottom: 0;">
+        <span data-target="slide-out" class="sidenav-trigger show-on-large tooltipped burbuja_wp zoomInLeft" style="bottom: 40px; height: 160px; border-radius: 10px 0px 0px; overflow: hidden; right: 40px;" data-position='left' data-tooltip="PEDIDO">
+            <span class="cantidad_cesta cantidad_cesta_nav ">0</span>
+            <img class="img_wp" src="static/img/cesta.png" / style="width:150px;position: relative;">
+        </span>
+    </footer>
+    
+    <audio class="bell_ding">
+        <source src="static/audio/bell-ding.mp3" type="audio/mp3">
+    </audio>
+
     <style>
+       .badge_pendientes{
+            background: #ed3446;
+            position: absolute;
+            padding: 0px 18px 0px  15px;
+            border-radius: 25px;
+            font-size: 30px;
+            box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+            color:white;
+            font-family:'Bangers', cursive;
+            }
+            .badge_pendientes_nav{
+            background: #ed3446;
+            border-radius: 25px;
+            font-size: 20px;
+            box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+            color: white;
+            font-family: 'Bangers', cursive;
+            padding: 8px 10px 8px 6px;
+            position: relative;
+            bottom: 12px;
+            left: 5px;
+            }
+        .cantidad_cesta_nav {
+            text-shadow: 2px 2px 0px black;
+            font-family: 'Bangers', cursive;
+            background: #ed3346;
+            position: relative;
+            left: -10px;
+            z-index: 1;
+            bottom: 15px;
+            font-size: 30px;
+            padding: 0 10px;
+            border-radius: 5px;
+            color: white;
+        }
+
         .menu_barras {
-            font-size:20px;
-            color:white;
-            margin-right:10px
-        }
-        .menu_barras:hover {
-            font-size:30px;
-            color:white;
-            margin-right:10px;
-            filter: invert(1)
-        }
-    .burbuja_wp{
-position: fixed !important;
-    right: -16px;
-    padding: 10px 10px 0px 20px;
-    border-radius: 50px 0 0px 0;
-    height: 67px !important;
-    padding-left: 24px;
-    bottom: 10px;
-    background: #29357d;
+            font-size: 20px;
+            color: white;
+            margin-right: 10px
         }
 
-        .img_open:hover{
-        animation:1.00s cubic-bezier(.36,.07,.19,.97) both;
+        .burbuja_wp {
+            position: fixed !important;
+            right: -16px;
+            padding: 8px 5px 0px 25px;
         }
-    .loading_content{
-    height: 100px;
-    overflow: hidden;
-    }
-    .gif_loading{
-        width:50px;
-        height:50px;
-    }
-    .current {
+
+        btn_menu_mobile
+        .img_open:hover {
+            animation: 1.00s cubic-bezier(.36,.07,.19,.97) both;
+        }
+
+        .loading_content {
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .gif_loading {
+            width: 50px;
+            height: 50px;
+        }
+
+        .current {
             background-color: #000000b5 !important;
-    }
-    .modal{
-              border-radius:3px;
-          }
-.img_producto_telefono_virtual{
-    position:relative;
-    top:3px;
-}
-    @media screen and (max-width: 501px) {
-    .img_producto_telefono_virtual {
-    width: 60px;
-    height: 60px;
-    border: 1px solid #dedede;
-    border-radius: 50px;
-    position: relative;
-    top: 8px !important;
-    right: 2px;
-    }
-    .loading_content{
-        height: 120px;
-        overflow: hidden;
-    }
-    .gif_loading{
-        top:15px;
-        position:relative;
-        width:50px;
-        height:50px;
-    }
-    .preloader-wrapper{
-        width: 80px;
-        height: 35px;
-        top: 10px;
         }
-    }
 
-.shadow:hover{
-    filter: invert(0) !important;
-}
+        .modal {
+            border-radius: 3px;
+        }
+
+
+        .img_producto_telefono_virtual {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #dedede;
+            border-radius: 5px;
+            position: relative;
+            top: 14px !important;
+            right: 2px;
+        }
+
+        @media screen and (min-width: 501px) {
+
+            .loading_content {
+                height: 120px;
+                overflow: hidden;
+            }
+
+            .gif_loading {
+                top: 15px;
+                position: relative;
+                width: 50px;
+                height: 50px;
+            }
+
+            .preloader-wrapper {
+                width: 80px;
+                height: 35px;
+                top: 10px;
+            }
+        }
+
+        .shadow:hover {
+            filter: invert(0) !important;
+        }
     </style>
 
     <%--axios--%>
@@ -387,24 +438,24 @@ position: fixed !important;
             //close_loadings()
             var URLactual = window.location;
             if (URLactual.href.includes("login") == false || URLactual.href.includes("asistente") == false || URLactual.href.includes("access_recovery") == false) {
-            if ("<%=perfil%>" == 2){
-            //detectar mas de una ventana abierta
+                if ("<%=perfil%>" == 2) {
+                    //detectar mas de una ventana abierta
 
-            const bc = new BroadcastChannel("my-awesome-site");
-            bc.onmessage = (event) => {
-                if (event.data === `Am I the first?`) {
-                    bc.postMessage(`No you're not.`);
-                    //console.log(`Another tab of this site just got opened`);
-                    show_alert("Multiple pestaña detectada", "No se admite operar el sistema en multiples pestañas", "warning")
-                } 
-                if (event.data === `No you're not.`) {
-                    //console.log(`An instance of this site is already running`);
-                    window.location.href = "multiple_pestaña_error.aspx";
+                    const bc = new BroadcastChannel("my-awesome-site");
+                    bc.onmessage = (event) => {
+                        if (event.data === `Am I the first?`) {
+                            bc.postMessage(`No you're not.`);
+                            //console.log(`Another tab of this site just got opened`);
+                            show_alert("Multiple pestaña detectada", "No se admite operar el sistema en multiples pestañas", "warning")
+                        }
+                        if (event.data === `No you're not.`) {
+                            //console.log(`An instance of this site is already running`);
+                            window.location.href = "multiple_pestaña_error.aspx";
+                        }
+                    };
+                    bc.postMessage(`Am I the first?`);
+                    //correccion click labels
                 }
-            };
-            bc.postMessage(`Am I the first?`);
-                //correccion click labels
-                    }
             }
 
             <%If HttpContext.Current.Request.Url.AbsoluteUri.Contains("login") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("asistente") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("access_recovery") = False Then %>
@@ -420,8 +471,8 @@ position: fixed !important;
             //console.log({ empleado_id: empleado_id, nombre: nombre, apellido: apellido, cuilSinGuiones: cuilSinGuiones, certificado_vigente_id: certificado_vigente_id, empresa_id: empresa_id, empresa_cuil: empresa_cuil, });
             <%  End If%>
             <%end If%>
-            
-            
+
+
             function loading() {
                 $('#loading2').modal({ dismissible: false });
                 $('#loading2').modal('open');
@@ -445,7 +496,7 @@ position: fixed !important;
             <% If Session("msg_toast") <> "" Then %>
 
             var msg = '<%= Session("msg_toast")%>';
-            procesar_toast(msg,"success")
+            procesar_toast(msg, "success")
             <% Session("msg_toast") = "" %>
 
             <% End If %>
@@ -453,18 +504,18 @@ position: fixed !important;
             <% If Session("msg_toast_error") <> "" Then %>
 
             var msg = '<%= Session("msg_toast_error")%>';
-            procesar_toast(msg,"error")
+            procesar_toast(msg, "error")
             <% Session("msg_toast_error") = "" %>
 
             <% End If %>
 
-                if (sessionStorage.msg_confirm != null) {//detectar toast para ocaciones javascript
-                    var msg = sessionStorage.msg_confirm
-                    var icon = sessionStorage.icon
-                    //console.logconsole.log(msg, icon)
-                    procesar_toast(msg, icon);
-                    sessionStorage.clear()
-                }
+            if (sessionStorage.msg_confirm != null) {//detectar toast para ocaciones javascript
+                var msg = sessionStorage.msg_confirm
+                var icon = sessionStorage.icon
+                //console.logconsole.log(msg, icon)
+                procesar_toast(msg, icon);
+                sessionStorage.clear()
+            }
 
 
             $('select').formSelect();
@@ -476,9 +527,54 @@ position: fixed !important;
 
             css_empresa_li()
 
-        }); 
+            // REFRESCAR CANTIDAD DE PEDIDOS EN NAV
+            refrescar_cantidad_pedidos_nav()
+            setInterval(function () {
+                refrescar_cantidad_pedidos_nav();
+            }, 10000)
+        });
 
-        
+        function refrescar_cantidad_pedidos_nav() {
+            $.ajax({
+                type: "POST",
+                url: "supervisor_index.aspx/consultar_pedidos",
+                async: false,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    if (response.d == "") {
+                        $(".n_pedido_nav").hide();
+                        $(".nav_pedido").hide();
+                        return;
+                    }
+
+                    $(".n_pedido_nav").show();
+                    $(".nav_pedido").show();
+
+                    // Parsea la respuesta JSON
+                    var data = JSON.parse(response.d);
+                    // Obtiene el número de pedidos pendientes
+                    var pedidosPendientes = parseInt(data);
+
+                    var prepedidosPendientes = localStorage.getItem('pedidosPendientes');
+                    if (prepedidosPendientes != pedidosPendientes) {
+                        $('.bell_ding').prop("volume", 0.5);
+                        $(".bell_ding")[0].play();
+                        procesar_toast("¡Tenés pedidos!", "info");
+                    }
+
+                    // Actualiza la etiqueta en el frontend
+                    $(".n_pedido_nav").text(pedidosPendientes);
+                    // Guarda el valor en localStorage
+                    localStorage.setItem('pedidosPendientes', pedidosPendientes);
+                },
+                error: function (xhr, status, error) {
+                    console.log("Error al llamar al servicio web: " + error);
+                }
+            });
+        }
+
+
         function btn_empresa(obj) { //esta funcion se encarga q funcione la nav entre empresas
             var empresa_id = $(obj).attr("empresa_id")
             var result;
@@ -486,34 +582,34 @@ position: fixed !important;
             <%If HttpContext.Current.Request.Url.AbsoluteUri.Contains("login") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("asistente") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("access_recovery") = False Then %>
 
             cuilSinGuiones = "<% If Not cls_security.usuario_actual Is Nothing Then%><%=cls_security.usuario_actual.cuil%><% End If %>"<% End if%>
-           $.ajax({//me fijo si ya existe este cuil
-               type: "POST",
-               url: "empleado_index.aspx/recargar_usuario",
-               data: '{cuil: "' + cuilSinGuiones + '", empresa_id: "' + empresa_id + '" }',
-               async: false,
-               contentType: "application/json; charset=utf-8",
-               dataType: "json",
-               success: function (response) {
-                   result = response.d;
-                   if (result == 0) {
-                       show_alert("Hubo un Problema al cargar la Empresa seleccionada", "Vuelve a intentar.", "warning");
-                       return false
-                   }
-               }
-           });
+            $.ajax({//me fijo si ya existe este cuil
+                type: "POST",
+                url: "empleado_index.aspx/recargar_usuario",
+                data: '{cuil: "' + cuilSinGuiones + '", empresa_id: "' + empresa_id + '" }',
+                async: false,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    result = response.d;
+                    if (result == 0) {
+                        show_alert("Hubo un Problema al cargar la Empresa seleccionada", "Vuelve a intentar.", "warning");
+                        return false
+                    }
+                }
+            });
 
 
-           var legajo
-           var perfil
+            var legajo
+            var perfil
             <%If HttpContext.Current.Request.Url.AbsoluteUri.Contains("login") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("asistente") = False And HttpContext.Current.Request.Url.AbsoluteUri.Contains("access_recovery") = False Then %>
                 <% If Not cls_security.usuario_actual Is Nothing Then%>
-                    legajo = '<%= cls_security.usuario_actual.legajo%>'
-                    perfil = '<%= cls_security.usuario_actual.perfil.codigo%>'
+            legajo = '<%= cls_security.usuario_actual.legajo%>'
+            perfil = '<%= cls_security.usuario_actual.perfil.codigo%>'
             <% End If %>
             <% End If %>
             //console.log(legajo)
             //console.log(perfil)
-            
+
             if (legajo == "---") {
                 window.location.href = "/supervisor_index.aspx";
                 return result == 1;
@@ -530,7 +626,7 @@ position: fixed !important;
                 window.location.href = "/admin_index.aspx";
                 return result == 1;
             }
-           
+
         }
 
 
@@ -552,7 +648,7 @@ position: fixed !important;
                 }
             }
         }
-    
+
     </script>
     <asp:ContentPlaceHolder ID="contenido_js" runat="server">
     </asp:ContentPlaceHolder>

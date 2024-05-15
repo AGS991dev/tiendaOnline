@@ -39,6 +39,7 @@ Public Class cls_db
 
     Public Function conectar() As OleDb.OleDbConnection
         Dim connStrig As String = CrearConexion()
+
         conectar = New OleDb.OleDbConnection(connStrig)
         conectar.Open()
 

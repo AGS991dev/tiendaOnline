@@ -1,0 +1,55 @@
+- SQL Client: Data Source=sql2016;Initial Catalog=w340207_store_1;Integrated Security=SSPI;
+
+- OLE DB: Provider=SQLNCLI10;Server=sql2016;Database=w340207_store_1; Trusted_Connection=yes;
+
+- ODBC Driver: Driver={SQL Server Native Client 10.0};Server=sql2016;Database=w340207_store_1;Trusted_Connection=yes;
+
+nombre w340207_store_1
+pass ba32ZAfuso
+C8249r4537
+
+w340207_store
+21wiLEkaki
+
+
+{
+    "result": {
+        "AccountInfo": {
+            "Plan": "Web Hosting Emprendedor",
+            "Dominios": "0 \/ 30",
+            "Subdominios": "0 \/ 10",
+            "Cuentas Ftp": "2 \/ Ilimitado",
+            "Base de datos": "2 \/ 5",
+            "Cuentas de email": "0 \/ 100",
+            "Aplicaciones instaladas": "0",
+            "Dominio principal": "w340207.ferozo.com",
+            "Espacio asignado para web": "51200 MB",
+            "Espacio asignado para correos": "51200 MB"
+        },
+        "DiskSpaceInfo": {
+            "DiskSpaceAssigned": 51200,
+            "DiskSpaceUsed": "Calc...",
+            "DiskSpaceAvailable": "Calc..."
+        },
+        "TransferInfo": {
+            "TransferAssigned": "Ilimitado",
+            "TransferUsed": "Calc..."
+        },
+        "DatabaseInfo": {
+            "DatabaseSpaceUsed": "Calc..."
+        },
+        "ServerInfo": {
+            "Nombre servidor": "dtc034.ferozo.com",
+            "Ip servidor": "200.58.120.50",
+            "Sistema operativo": "Windows",
+            "Versi\u00f3n del sistema operativo": "2019",
+            "Versi\u00f3n de php actual": "PHP 7.3 FastCGI",
+            "Versiones de php disponibles": "PHP 7.3 FastCGI, PHP 8.1 FastCGI, PHP 8.2 FastCGI, PHP 8.3 FastCGI",
+            "Versi\u00f3n del servidor web": null,
+            "Versi\u00f3n de MySql": null,
+            "Versi\u00f3n de .net actual": ".NET Framework 4.7",
+            "Versiones de .Net disponibles": ".NET Framework 4.7, .NET Core V3.1\/.NET 6"
+        }
+    },
+    "requestId": "5436502945"
+}
