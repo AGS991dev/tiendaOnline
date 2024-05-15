@@ -165,37 +165,14 @@
     <br />
 
 <style>
-    .badge_pendientes{
-    background: #ed3446;
-    position: absolute;
-    padding: 0px 18px 0px  15px;
-    border-radius: 25px;
-    font-size: 30px;
-    box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
-    color:white;
-    font-family:'Bangers', cursive;
-    }
-    .badge_pendientes_nav{
-    background: #ed3446;
-    border-radius: 25px;
-    font-size: 20px;
-    box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
-    color: white;
-    font-family: 'Bangers', cursive;
-    padding: 8px 10px 8px 6px;
+.logo_empresas{
     position: relative;
-    bottom: 12px;
-    left: 5px;
-    }
-    
-        .logo_empresas{
-                position: relative;
-                top: 5px;
-                width: 125px;
-                height: 125px;
-                border-radius: 3px;
-        }
-               .zoomIn {
+    top: 5px;
+    width: 125px;
+    height: 125px;
+    border-radius: 3px;
+}
+.zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
   -webkit-animation-duration: 1s;

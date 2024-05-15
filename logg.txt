@@ -270,3 +270,105 @@ Nombre del parámetro: methodName
    en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
    en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  14/5/2024 21:22:46
           -               -               -             
+------------------- error --- System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en ASP.master_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\master.master:línea 60
+   en System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   en System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   en System.Web.UI.Control.Render(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   en System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   en System.Web.UI.Page.Render(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.login_aspx.ProcessRequest(HttpContext context)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  15/5/2024 18:41:26
+          -               -               -             
+------------------- error --- System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en ASP.master_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\master.master:línea 60
+   en System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   en System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   en System.Web.UI.Control.Render(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   en System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   en System.Web.UI.Page.Render(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.shopstore_aspx.ProcessRequest(HttpContext context)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  15/5/2024 18:41:43
+          -               -               -             
+------------------- error --- System.Web.HttpUnhandledException (0x80004005): Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en ASP.master_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) en C:\Users\Caballo\Documents\Alan\Projecto\tiendaonline\tiendaonline\master.master:línea 60
+   en System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   en System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   en System.Web.UI.Control.Render(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   en System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   en System.Web.UI.Page.Render(HtmlTextWriter writer)
+   en System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   en System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.shopstore_aspx.ProcessRequest(HttpContext context)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  15/5/2024 18:42:50
+          -               -               -             
+------------------- error --- System.Web.HttpException (0x80004005): El archivo '/Frm_ver_certificado_empleado.aspx' no existe.
+   en System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   en System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  15/5/2024 19:16:45
+          -               -               -             
+------------------- error --- System.Web.HttpException (0x80004005): El archivo '/grilla_empresa.aspx' no existe.
+   en System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   en System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)    <----  15/5/2024 19:17:09
+          -               -               -             

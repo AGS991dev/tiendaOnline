@@ -37,18 +37,11 @@
 
     <script type="text/javascript" src="static/js/main.js"></script>
     <script type="text/javascript" src="static/js/lazysizes.min.js"></script>
-
-
-
     <link href="static/fontawesome/css/all.css" rel="stylesheet" type="text/css" />
-            
     <link href="static/fontawesome/css/courier-new.css" rel="stylesheet" type="text/css" />
-
-    
     <script src="static/js/sweetalert2.js"></script>
     <script src="static/js/FileSaver.min.js"></script>
      <script type="text/javascript" src="static/js/mstepper.min.js"></script>
-
       <link rel="stylesheet" href="static/css/main.css" />
       <link rel="stylesheet" href="static/css/theAppGuruz.css" />
       <link rel = "stylesheet" href="static/css/main_FA.css" />
@@ -59,19 +52,18 @@
 </head>
 <body>
 
-
-
-
     <nav class="nav nav_master">
     <div class="nav-wrapper">
-        <span class="iconos_nav" style="display:none">
-                <a href="shopStore.aspx" ><img class="img_open swing tooltipped" src="static/img/laptop.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height: 40px; margin: 3px 0px 0px 15px;" /></a>
-        </span>
+            <span class="iconos_nav" style="display:none">
+                    <a href="shopStore.aspx" ><img class="img_open swing tooltipped" src="static/img/laptop.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height: 40px; margin: 3px 0px 0px 15px;" /></a>
+            </span>
+            <span class="nav_pedido" style="display:none">
+                    <a href="Grilla_pedidos.aspx" ><img class="tooltipped" src="static/img/camion.png"  data-position='bottom' data-tooltip="Pedidos" style="height: 40px; margin: 3px 0px 0px 15px;" /><span class="badge_pendientes_nav rubberBand"><span class="n_pedido_nav"></span></span></a>
+            </span>
+            <span class="nav_pedido" style="display:none">
+                    <a href="supervisor_index.aspx" ><img class="img_open swing tooltipped" src="static/img/admin.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 40px; margin: 3px 0px 0px 15px;" /></a>
+            </span>
 
-        <span class="nav_pedido" style="display:none">
-                <a href="Grilla_pedidos.aspx" ><img class="tooltipped" src="static/img/camion.png"  data-position='bottom' data-tooltip="Pedidos" style="height: 40px; margin: 3px 0px 0px 15px;" /><span class="badge_pendientes_nav rubberBand"><span class="n_pedido_nav"></span></span></a>
-        </span>
-        
                 
 
           <ul id="nav-mobile" class="right" style="position: relative;top: -5px;">
@@ -273,7 +265,7 @@
     <footer class="footer" style="display:none; height: 0px; width: 100%; position: fixed; bottom: 0;">
         <span data-target="slide-out" class="sidenav-trigger show-on-large tooltipped burbuja_wp zoomInLeft" style="bottom: 40px; height: 160px; border-radius: 10px 0px 0px; overflow: hidden; right: 40px;" data-position='left' data-tooltip="PEDIDO">
             <span class="cantidad_cesta cantidad_cesta_nav ">0</span>
-            <img class="img_wp" src="static/img/cesta.png" / style="width:150px;position: relative;">
+            <img class="img_wp" src="static/img/celu.png" / style="width:150px;position: relative;">
         </span>
     </footer>
     
@@ -282,76 +274,80 @@
     </audio>
 
     <style>
-       .badge_pendientes{
-            background: #ed3446;
-            position: absolute;
-            padding: 0px 18px 0px  15px;
-            border-radius: 25px;
-            font-size: 30px;
-            box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
-            color:white;
-            font-family:'Bangers', cursive;
-            }
-            .badge_pendientes_nav{
-            background: #ed3446;
-            border-radius: 25px;
-            font-size: 20px;
-            box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
-            color: white;
-            font-family: 'Bangers', cursive;
-            padding: 8px 10px 8px 6px;
-            position: relative;
-            bottom: 12px;
-            left: 5px;
-            }
-        .cantidad_cesta_nav {
-            text-shadow: 2px 2px 0px black;
-            font-family: 'Bangers', cursive;
-            background: #ed3346;
-            position: relative;
-            left: -10px;
-            z-index: 1;
-            bottom: 15px;
-            font-size: 30px;
-            padding: 0 10px;
-            border-radius: 5px;
-            color: white;
-        }
+    input[type="search"] {
+    text-align: center !important;
+    }
 
-        .menu_barras {
-            font-size: 20px;
-            color: white;
-            margin-right: 10px
-        }
+.badge_pendientes{
+    background: #ed3446;
+    position: absolute;
+    padding: 0px 18px 0px  15px;
+    border-radius: 25px;
+    font-size: 30px;
+    box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+    color:white;
+    font-family:'Bangers', cursive;
+    }
 
-        .burbuja_wp {
-            position: fixed !important;
-            right: -16px;
-            padding: 8px 5px 0px 25px;
-        }
+.badge_pendientes_nav{
+border-radius: 25px;
+font-size: 20px;
+color: white;
+font-family: 'Bangers', cursive;
+padding: 8px 10px 8px 6px;
+position: relative;
+bottom: 12px;
+left: 5px;
+}
 
-        btn_menu_mobile
-        .img_open:hover {
-            animation: 1.00s cubic-bezier(.36,.07,.19,.97) both;
-        }
+.cantidad_cesta_nav {
+    text-shadow: 2px 2px 0px black;
+    font-family: 'Bangers', cursive;
+    background: #a2a2f9;
+    position: relative;
+    left: 30px;
+    z-index: 1;
+    bottom: 15px;
+    font-size: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: white;
+}
 
-        .loading_content {
-            height: 100px;
-            overflow: hidden;
-        }
+    .menu_barras {
+        font-size: 20px;
+        color: white;
+        margin-right: 10px
+    }
 
-        .gif_loading {
-            width: 50px;
-            height: 50px;
-        }
+    .burbuja_wp {
+        position: fixed !important;
+        right: -16px;
+        padding: 8px 5px 0px 25px;
+    }
 
-        .current {
-            background-color: #000000b5 !important;
-        }
+    btn_menu_mobile
+    .img_open:hover {
+        animation: 1.00s cubic-bezier(.36,.07,.19,.97) both;
+    }
 
-        .modal {
-            border-radius: 3px;
-        }
+    .loading_content {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .gif_loading {
+        width: 50px;
+        height: 50px;
+    }
+
+    .current {
+        background-color: #000000b5 !important;
+    }
+
+    .modal {
+        border-radius: 3px;
+    }
 
 
         .img_producto_telefono_virtual {
@@ -557,7 +553,7 @@
                     var pedidosPendientes = parseInt(data);
 
                     var prepedidosPendientes = localStorage.getItem('pedidosPendientes');
-                    if (prepedidosPendientes != pedidosPendientes) {
+                    if (parseInt(prepedidosPendientes) < parseInt(pedidosPendientes)){
                         $('.bell_ding').prop("volume", 0.5);
                         $(".bell_ding")[0].play();
                         procesar_toast("¡Tenés pedidos!", "info");
@@ -565,6 +561,7 @@
 
                     // Actualiza la etiqueta en el frontend
                     $(".n_pedido_nav").text(pedidosPendientes);
+                    $('.badge_pendientes').text(pedidosPendientes)
                     // Guarda el valor en localStorage
                     localStorage.setItem('pedidosPendientes', pedidosPendientes);
                 },
