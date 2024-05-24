@@ -579,7 +579,7 @@
 
 
             //phone_fixed()
-            $('.img_open').hide();
+            //$('.img_open').hide();
             $('.footer').show();
             $('.phone').show();
 

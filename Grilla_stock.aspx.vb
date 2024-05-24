@@ -1,4 +1,8 @@
-﻿Imports System.Data
+﻿Imports OfficeOpenXml
+Imports System.IO
+Imports System.Data
+Imports OfficeOpenXml.Style
+Imports System.Drawing
 
 Partial Class Grilla_stock
     Inherits System.Web.UI.Page
@@ -96,6 +100,52 @@ Partial Class Grilla_stock
         Dim grilla As New cls_grid(dt, formulario)
         tabla = grilla.html()
     End Sub
+    Protected Sub btnExportarExcel_stock_Click(sender As Object, e As EventArgs) Handles btnExportarExcel_stock.Click
+        Try
+            Dim fecha As String = DateTime.Now.ToString("yyyy-MM-dd") ' Formato de fecha: Año-Mes-Día
+
+            Dim sql As New cls_db
+            Dim dt As DataTable = sql.ejecutar_sp("SP_stock_GRILLA_EXCEL", sql.parametros)
+
+            Using package As New ExcelPackage()
+                ExcelPackage.LicenseContext = LicenseContext.NonCommercial
+
+                Dim ws As ExcelWorksheet = package.Workbook.Worksheets.Add("Datos")
+
+                ws.Cells("A1").Value = "Stock"
+                ws.Cells("A1:L1").Merge = True
+                ws.Cells("A1").Style.Font.Size = 16
+                ws.Cells("A1").Style.Font.Bold = True
+                ws.Cells("A1").Style.HorizontalAlignment = ExcelHorizontalAlignment.Center
+
+                ws.Cells("A3").LoadFromDataTable(dt, True)
+
+                Using range As ExcelRange = ws.Cells("A5:L5")
+                    range.Style.Font.Bold = True
+                    range.Style.Fill.PatternType = ExcelFillStyle.Solid
+                    range.Style.Fill.BackgroundColor.SetColor(Color.LightGray)
+                    range.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center
+                End Using
+
+                For col As Integer = 1 To dt.Columns.Count
+                    ws.Cells(5, col).Value = dt.Columns(col - 1).ColumnName.ToUpper()
+                Next
+
+                ws.Cells(ws.Dimension.Address).AutoFitColumns()
+
+                Response.Clear()
+                Response.Buffer = True
+                Response.AddHeader("content-disposition", "attachment; filename=Stock " & fecha & ".xlsx")
+                Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                Response.BinaryWrite(package.GetAsByteArray())
+                Response.Flush()
+                Response.End()
+            End Using
+        Catch ex As Exception
+            Response.Write("Ocurrió un error: " & ex.Message)
+        End Try
+    End Sub
+
 
     <System.Web.Services.WebMethod(EnableSession:=True)> Public Shared Function recarga_grafico(ByVal hi_categoria As String) As String
         Dim sql As New cls_db

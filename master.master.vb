@@ -57,7 +57,7 @@ Partial Class master
 
             Return
         End If
-        If page_name = "shop.aspx" Or page_name = "shopstore.aspx" Then
+        If page_name = "shop.aspx" Or page_name = "shopstore.aspx" Or page_name = "contacto.aspx" Then
 
             Return
         End If

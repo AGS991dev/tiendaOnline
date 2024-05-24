@@ -9,43 +9,34 @@
     <title><%= title_name %></title>
 
     <link rel = "stylesheet" href="static/img/logo.png" />
-    <link rel="icon" type="image/png" href="static/img/laptop.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="static/img/laptop.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="static/img/laptop.png" sizes="96x96">
+     <!-- Custom CSS -->
     <link href="static/css/material-icon.css" rel="stylesheet">
     <link href="static/css/efectos_elementos.css" rel="stylesheet">
-
-    <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
-    <!--<link rel="stylesheet" href="static/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="static/css/animate.min.css" />
     <link rel="stylesheet" href="static/css/mstepper.min.css" />
     <link rel="stylesheet" href="static/css/materialize.min.css" />
-    <!--<link rel="stylesheet" href="static/css/materialize.custom.css" />-->
     <link rel="stylesheet" href="static/css/materialUiSweetAlert.css">
-    <!--<link rel="stylesheet" href="static/css/jquery.dataTables.css" type="text/css" />-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
-
-    <link rel="stylesheet" type="text/css" href="static/css/jquery.dataTables.css">
     <link href="static/css/select2.min.css" rel="stylesheet" />
-    <!--<link rel="preconnect" href="https://fonts.googleapis.com">google font-->
-    <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>google font-->
-    <link href="static/css/banger.css" rel="stylesheet"><!--google font-->
-    <link rel="stylesheet" href="static/css/owl.carousel.css"  /><!--owl.carousel-->
+    <link href="static/css/banger.css" rel="stylesheet"><!-- Google Font -->
+    <link rel="stylesheet" href="static/css/owl.carousel.css" /><!-- Owl Carousel -->
     <link rel="stylesheet" href="static/css/owl.theme.default.css" />
-
-    <script type="text/javascript" src="static/js/main.js"></script>
-    <script type="text/javascript" src="static/js/lazysizes.min.js"></script>
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/theAppGuruz.css" />
+    <link rel="stylesheet" href="static/css/main_FA.css" />
+    <link rel="stylesheet" href="static/css/leaflet.css" />
     <link href="static/fontawesome/css/all.css" rel="stylesheet" type="text/css" />
     <link href="static/fontawesome/css/courier-new.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JavaScript Files -->
+    <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
+    <script type="text/javascript" src="static/js/lazysizes.min.js"></script>
     <script src="static/js/sweetalert2.js"></script>
     <script src="static/js/FileSaver.min.js"></script>
-     <script type="text/javascript" src="static/js/mstepper.min.js"></script>
-      <link rel="stylesheet" href="static/css/main.css" />
-      <link rel="stylesheet" href="static/css/theAppGuruz.css" />
-      <link rel = "stylesheet" href="static/css/main_FA.css" />
-    <%-- USA EL CSS QUE LE DIGAS DE LOS DE MAIN ... PARA TEMAS DISTINTOS --%>
+    <script type="text/javascript" src="static/js/mstepper.min.js"></script>
+    <script type="text/javascript" src="static/js/leaflet.js"></script>
 
     <asp:ContentPlaceHolder ID="contenido_css" runat="server">
     </asp:ContentPlaceHolder>
@@ -54,16 +45,15 @@
 
     <nav class="nav nav_master">
     <div class="nav-wrapper">
-            <span class="iconos_nav" style="display:none">
-                    <a href="shopStore.aspx" ><img class="img_open swing tooltipped" src="static/img/laptop.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height: 40px; margin: 3px 0px 0px 15px;" /></a>
+            <span class="iconos_nav">
+                    <a href="shopStore.aspx" ><img class="tooltipped" src="static/img/nav_4.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height: 40px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+                    <% If cls_security.usuario_actual IsNot Nothing Then%>
+                        <% If cls_security.usuario_actual.es_supervisor Then%>
+                            <a href="supervisor_index.aspx" ><img class="tooltipped" src="static/img/nav_3.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 40px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+                            <a href="Grilla_pedidos.aspx" ><img class="tooltipped" src="static/img/nav_2.png"  data-position='bottom' data-tooltip="Pedidos" style="height: 40px; margin: 3px 0px 0px 15px;filter:invert(1)" /><span class="badge_pendientes_nav rubberBand"><span class="n_pedido_nav"></span></span></a>
+                         <% End If %>
+                     <% End If %>
             </span>
-            <span class="nav_pedido" style="display:none">
-                    <a href="Grilla_pedidos.aspx" ><img class="tooltipped" src="static/img/camion.png"  data-position='bottom' data-tooltip="Pedidos" style="height: 40px; margin: 3px 0px 0px 15px;" /><span class="badge_pendientes_nav rubberBand"><span class="n_pedido_nav"></span></span></a>
-            </span>
-            <span class="nav_pedido" style="display:none">
-                    <a href="supervisor_index.aspx" ><img class="img_open swing tooltipped" src="static/img/admin.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 40px; margin: 3px 0px 0px 15px;" /></a>
-            </span>
-
                 
 
           <ul id="nav-mobile" class="right" style="position: relative;top: -5px;">
@@ -136,16 +126,13 @@
                             <li class="compartir_store" style="margin-top:20px"><a class="pulse" style="position: relative; left: -20px;"><img src="static/img/share.png" class="tooltipped" data-position='bottom' data-tooltip="Compartir por Whataspp" style="height: 28px; width: auto; position: relative; top: 7px; margin-left: 16px;" /><span style="margin-left: 20px;">COMPARTIR TIENDA</span></a></li>
                             <li><a class="logout" runat="server" href="login.aspx?logout=true"> <img src="static/img/key.png"  width="30px" style="position: relative; top: 10px; left: -5px;" /><span style="margin-left:15px">LOGIN</span></a></li>
                       </ul>
-              <div class="btn_menu_mobile" id="btn_menu_mobile" runat="server" visible="true">
-
-              </div>    
+              <div class="btn_menu_mobile" id="btn_menu_mobile" runat="server" visible="true"></div>    
 
 
               <div  class="btn_menu_desktop" id="btn_menu_desktop" runat="server">
-                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped "
-                         data-position='bottom' data-tooltip="Menú"
-                         style="height: 55px;position: relative;width: 55px;border-radius: 10px;">
-                           <span class="fa-solid fa-bars menu_barras"></span>
+                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped "data-position='bottom' data-tooltip="Menú" style="height: 55px;">
+                           <img class="tooltipped" src="static/img/nav_menu.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 55px; filter: invert(1); padding: 10px 0px 10px 0px;" />
+
                       </a>
               </div>
         <%End If%>
@@ -180,7 +167,18 @@
   </nav>
     <%End If%>
 
-
+    <% If cls_security.usuario_actual IsNot Nothing Then%>
+   <div class="tarjetaUsuario" style="display:none">
+            <p>Nombre:<b><%=cls_security.usuario_actual.perfil.descripcion %> <%=cls_security.usuario_actual.nombre %> </b></p>
+        <div class="detalles" style="display:">
+            <p>ID:<b><%=cls_security.usuario_actual.id%></b></p>
+            <p>Apelldio:<b><%=cls_security.usuario_actual.apellido%></b></p>
+            <p>Cuit/Cuil:<b><%=cls_security.usuario_actual.cuil %></b></p>
+            <p>Logo:<b><%=cls_security.usuario_actual.logo %></b></p>
+            <p>Razon Social:<b><%=cls_security.usuario_actual.razon_social%></b></p>
+        </div>
+    </div>
+    <%End If%>
 
     <div class="main animated fadeIn" style="margin-bottom:100px;">
         <asp:ContentPlaceHolder ID="contenido_body" runat="server" />
@@ -263,9 +261,9 @@
         </div>
 
     <footer class="footer" style="display:none; height: 0px; width: 100%; position: fixed; bottom: 0;">
-        <span data-target="slide-out" class="sidenav-trigger show-on-large tooltipped burbuja_wp zoomInLeft" style="bottom: 40px; height: 160px; border-radius: 10px 0px 0px; overflow: hidden; right: 40px;" data-position='left' data-tooltip="PEDIDO">
+        <span data-target="slide-out" class="sidenav-trigger show-on-large tooltipped burbuja_wp zoomInLeft" style="bottom: 20px; height: 160px; border-radius: 10px 0px 0px; overflow: hidden; right: 40px;" data-position='left' data-tooltip="PEDIDO">
             <span class="cantidad_cesta cantidad_cesta_nav ">0</span>
-            <img class="img_wp" src="static/img/celu.png" / style="width:150px;position: relative;">
+            <img class="img_wp" src="static/img/celu.png" / style="width:120px;position: relative;">
         </span>
     </footer>
     
@@ -296,7 +294,7 @@ color: white;
 font-family: 'Bangers', cursive;
 padding: 8px 10px 8px 6px;
 position: relative;
-bottom: 12px;
+bottom: 7px;
 left: 5px;
 }
 
@@ -525,51 +523,77 @@ left: 5px;
 
             // REFRESCAR CANTIDAD DE PEDIDOS EN NAV
             refrescar_cantidad_pedidos_nav()
-            setInterval(function () {
-                refrescar_cantidad_pedidos_nav();
-            }, 10000)
+            iterarConsultaPedidos()
         });
 
-        function refrescar_cantidad_pedidos_nav() {
-            $.ajax({
-                type: "POST",
-                url: "supervisor_index.aspx/consultar_pedidos",
-                async: false,
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (response) {
-                    if (response.d == "") {
-                        $(".n_pedido_nav").hide();
-                        $(".nav_pedido").hide();
-                        return;
-                    }
-
-                    $(".n_pedido_nav").show();
-                    $(".nav_pedido").show();
-
-                    // Parsea la respuesta JSON
-                    var data = JSON.parse(response.d);
-                    // Obtiene el número de pedidos pendientes
-                    var pedidosPendientes = parseInt(data);
-
+        async function iterarConsultaPedidos() {
+            try {
+                var timeInterval = 10000; // Establece el valor inicial como 45000 milisegundos
+                var pedidosPendientes;
+                while (true) {
                     var prepedidosPendientes = localStorage.getItem('pedidosPendientes');
-                    if (parseInt(prepedidosPendientes) < parseInt(pedidosPendientes)){
-                        $('.bell_ding').prop("volume", 0.5);
-                        $(".bell_ding")[0].play();
-                        procesar_toast("¡Tenés pedidos!", "info");
-                    }
+                    pedidosPendientes = await refrescar_cantidad_pedidos_nav();
 
-                    // Actualiza la etiqueta en el frontend
-                    $(".n_pedido_nav").text(pedidosPendientes);
-                    $('.badge_pendientes').text(pedidosPendientes)
-                    // Guarda el valor en localStorage
-                    localStorage.setItem('pedidosPendientes', pedidosPendientes);
-                },
-                error: function (xhr, status, error) {
-                    console.log("Error al llamar al servicio web: " + error);
+                    if (parseInt(prepedidosPendientes) < parseInt(pedidosPendientes)) {
+                        timeInterval = 10000; // Disminuye en 1000 milisegundos
+                        console.log(timeInterval);
+                    } else {
+                        timeInterval += 1000; // Aumenta en 1000 milisegundos
+                        // Asegúrate de que el valor de timeInterval no sea mayor que el máximo permitido
+                        timeInterval = Math.min(timeInterval, 45000);
+                        console.log(timeInterval);
+                    }
+                    // Esperar antes de la siguiente iteración
+                    await new Promise(resolve => setTimeout(resolve, timeInterval));
                 }
+            } catch (error) {
+                console.error("Ha ocurrido un error:", error);
+            }
+        }
+
+        function refrescar_cantidad_pedidos_nav() {
+            return new Promise((resolve, reject) => {
+                $.ajax({
+                    type: "POST",
+                    url: "supervisor_index.aspx/consultar_pedidos",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                        if (response.d == "") {
+                            $(".n_pedido_nav").hide();
+                            resolve(0); // Resuelve la promesa con 0 si no hay pedidos
+                            return;
+                        }
+
+                        $(".n_pedido_nav").show();
+
+                        // Parsea la respuesta JSON
+                        var data = JSON.parse(response.d);
+                        // Obtiene el número de pedidos pendientes
+                        var pedidosPendientes = parseInt(data);
+
+                        var prepedidosPendientes = localStorage.getItem('pedidosPendientes');
+                        if (parseInt(prepedidosPendientes) < pedidosPendientes) {
+                            $('.bell_ding').prop("volume", 0.5);
+                            $(".bell_ding")[0].play();
+                            procesar_toast("¡Tenés pedidos!", "info");
+                        }
+
+                        // Actualiza la etiqueta en el frontend
+                        $(".n_pedido_nav").text(pedidosPendientes);
+                        $('.badge_pendientes').text(pedidosPendientes);
+                        // Guarda el valor en localStorage
+                        localStorage.setItem('pedidosPendientes', pedidosPendientes);
+                        resolve(pedidosPendientes); // Resuelve la promesa con pedidosPendientes
+                    },
+                    error: function (xhr, status, error) {
+                        console.log("Error al llamar al servicio web: " + error);
+                        reject(error); // Rechaza la promesa con el error
+                    }
+                });
             });
         }
+
 
 
         function btn_empresa(obj) { //esta funcion se encarga q funcione la nav entre empresas

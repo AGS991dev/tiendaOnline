@@ -46,7 +46,7 @@
                                                                 <p style="margin: 0 20px;">
                                                                     <label>
                                                                     <input categoria="<%= categorias(index_categoria) %>" type="checkbox" class="filled-in" checked="checked" />
-                                                                    <span><%= categorias(index_categoria) %></span>
+                                                                    <span style="width: 120px;"><%= categorias(index_categoria) %></span>
                                                                     </label>
                                                                 </p>
                                                                 <% End if %>
@@ -59,8 +59,17 @@
                                                   <div id="grilla">
                                                     <asp:UpdatePanel ID="Update_grilla" runat="server" UpdateMode="Conditional">
                                                         <ContentTemplate>
+                                                            <br />
+                                                            <span style="display: flex; position: relative; left: 50px; top: 10px;">
+                                                                <asp:Button ID="btnExportarExcel_stock" runat="server" Text="Excel" OnClick="btnExportarExcel_stock_Click" CssClass="btn btn-primary btnExportarExcel_stock" style="width: 110px; text-align: left;" />
+                                                                <img src="static/img/excel.png" alt="Exportar a Excel" style="width: 30px; height: 30px; position: relative; left: -45px; top: 2px;" />
+                                                            </span>
+                                                            <br /><br />
                                                             <%=tabla %>
-                                                        </ContentTemplate> 
+                                                        </ContentTemplate>
+                                                        <Triggers>
+                                                            <asp:PostBackTrigger ControlID="btnExportarExcel_stock" />
+                                                        </Triggers>
                                                     </asp:UpdatePanel>
                                                   </div>
                                                    <div id="grilla_imagen">
@@ -309,9 +318,38 @@
                 lazyLoad();
             });
 
-        on_postback_end(recargar_postback)
-
+            on_postback_end(recargar_postback)
+            inicializarControlCheckbox()
+            // DATATABLE( inicializar_grilla
+            var selector = $('.striped')
+            inicializar_grilla(selector)
         });// FIN ON READY
+
+
+        function inicializarControlCheckbox() {
+            var filter_array = []
+            var checks = $('input[categoria]')
+            var hi_string = ""
+
+            for (i = 0; i < checks.length; i++) {
+                var check = checks[i]
+                //console.log(check)
+                categoria = $(check).attr("categoria")
+                check = $(check).is(':checked')
+                if (check == true) {
+                    filter_array.push(categoria)
+
+                    if (i == 0) {
+                        hi_string = categoria
+                    } else {
+                        hi_string = hi_string + "," + categoria
+                        //console.log(i)
+                    }
+                }
+            }
+            //console.log("Hi_string ->", hi_string)
+            $('#<%=hi_categoria_filter.ClientID%>').val(hi_string);
+        }
 
         function inicializar_graficos() {
             $.ajax({

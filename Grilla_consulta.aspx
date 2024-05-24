@@ -19,7 +19,7 @@
                                           
                                     <div id="tab_consultas" >
                                     <div class="contender_carrito" style="position: absolute; top: 17vh; right: 15vw;">
-                                        <img src="./static/img/finanza.png" class="img_carrito bounce" style="width: 80px;"/>
+                                        <img src="./static/img/consulta.png" class="img_carrito bounce" style="width: 80px;"/>
                                     </div>
                                         <!---->
                                         <div style="margin:20px">
@@ -52,8 +52,18 @@
 
                                                     <asp:UpdatePanel ID="panel_btn_filtrar" runat="server" UpdateMode="Conditional">
                                                         <ContentTemplate>
-                                                            <asp:Button AutoPostBack="true" style="margin: 20px; position: relative; top: 22px; height: 34px;background:#29357d;" ID="btn_filtrar" runat="server" name="btn_filtrar" CssClass="btn btn_filtrar" Text="Consultar" />
+                                                            <br />
+                                                            <div style="display:flex;gap:10px">
+                                                                <span style="display: flex; position: relative; left: 50px; top: 10px;">
+                                                                    <asp:Button ID="btnExportarExcel_consul" EnableViewState="false" runat="server" Text="Excel" OnClick="btnExportarExcel_consul_Click" CssClass="btn btn-primary btnExportarExcel_consul" style="width: 110px; text-align: left;" />
+                                                                    <img src="static/img/excel.png" alt="Exportar a Excel" style="width: 30px; height: 30px; position: relative; left: -45px; top: 2px;" />
+                                                                </span>
+                                                                <asp:Button AutoPostBack="true" style="margin: 0px 20px; position: relative; top: 10px; height: 36px; background: #29357d;" ID="btn_filtrar" runat="server" name="btn_filtrar" CssClass="btn btn_filtrar" Text="Consultar" />
+                                                            </div>
                                                         </ContentTemplate>
+                                                        <Triggers>
+                                                            <asp:PostBackTrigger ControlID="btnExportarExcel_consul" />
+                                                        </Triggers>
                                                     </asp:UpdatePanel>
                                                       </div>
                                                 </div>

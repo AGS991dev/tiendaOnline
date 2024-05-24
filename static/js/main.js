@@ -11,7 +11,8 @@ function lazyLoad() {
     });
 }
 
-function inicializar_grilla(selector, callback, primer_columna_visible) {
+
+function inicializar_grilla(selector, callback, primer_columna_visible) { //SIN EXCEL
 
     if (primer_columna_visible == undefined) primer_columna_visible = true;
     if (selector == undefined) selector = 'striped';
@@ -35,6 +36,7 @@ function inicializar_grilla(selector, callback, primer_columna_visible) {
         }
     });
 }
+
 function incializar_calendario(id) {
     var element = $('#' + id)
     new Cleave(element, {

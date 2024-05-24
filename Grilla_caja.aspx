@@ -636,13 +636,13 @@
 
 
             // Start/stop scanner
-            document.getElementById("btn").addEventListener("click", function () {
-                if (_scannerIsRunning) {
-                    Quagga.stop();
-                } else {
-                    startScanner();
-                }
-            }, false);
+            //document.getElementById("btn").addEventListener("click", function () {
+            //    if (_scannerIsRunning) {
+            //        Quagga.stop();
+            //    } else {
+            //        startScanner();
+            //    }
+            //}, false);
         });
      </script>
 </asp:Content>

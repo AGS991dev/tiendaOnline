@@ -19,7 +19,7 @@
                                           
                                     <div id="tab_consultas" >
                                     <div class="contender_carrito" style="position: absolute; top: 17vh; right: 15vw;">
-                                        <img src="./static/img/ranking.png" class="img_carrito bounce" style="width: 80px;"/>
+                                        <img src="./static/img/podio.png" class="img_carrito bounce" style="width: 80px;"/>
                                     </div>
                                         <!---->
                                         <div style="margin:20px">

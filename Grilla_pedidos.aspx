@@ -33,7 +33,7 @@
                                             <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; margin: 0 10px; padding: 10px 0px 0px 10px;; width: 100%; background: #f2f2f2; border-radius: 5px 5px 0px 0px;">
                                                 <span>Filtrá por Estado:</span>
                                             </div>
-                                            <div style="display: flex;flex-wrap: wrap;margin: 0 0px 20px 10px;padding: 5px;width: 100%;background: #f2f2f2;border-radius: 0px 0px 5px 5px; }">
+                                            <div style="justify-content: center; display: flex; flex-wrap: wrap; margin: 0 0px 20px 10px; padding: 5px; width: 100%; background: #f2f2f2; border-radius: 0px 0px 5px 5px;">
                                                 <span style="margin: 10px;background: #e1f0c4;color:black" class="btn btn_categoria_buscar" cat="ENTREGADO">ENTREGADO</span>
                                                 <span style="margin: 10px;background: #fff6cc;color:black" class="btn btn_categoria_buscar" cat="EN PROCESO">EN PROCESO</span>
                                                 <span style="margin: 10px;background: #ff000054;color:black" class="btn btn_categoria_buscar" cat="PENDIENTE">PENDIENTE</span>

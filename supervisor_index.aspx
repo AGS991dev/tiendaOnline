@@ -23,16 +23,7 @@
     <%End If%>
 
 
-     <div class="tarjetaUsuario" style="display:none">
-            <p>Nombre:<b><%=cls_security.usuario_actual.perfil.descripcion %> <%=cls_security.usuario_actual.nombre %> </b></p>
-        <div class="detalles" style="display:none">
-            <p>ID:<b><%=cls_security.usuario_actual.id%></b></p>
-            <p>Apelldio:<b><%=cls_security.usuario_actual.apellido%></b></p>
-            <p>Cuit/Cuil:<b><%=cls_security.usuario_actual.cuil %></b></p>
-            <p>Logo:<b><%=cls_security.usuario_actual.logo %></b></p>
-            <p>Razon Social:<b><%=cls_security.usuario_actual.razon_social%></b></p>
-        </div>
-    </div>
+
    
     
     <div class="container" style="margin-top:10px">
@@ -42,10 +33,8 @@
 
             <div class="col m4 s6 zoom">
                 <a href="./Grilla_Stock.aspx">
-                    <div class="card-panel card-menu center white-text hoverable">
-                       <img src="./static/img/almacen.png" style="width: 60px;"/>
-
-
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
+                       <img src="./static/img/inStock.png" style="width: 60px;"/>
                         <p>Stock</p>
                     </div>
                 </a>
@@ -58,8 +47,8 @@
                     <span class="badge_pendientes rubberBand"><%=pedidos_pendientes %></span>
                     <% End if %>
                 </div>
-                    <div class="card-panel card-menu center white-text hoverable">
-                        <img src="./static/img/camion.png" style="width: 60px;"/>
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
+                        <img src="./static/img/pedido3.png" style="width: 60px;"/>
                         <p>Pedidos</p>
                     </div>
                 </a>
@@ -67,8 +56,8 @@
             
             <div class="col m4 s6 zoom">
                 <a href="./shopStore.aspx">
-                    <div class="card-panel card-menu center white-text hoverable">
-                        <img src="./static/img/laptop.png" style="width: 60px;"/>
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
+                        <img src="./static/img/celu.png" style="width: 60px;"/>
                        <p>Tienda Online</p>
                     </div>
 
@@ -77,8 +66,8 @@
 
             <div class="col m4 s6 zoom">
                 <a href="./Grilla_caja.aspx">
-                    <div class="card-panel card-menu center white-text hoverable">
-                          <img src="./static/img/cash.png" style="width: 60px;"/>
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
+                          <img src="./static/img/caja.png" style="width: 60px;"/>
                         <p>Caja</p>
                     </div>
                 </a>
@@ -86,8 +75,8 @@
 
             <div class="col m4 s6 zoom">
                 <a href="./grilla_consulta.aspx">
-                    <div class="card-panel card-menu center white-text hoverable">
-                        <img src="./static/img/finanza.png" style="width: 60px;"/>
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
+                        <img src="./static/img/consulta.png" style="width: 60px;"/>
                        <p>Consultas</p>
                     </div>
 
@@ -96,8 +85,8 @@
 
             <div class="col m4 s6 zoom">
                 <a href="./c_movimientos.aspx">
-                    <div class="card-panel card-menu center white-text hoverable">
-                        <img src="./static/img/gasto.png" style="width: 60px;"/>
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
+                        <img src="./static/img/negocio.png" style="width: 60px;"/>
                        <p>Movimientos</p>
                     </div>
 
@@ -106,7 +95,7 @@
 
             <div style="display:none" class="col m4 s6 zoom">
                 <a href="./Grilla_empleados.aspx">
-                    <div class="card-panel card-menu center white-text hoverable">
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
                         <img src="./static/img/emp.png" style="width: 60px;"/>
                        <p>Empleados</p>
                     </div>
@@ -118,8 +107,8 @@
 
             <div class="col m4 s6 zoom">
                 <a href="./grilla_categorias.aspx">
-                    <div class="card-panel card-menu center white-text hoverable">
-                        <img src="./static/img/categorias.png" style="width: 60px;"/>
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
+                        <img src="./static/img/categorias1.png" style="width: 60px;"/>
                        <p>Categorias de Productos</p>
                     </div>
 
@@ -128,8 +117,8 @@
 
             <div class="col m4 s6 zoom">
                 <a href="./grilla_ranking.aspx">
-                    <div class="card-panel card-menu center white-text hoverable">
-                        <img src="./static/img/ranking.png" style="width: 60px;"/>
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
+                        <img src="./static/img/masVendidos.png" style="width: 60px;"/>
                        <p>MÁS VENDIDOS</p>
                     </div>
 
@@ -138,7 +127,7 @@
 
             <div class="col m4 s6 zoom">
                 <a href="./grilla_whatsapp.aspx">
-                    <div class="card-panel card-menu center white-text hoverable">
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
                         <img src="./static/img/wp.png" style="width: 60px;"/>
                        <p>Whatsapp</p>
                     </div>
@@ -148,9 +137,19 @@
 
             <div class="col m4 s6 zoom tooltipped" " data-position="top" data-tooltip="Productos más visitados">
                 <a href="./grilla_mas_visitados.aspx">
-                    <div class="card-panel card-menu center white-text hoverable">
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
                         <img src="./static/img/amor.png" style="width: 60px;"/>
                        <p>Productos más visitados</p>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="col m4 s6 zoom tooltipped" " data-position="top" data-tooltip="Productos más visitados">
+                <a href="./Contacto.aspx">
+                    <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
+                        <img src="./static/img/pinMapColor.png" style="width: 60px;"/>
+                       <p>Contacto</p>
                     </div>
 
                 </a>

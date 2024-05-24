@@ -1,4 +1,9 @@
-﻿Imports System.Data
+﻿Imports OfficeOpenXml
+Imports System.IO
+Imports System.Data
+Imports OfficeOpenXml.Style
+Imports System.Drawing
+
 
 Partial Class Grilla_consulta
     Inherits System.Web.UI.Page
@@ -30,11 +35,12 @@ Partial Class Grilla_consulta
 
         cbo_ticket.Items.Add(New ListItem("Todos", -1))
         cargar_cbo_tkt()
-
-        txt_desde.Text = Date.Now.AddDays(-Date.Now.Day + 1).ToShortDateString
-        txt_hasta.Text = Date.Now.ToShortDateString
-        Update_txt_desde.Update()
-        Update_txt_hasta.Update()
+        ' Obtener el primer día del mes actual
+        Dim primerDiaDelMes As DateTime = New DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)
+        ' Establecer el texto en el campo txt_desde
+        txt_desde.Text = primerDiaDelMes.ToString("yyyy-MM-dd")
+        ' Establecer el texto en el campo txt_hasta con la fecha actual
+        txt_hasta.Text = DateTime.Now.ToString("yyyy-MM-dd")
         panel_btn_filtrar.Update()
     End Sub
 
@@ -138,44 +144,135 @@ Partial Class Grilla_consulta
         filldata()
     End Sub
     Sub filldata()
-        Dim sql As New cls_db
-        Dim desde As String = txt_desde.Text
-        Dim hasta As String = txt_hasta.Text
-        sql.parametros.Add("venta_id", cbo_ticket.SelectedValue)
-        If desde = "" Then
-            sql.parametros.Add("desde", DBNull.Value)
-        Else
-            Dim _desde As Date = cls_utils.string_to_date(desde)
-            sql.parametros.Add("desde", _desde)
-        End If
-        If hasta = "" Then
-            sql.parametros.Add("hasta", DBNull.Value)
-        Else
-            Dim _hasta As Date = cls_utils.string_to_date(hasta)
-            sql.parametros.Add("hasta", _hasta)
-        End If
-        Dim dt As DataTable = sql.ejecutar_sp("SP_REGISTRO_FILTRAR", sql.parametros)
+        Try
+            Dim sql As New cls_db
+            Dim desde As String = txt_desde.Text
+            Dim hasta As String = txt_hasta.Text
+            Dim _desde As Date
+            Dim _hasta As Date
 
-        Dim grilla As New cls_grid(dt, formulario)
-        If grilla.dt.Rows.Count > 0 Then
-            tabla_vacia = False
-            GV_consultas.Visible = True
-            GV_consultas.DataSource = dt
-            GV_consultas.DataBind()
-            GV_consultas.HeaderRow.TableSection = TableRowSection.TableHeader
-            panel_btn_filtrar.Update()
-            lbl_total.InnerText = dt(0)(4)
-            Update_lbl_total.Update()
-            panel_consultas.Update()
+            sql.parametros.Add("venta_id", cbo_ticket.SelectedValue)
 
-        Else
-            GV_consultas.Visible = False
-            tabla_vacia = True
-            tabla = "<br/><center><h4>No hay Resultados para esta Búsqueda</h4></center><br/>"
-            lbl_total.InnerText = "$ 0.00"
-        End If
+            ' Manejo de parámetro 'desde'
+            If String.IsNullOrEmpty(desde) Then
+                sql.parametros.Add("desde", DBNull.Value)
+            Else
+                If Date.TryParse(desde, _desde) Then
+                    sql.parametros.Add("desde", _desde)
+                Else
+                    Throw New ArgumentException("Fecha 'desde' no válida.")
+                End If
+            End If
 
+            ' Manejo de parámetro 'hasta'
+            If String.IsNullOrEmpty(hasta) Then
+                sql.parametros.Add("hasta", DBNull.Value)
+            Else
+                If Date.TryParse(hasta, _hasta) Then
+                    sql.parametros.Add("hasta", _hasta)
+                Else
+                    Throw New ArgumentException("Fecha 'hasta' no válida.")
+                End If
+            End If
 
+            ' Ejecutar procedimiento almacenado
+            Dim dt As DataTable = sql.ejecutar_sp("SP_REGISTRO_FILTRAR", sql.parametros)
+
+            ' Actualizar grilla con resultados
+            Dim grilla As New cls_grid(dt, formulario)
+            If grilla.dt.Rows.Count > 0 Then
+                tabla_vacia = False
+                GV_consultas.Visible = True
+                GV_consultas.DataSource = dt
+                GV_consultas.DataBind()
+                GV_consultas.HeaderRow.TableSection = TableRowSection.TableHeader
+
+                ' Actualizar UI
+                panel_btn_filtrar.Update()
+                lbl_total.InnerText = dt.Rows(0)(4).ToString() ' Asegúrate de que el índice de columna es correcto
+                Update_lbl_total.Update()
+                panel_consultas.Update()
+            Else
+                GV_consultas.Visible = False
+                tabla_vacia = True
+                tabla = "<br/><center><h4>No hay Resultados para esta Búsqueda</h4></center><br/>"
+                lbl_total.InnerText = "$ 0.00"
+            End If
+        Catch ex As Exception
+            ' Manejo de errores
+            Dim err As String = "Ocurrió un error: " & ex.Message
+        End Try
     End Sub
+
+    Protected Sub btnExportarExcel_consul_Click(sender As Object, e As EventArgs) Handles btnExportarExcel_consul.Click
+        Try
+            Dim sql As New cls_db
+            Dim desde As String = txt_desde.Text
+            Dim hasta As String = txt_hasta.Text
+
+            sql.parametros.Add("venta_id", cbo_ticket.SelectedValue)
+            If desde = "" Then
+                sql.parametros.Add("desde", DBNull.Value)
+            Else
+                Dim _desde As Date = cls_utils.string_to_date(desde)
+                sql.parametros.Add("desde", _desde)
+            End If
+            If hasta = "" Then
+                sql.parametros.Add("hasta", DBNull.Value)
+            Else
+                Dim _hasta As Date = cls_utils.string_to_date(hasta)
+                sql.parametros.Add("hasta", _hasta)
+            End If
+
+            Dim dt As DataTable = sql.ejecutar_sp("SP_REGISTRO_FILTRAR_EXCEL", sql.parametros)
+
+            Using package As New ExcelPackage()
+                ExcelPackage.LicenseContext = LicenseContext.NonCommercial
+
+                Dim ws As ExcelWorksheet = package.Workbook.Worksheets.Add("Datos")
+
+                ws.Cells("A1").Value = "Consulta"
+                ws.Cells("A1:E1").Merge = True
+                ws.Cells("A1").Style.Font.Size = 16
+                ws.Cells("A1").Style.Font.Bold = True
+                ws.Cells("A1").Style.HorizontalAlignment = ExcelHorizontalAlignment.Center
+
+                ws.Cells("A2").Value = "Desde:"
+                ws.Cells("B2").Value = desde
+                ws.Cells("A3").Value = "Hasta:"
+                ws.Cells("B3").Value = hasta
+                ws.Cells("A2:B2").Style.Font.Bold = True
+                ws.Cells("A3:B3").Style.Font.Bold = True
+
+                ws.Cells("A5").LoadFromDataTable(dt, True)
+
+                Using range As ExcelRange = ws.Cells("A5:E5")
+                    range.Style.Font.Bold = True
+                    range.Style.Fill.PatternType = ExcelFillStyle.Solid
+                    range.Style.Fill.BackgroundColor.SetColor(Color.LightGray)
+                    range.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center
+                End Using
+
+                For col As Integer = 1 To dt.Columns.Count
+                    ws.Cells(5, col).Value = dt.Columns(col - 1).ColumnName.ToUpper()
+                Next
+
+                ws.Cells(ws.Dimension.Address).AutoFitColumns()
+
+                Response.Clear()
+                Response.Buffer = True
+                Response.AddHeader("content-disposition", "attachment; filename=" & "Consulta desde " & desde.ToString & " hasta " & hasta.ToString & ".xlsx")
+                Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                Response.BinaryWrite(package.GetAsByteArray())
+                Response.Flush()
+                Response.End()
+            End Using
+        Catch ex As Exception
+            Response.Write("Ocurrió un error: " & ex.Message)
+        End Try
+    End Sub
+
+
+
 End Class
 

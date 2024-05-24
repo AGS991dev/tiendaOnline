@@ -15,7 +15,7 @@
             <p class="center">Visualizá y Registrá movimientos</p>
             <br />
             <div class="contender_carrito" style="position: absolute; top: 17vh; right: 15vw;">
-                <img src="./static/img/gasto.png" class="img_carrito bounce" style="width: 80px;">
+                <img src="./static/img/negocio.png" class="img_carrito bounce" style="width: 80px;">
             </div>
 
 
@@ -62,6 +62,7 @@
 
 
 
+            
             <asp:UpdatePanel ID="panel_consultas" runat="server" style="width: 80%;margin: auto;min-width: 380px;" UpdateMode="Conditional">
                 <ContentTemplate>
             <% If tabla_vacia = True Then %>
@@ -74,9 +75,16 @@
             
 
             <br />
-            <h5>📈 Registros</h5>
+            <div style="display:flex">
+                <span style="font-size: 35px;">📈 Registros</span>
+                <span style="display: flex; position: relative; left: 50px; top: 10px;">
+                    <asp:Button ID="btnExportarExcel_mov" runat="server" Text="Excel" OnClick="btnExportarExcel_mov_Click" CssClass="btn btn-primary btnExportarExcel_mov" style="width: 110px; text-align: left;"/>
+                    <img src="static/img/excel.png" alt="Exportar a Excel" style="width: 30px; height: 30px; position: relative; left: -45px; top: 2px;" />
+                </span>
+
+            </div>
             <br />
-            <ASP:GridView ID ="GV_registros" runat="server" class="table" AutoGenerateColumns="false"  CellSpacing='0' style='margin: auto; box-shadow: rgb(0 0 0 / 25%) 0px 0.0625em 0.0625em, rgb(0 0 0 / 25%) 0px 0.125em 0.5em, rgb(255 255 255 / 10%) 0px 0px 0px 1px inset; }'>
+            <ASP:GridView ID ="GV_registros" runat="server" class="table striped" AutoGenerateColumns="false"  CellSpacing='0' style='margin: auto; box-shadow: rgb(0 0 0 / 25%) 0px 0.0625em 0.0625em, rgb(0 0 0 / 25%) 0px 0.125em 0.5em, rgb(255 255 255 / 10%) 0px 0px 0px 1px inset; }'>
             <Columns>
                                 
                 <ASP:BoundField DataField = "id" htmlencode="false" HeaderText="ID" />
@@ -169,6 +177,7 @@
         th:nth-child(6){
             text-align:center;
         }
+
     </style>
 </asp:Content>
 
@@ -178,6 +187,9 @@
         $('document').ready(function () {
             refresh()
             on_postback_end(refresh)
+            var selector = $('.striped')
+            inicializar_grilla(selector)
+
         })
         function refresh() {
 

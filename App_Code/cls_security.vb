@@ -63,7 +63,7 @@ Public Class cls_security
             paginas.Add("c_movimientos.aspx".ToLower)
             paginas.Add("store.aspx".ToLower)
             paginas.Add("grilla_mas_visitados.aspx".ToLower)
-
+            paginas.Add("Seguimiento_index.aspx".ToLower)
             Return paginas
         End Get
 
