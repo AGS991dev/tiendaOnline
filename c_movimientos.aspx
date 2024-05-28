@@ -48,21 +48,7 @@
                     </div>
 
             </div>
-            <p>Elegí el concepto para registrar tu moviemiento.</p>
-            <div class="box_inputs">
-                <label for="cbo_concepto" style="position: relative; top: 10px; font-size: 18px; right: 5px;">CONCEPTO</label>
-                <asp:DropDownList runat='server' ID='cbo_concepto' style="margin: 0 5px;width: 130px;" type='text' />
-                <asp:TextBox runat='server'  placeholder="Descripción" ID='txt_descripcion' style="min-width:200px;max-width:200px;margin: 0 5px; border: 1px grey solid; height: 50px;padding: 0 10px;" type='text'/>
-                <div style="display:flex;">
-                    <label for="txt_monto" style="position: relative; top: 10px; font-size: 20px;">MONTO</label>
-                    <asp:TextBox runat='server' ID='txt_monto' style="margin: 0 5px;text-align: center;" type='number'/>
-                    <asp:button runat='server' ID='btn_add' style="margin: 0 5px; height: 30px; position: relative; top: 15px; left: 5px;" text="➕"/>
-                </div>
-            </div>
 
-
-
-            
             <asp:UpdatePanel ID="panel_consultas" runat="server" style="width: 80%;margin: auto;min-width: 380px;" UpdateMode="Conditional">
                 <ContentTemplate>
             <% If tabla_vacia = True Then %>
@@ -95,9 +81,20 @@
                 <ASP:BoundField DataField = "monto" htmlencode="false" HeaderText="Monto 💲" />
 
                 </Columns>
-                </asp:GridView>
+             </asp:GridView>
+
+            <p>Para registrar tu moviemiento elegí el concepto, el concepto determina la operación.</p>
+            <div class="box_inputs">
+                <label for="cbo_concepto" style="position: relative; top: 10px; font-size: 18px; right: 5px;">CONCEPTO</label>
+                <asp:DropDownList runat='server' ID='cbo_concepto' style="margin: 0 5px;width: 130px;" type='text' />
+                <asp:TextBox runat='server'  placeholder="Descripción" ID='txt_descripcion' style="min-width:200px;max-width:200px;margin: 0 5px; border: 1px grey solid; height: 50px;padding: 0 10px;" type='text'/>
+                <div style="display:flex;">
+                    <label for="txt_monto" style="position: relative; top: 10px; font-size: 20px;">MONTO</label>
+                    <asp:TextBox runat='server' ID='txt_monto' style="margin: 0 5px;text-align: center;" type='number'/>
+                    <asp:button runat='server' ID='btn_add' style="margin: 0 5px; height: 30px; position: relative; top: 15px; left: 5px;" text="➕"/>
+                </div>
+            </div>
         </div>
-        
     </form>
     <br /><br /><br /><br />
     <style>

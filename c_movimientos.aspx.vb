@@ -110,6 +110,8 @@ Partial Class c_movimientos
             Dim sql As New cls_db
             Dim desde As String = txt_desde.Text
             Dim hasta As String = txt_hasta.Text
+
+            ' Manejo de fechas y parámetros
             If desde = "" Then
                 sql.parametros.Add("desde", DBNull.Value)
             Else
@@ -122,6 +124,8 @@ Partial Class c_movimientos
                 Dim _hasta As Date = cls_utils.string_to_date(hasta)
                 sql.parametros.Add("hasta", _hasta)
             End If
+
+            ' Ejecutar el procedimiento almacenado y obtener los datos
             Dim dt As DataTable = sql.ejecutar_sp("SP_REGISTRO_MOV_GRILLA_FILTRAR_EXCEL", sql.parametros)
 
             Using package As New ExcelPackage()
@@ -131,7 +135,7 @@ Partial Class c_movimientos
                 Dim ws As ExcelWorksheet = package.Workbook.Worksheets.Add("Datos")
 
                 ' Añadir título personalizado
-                ws.Cells("A1").Value = "Moviemientos"
+                ws.Cells("A1").Value = "Movimientos"
                 ws.Cells("A1:E1").Merge = True
                 ws.Cells("A1").Style.Font.Size = 16
                 ws.Cells("A1").Style.Font.Bold = True
@@ -164,9 +168,10 @@ Partial Class c_movimientos
                 ' Ajustar el tamaño de las columnas
                 ws.Cells(ws.Dimension.Address).AutoFitColumns()
 
+                ' Preparar la respuesta HTTP
                 Response.Clear()
                 Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                Response.AddHeader("content-disposition", "attachment; filename=" & "Moviemientos desde " & desde.ToString & " hasta " & hasta.ToString & ".xlsx")
+                Response.AddHeader("content-disposition", "attachment; filename=" & "Movimientos desde " & desde.ToString() & " hasta " & hasta.ToString() & ".xlsx")
                 Response.BinaryWrite(package.GetAsByteArray())
                 Response.End()
             End Using
@@ -175,5 +180,6 @@ Partial Class c_movimientos
             Response.Write("Ocurrió un error: " & ex.Message)
         End Try
     End Sub
+
 End Class
 

@@ -2,7 +2,7 @@
 
 <asp:Content runat="server" ContentPlaceHolderID="contenido_nav">
     <a href="supervisor_index.aspx" class="breadcrumb">INICIO</a>
-    <a href="frm_whatsapp.aspx" class="breadcrumb"><%=Titulo %></a>
+    <a href="#" class="breadcrumb"><%=Titulo %></a>
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="contenido_body">

@@ -307,7 +307,7 @@ function quitar_producto_de_table(tr) {
 }
 
 function cantidad_cesta(carrito) {
-    console.log(carrito)
+    //console.log(carrito)
     var cantidad = 0
     for (i = 0; i < carrito.length; i++) {
         cantidad = cantidad + carrito[i].cantidad
@@ -346,7 +346,7 @@ function quitar_producto_de_celular(tr) {
             carrito.splice(indice, 1) //quitar del carrito session storage
             sessionStorage.carrito = JSON.stringify(carrito)
             tr = $(tr).closest("tr")
-            console.log(tr)
+            //console.log(tr)
             $(tr).remove()
             calcular_total_celular()
             cantidad_cesta(carrito)
@@ -606,6 +606,28 @@ function procesar_toast(msg, icon) {
     })
 }
 
+function procesar_toast_time(msg, icon, time) {
+
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: time,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+    if (msg == undefined) {
+        msg = "Registro Eliminado con Éxito"
+    }
+    Toast.fire({
+        icon: icon,
+        title: msg
+    })
+}
 
 
 function find_input(id, from) {

@@ -44,15 +44,17 @@
 <body>
 
     <nav class="nav nav_master">
-    <div class="nav-wrapper">
+    <div class="nav-wrapper" style="padding: 4px 0px 0px 0px;">
             <span class="iconos_nav">
-                    <a href="shopStore.aspx" ><img class="tooltipped" src="static/img/nav_4.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height: 40px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+                    <a href="shopStore.aspx" ><img class="tooltipped" src="static/img/nav_4.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height: 35px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
                     <% If cls_security.usuario_actual IsNot Nothing Then%>
                         <% If cls_security.usuario_actual.es_supervisor Then%>
-                            <a href="supervisor_index.aspx" ><img class="tooltipped" src="static/img/nav_3.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 40px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
-                            <a href="Grilla_pedidos.aspx" ><img class="tooltipped" src="static/img/nav_2.png"  data-position='bottom' data-tooltip="Pedidos" style="height: 40px; margin: 3px 0px 0px 15px;filter:invert(1)" /><span class="badge_pendientes_nav rubberBand"><span class="n_pedido_nav"></span></span></a>
+                            <a href="supervisor_index.aspx" ><img class="tooltipped" src="static/img/nav_3.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 35px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+                            <a href="Grilla_pedidos.aspx" ><img class="tooltipped" src="static/img/nav_2.png"  data-position='bottom' data-tooltip="Pedidos" style="height: 35px; margin: 3px 0px 0px 15px;filter:invert(1)" /><span class="badge_pendientes_nav rubberBand"><span class="n_pedido_nav"></span></span></a>
                          <% End If %>
                      <% End If %>
+                    <a href="Contacto.aspx" ><img class="tooltipped" src="static/img/info.png"  data-position='bottom' data-tooltip="Contacto" style="height: 35px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+
             </span>
                 
 
@@ -129,9 +131,9 @@
               <div class="btn_menu_mobile" id="btn_menu_mobile" runat="server" visible="true"></div>    
 
 
-              <div  class="btn_menu_desktop" id="btn_menu_desktop" runat="server">
-                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped "data-position='bottom' data-tooltip="Menú" style="height: 55px;">
-                           <img class="tooltipped" src="static/img/nav_menu.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 55px; filter: invert(1); padding: 10px 0px 10px 0px;" />
+              <div  class="btn_menu_desktop" id="btn_menu_desktop" runat="server" style="position: relative; left: 10px; top: 4px;">
+                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped "data-position='bottom' data-tooltip="Menú" style="height: 40px;">
+                           <img class="tooltipped" src="static/img/nav_menu.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 35px; filter: invert(1);" />
 
                       </a>
               </div>
@@ -541,7 +543,8 @@ left: 5px;
                         timeInterval += 1000; // Aumenta en 1000 milisegundos
                         // Asegúrate de que el valor de timeInterval no sea mayor que el máximo permitido
                         timeInterval = Math.min(timeInterval, 45000);
-                        console.log(timeInterval);
+                        var hora = obtener_hora()
+                        console.log(timeInterval, hora);
                     }
                     // Esperar antes de la siguiente iteración
                     await new Promise(resolve => setTimeout(resolve, timeInterval));
@@ -670,6 +673,20 @@ left: 5px;
             }
         }
 
+        function obtener_hora() {
+            // Obtener la hora actual con minutos y segundos
+            var fecha = new Date();
+            var minutos = fecha.getMinutes();
+            var segundos = fecha.getSeconds();
+
+            // Formatear los minutos y segundos para que tengan dos dígitos
+            minutos = (minutos < 10 ? '0' : '') + minutos;
+            segundos = (segundos < 10 ? '0' : '') + segundos;
+
+            // Construir la hora en formato HH:MM:SS
+            var horaConMinutosYSegundos = fecha.getHours() + ':' + minutos + ':' + segundos;
+            return horaConMinutosYSegundos
+        }
     </script>
     <asp:ContentPlaceHolder ID="contenido_js" runat="server">
     </asp:ContentPlaceHolder>

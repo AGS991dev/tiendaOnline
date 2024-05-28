@@ -29,8 +29,7 @@
 
         ' Redirige a la página de error personalizada
         cls_utils.Log("------------------- error --- " & lastError.ToString)
-
-        'Response.Redirect("~/access_recovery.aspx")
+        Response.Redirect("~/access_recovery.aspx")
     End Sub
 
     Sub Session_Start(ByVal sender As Object, ByVal e As EventArgs)

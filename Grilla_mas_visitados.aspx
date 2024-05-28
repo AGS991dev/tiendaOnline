@@ -459,7 +459,6 @@
                 }else{
                 var cantidad = sessionStorage.getItem("carrito")
                 cantidad = JSON.parse(cantidad)
-                console.log("che",cantidad)
                 //$('.cantidad_cesta').html(cantidad)
                 }
             }
