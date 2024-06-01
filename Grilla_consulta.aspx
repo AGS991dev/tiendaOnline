@@ -84,7 +84,7 @@
                                                             <%= tabla %>
                                                         </div>
                                                         <%End if %>
-                                                    <ASP:GridView ID ="GV_consultas" runat="server" class="table" AutoGenerateColumns="false"  CellSpacing='0' style='width:100%;position: relative;left: -30px;'>
+                                                    <ASP:GridView ID ="GV_consultas" runat="server" class="table" AutoGenerateColumns="false"  CellSpacing='0' style='width:100%;'>
                                                     <Columns>
                                 
                                                        <ASP:BoundField DataField = "ticket" htmlencode="false" HeaderText="Ticket 🧾" />

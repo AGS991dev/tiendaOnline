@@ -1,4 +1,5 @@
 ﻿Imports System.Data
+Imports System.IO
 
 Partial Class shopStore
     Inherits System.Web.UI.Page
@@ -25,7 +26,18 @@ Partial Class shopStore
         Next
     End Sub
 
-
+    Public Shared Function GetImageUrl(imagePath As String) As String
+        Try
+            Dim serverPath As String = HttpContext.Current.Server.MapPath(imagePath)
+            If File.Exists(serverPath) Then
+                Return imagePath
+            Else
+                Return "static\img\imagen_vacia.png"
+            End If
+        Catch ex As Exception
+            Return "static\img\imagen_vacia.png"
+        End Try
+    End Function
 
     Sub inicializar_variables()
         Dim sql As New cls_db

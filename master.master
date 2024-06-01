@@ -44,18 +44,24 @@
 <body>
 
     <nav class="nav nav_master">
-    <div class="nav-wrapper" style="padding: 4px 0px 0px 0px;">
+    <div class="nav-wrapper" style="display: flex; align-items: center; position: relative; top: 7px;">
             <span class="iconos_nav">
-                    <a href="shopStore.aspx" ><img class="tooltipped" src="static/img/nav_4.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height: 35px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+                    <a href="login.aspx" ><img class="tooltipped" src="static/img/login.png"  data-position='bottom' data-tooltip="Login" style="height: 28px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+                    <a href="shopStore.aspx" ><img class="tooltipped" src="static/img/nav_4.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height: 30px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
                     <% If cls_security.usuario_actual IsNot Nothing Then%>
                         <% If cls_security.usuario_actual.es_supervisor Then%>
-                            <a href="supervisor_index.aspx" ><img class="tooltipped" src="static/img/nav_3.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 35px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
-                            <a href="Grilla_pedidos.aspx" ><img class="tooltipped" src="static/img/nav_2.png"  data-position='bottom' data-tooltip="Pedidos" style="height: 35px; margin: 3px 0px 0px 15px;filter:invert(1)" /><span class="badge_pendientes_nav rubberBand"><span class="n_pedido_nav"></span></span></a>
+                            <a href="supervisor_index.aspx" ><img class="tooltipped" src="static/img/nav_3.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 28px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+                            <a href="Grilla_pedidos.aspx" ><img class="tooltipped" src="static/img/nav_2.png"  data-position='bottom' data-tooltip="Pedidos" style="height: 28px; margin: 3px 0px 0px 15px;filter:invert(1)" /><span class="badge_pendientes_nav rubberBand"><span class="n_pedido_nav"></span></span></a>
                          <% End If %>
                      <% End If %>
-                    <a href="Contacto.aspx" ><img class="tooltipped" src="static/img/info.png"  data-position='bottom' data-tooltip="Contacto" style="height: 35px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
-
+                    <a href="Contacto.aspx" ><img class="tooltipped" src="static/img/info.png"  data-position='bottom' data-tooltip="Contacto" style="height: 28px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+                    <span class="compartir_store"><img class="tooltipped" src="static/img/shared.png"  data-position='bottom' data-tooltip="Compartir tienda" style="height: 27px; margin: 3px 0px 0px 15px;filter:invert(1)" /></span>
             </span>
+             <!--<div  class="btn_menu_desktop" id="btn_menu_desktop" runat="server" style="margin-left:auto">
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped "data-position='bottom' data-tooltip="Menú">
+                    <img src="static/img/nav_menu.png" style="height: 28px; filter: invert(1);" />
+                </a>
+            </div>-->
                 
 
           <ul id="nav-mobile" class="right" style="position: relative;top: -5px;">
@@ -88,9 +94,6 @@
                           
                         <% Next%>
                           <%End if %>
-                              <% if Not cls_security.usuario_actual is Nothing Then  %>
-                                <li><a class="logout" runat="server" href="supervisor_index.aspx"><img style="width: 35px; position: relative; top: 15px; right: 8px;" src="./static/img/admin.png" alt=""><span style="margin-left:10px;">ADMINISTRADOR</span></a></li>
-                              <% End If %>
                           <div class="phone" style="width:290px;display:none">
                           <div style="display:flex;justify-content:center;"><!--TELEFONO EN MENÚ-->
                               <span class="cantidad_cesta " style="font-family: 'Bangers', cursive; font-size: 25px; color: black;margin-right:15px">0</span><span style="color: black; font-size: 20px; font-family: 'Bangers', cursive;"> Productos</span>
@@ -120,23 +123,13 @@
                                 </div>
                           </div>
                           <!---->
-                          <div id="enviar_whatsapp" class="enviar_whatsapp tooltipped"  data-position='bottom' data-tooltip='Enviar Whatsapp con pedido' ><img src="static/img/chat.png" style="position: relative; width: 55px; top: 20px; left: 24px;"/></div>
-                          <p style="text-align: center; position: relative; top: 15px; font-weight: 600;">ENVIAR PEDIDO</p>           
+                          <div id="enviar_whatsapp" class="enviar_whatsapp tooltipped"  data-position='bottom' data-tooltip='Enviar Whatsapp con pedido' ><img src="static/img/whatsapp.png" style="position: relative; width: 185px; left: 7px;"/></div>
 
                           </div>
                           
-                            <li class="compartir_store" style="margin-top:20px"><a class="pulse" style="position: relative; left: -20px;"><img src="static/img/share.png" class="tooltipped" data-position='bottom' data-tooltip="Compartir por Whataspp" style="height: 28px; width: auto; position: relative; top: 7px; margin-left: 16px;" /><span style="margin-left: 20px;">COMPARTIR TIENDA</span></a></li>
-                            <li><a class="logout" runat="server" href="login.aspx?logout=true"> <img src="static/img/key.png"  width="30px" style="position: relative; top: 10px; left: -5px;" /><span style="margin-left:15px">LOGIN</span></a></li>
                       </ul>
-              <div class="btn_menu_mobile" id="btn_menu_mobile" runat="server" visible="true"></div>    
+              <!--<div class="btn_menu_mobile" id="btn_menu_mobile" runat="server" visible="true"></div>-->
 
-
-              <div  class="btn_menu_desktop" id="btn_menu_desktop" runat="server" style="position: relative; left: 10px; top: 4px;">
-                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large tooltipped "data-position='bottom' data-tooltip="Menú" style="height: 40px;">
-                           <img class="tooltipped" src="static/img/nav_menu.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 35px; filter: invert(1);" />
-
-                      </a>
-              </div>
         <%End If%>
            <!--<li><a class="logout" runat="server" href="login.aspx?logout=true">CERRAR SESIÓN</a></li>-->
           </ul>
@@ -263,7 +256,7 @@
         </div>
 
     <footer class="footer" style="display:none; height: 0px; width: 100%; position: fixed; bottom: 0;">
-        <span data-target="slide-out" class="sidenav-trigger show-on-large tooltipped burbuja_wp zoomInLeft" style="bottom: 20px; height: 160px; border-radius: 10px 0px 0px; overflow: hidden; right: 40px;" data-position='left' data-tooltip="PEDIDO">
+        <span data-target="slide-out" class="sidenav-trigger show-on-large tooltipped burbuja_wp zoomInLeft" style="bottom: 20px; height: 160px; border-radius: 10px 0px 0px; overflow: hidden; right: 40px;cursor:pointer" data-position='left' data-tooltip="PEDIDO">
             <span class="cantidad_cesta cantidad_cesta_nav ">0</span>
             <img class="img_wp" src="static/img/celu.png" / style="width:120px;position: relative;">
         </span>
@@ -274,81 +267,84 @@
     </audio>
 
     <style>
-    input[type="search"] {
-    text-align: center !important;
-    }
+        input[type="search"] {
+            text-align: center !important;
+        }
 
-.badge_pendientes{
-    background: #ed3446;
-    position: absolute;
-    padding: 0px 18px 0px  15px;
-    border-radius: 25px;
-    font-size: 30px;
-    box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
-    color:white;
-    font-family:'Bangers', cursive;
-    }
+        .badge_pendientes {
+            background: #ed3446;
+            position: absolute;
+            padding: 0px 18px 0px 15px;
+            border-radius: 25px;
+            font-size: 30px;
+            box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+            color: white;
+            font-family: 'Bangers', cursive;
+        }
 
-.badge_pendientes_nav{
-border-radius: 25px;
-font-size: 20px;
-color: white;
-font-family: 'Bangers', cursive;
-padding: 8px 10px 8px 6px;
-position: relative;
-bottom: 7px;
-left: 5px;
-}
+        .badge_pendientes_nav {
+            border-radius: 25px;
+            font-size: 20px;
+            color: white;
+            font-family: 'Bangers', cursive;
+            padding: 8px 10px 8px 6px;
+            position: relative;
+            bottom: 7px;
+            left: 5px;
+        }
 
-.cantidad_cesta_nav {
-    text-shadow: 2px 2px 0px black;
-    font-family: 'Bangers', cursive;
-    background: #a2a2f9;
-    position: relative;
-    left: 30px;
-    z-index: 1;
-    bottom: 15px;
-    font-size: 30px;
-    padding: 0 10px;
-    border-radius: 5px;
-    color: white;
-}
+        .cantidad_cesta_nav {
+            text-shadow: 2px 2px 0px black;
+            font-family: 'Bangers', cursive;
+            background: #a2a2f9;
+            position: relative;
+            left: 30px;
+            z-index: 1;
+            bottom: 15px;
+            font-size: 30px;
+            padding: 0 10px;
+            border-radius: 5px;
+            color: white;
+        }
 
-    .menu_barras {
-        font-size: 20px;
-        color: white;
-        margin-right: 10px
-    }
+        .menu_barras {
+            font-size: 20px;
+            color: white;
+            margin-right: 10px
+        }
 
-    .burbuja_wp {
-        position: fixed !important;
-        right: -16px;
-        padding: 8px 5px 0px 25px;
-    }
+        .burbuja_wp {
+            position: fixed !important;
+            right: -16px;
+            padding: 8px 5px 0px 25px;
+        }
 
-    btn_menu_mobile
-    .img_open:hover {
-        animation: 1.00s cubic-bezier(.36,.07,.19,.97) both;
-    }
+        btn_menu_mobile
+        .img_open:hover {
+            animation: 1.00s cubic-bezier(.36,.07,.19,.97) both;
+        }
 
-    .loading_content {
-        height: 100px;
-        overflow: hidden;
-    }
+        .loading_content {
+            height: 100px;
+            overflow: hidden;
+        }
 
-    .gif_loading {
-        width: 50px;
-        height: 50px;
-    }
+        .gif_loading {
+            width: 50px;
+            height: 50px;
+        }
 
-    .current {
-        background-color: #000000b5 !important;
-    }
+        .current {
+            background-color: #000000b5 !important;
+        }
 
-    .modal {
-        border-radius: 3px;
-    }
+        .modal {
+            border-radius: 3px;
+        }
 
+        .compartir_store {
+            cursor: pointer;
+        }
 
         .img_producto_telefono_virtual {
             width: 60px;
@@ -522,6 +518,10 @@ left: 5px;
             });
 
             css_empresa_li()
+            //Compartir tienda
+            $('.compartir_store').click(function () {
+                compartir_tienda_por_wpp("https://w340207.ferozo.com/projectos/shopStore.aspx")
+            })
 
             // REFRESCAR CANTIDAD DE PEDIDOS EN NAV
             refrescar_cantidad_pedidos_nav()
@@ -552,6 +552,23 @@ left: 5px;
             } catch (error) {
                 console.error("Ha ocurrido un error:", error);
             }
+        }
+
+        function compartir_tienda_por_wpp(msg) {
+            var msgEnChat = ""
+            msg = msg.split(" ").join("%20");
+            console.log(msg);
+            var href = 'https://api.whatsapp.com/send?text='
+            href = href + msg;
+            console.log(href)
+            $('#whatsappMsg').attr('href', href);
+            $('.waMsg').val('');
+            $("<p class='textoEnviado'>" + msgEnChat + "</p>").appendTo(".chat");
+            var a = document.createElement('a');
+            a.target = '_blank';
+            a.href = href;
+            a.click();
+            //settimeout(location.href = 'shop.aspx',5000)
         }
 
         function refrescar_cantidad_pedidos_nav() {

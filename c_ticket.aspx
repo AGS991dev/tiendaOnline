@@ -33,9 +33,9 @@
                                                           <div class="card tarjeta">
                                                             <div class="card-image waves-effect waves-block waves-light">
                                                                 <div class="owl-carousel owl-theme" >
-                                                                    <img class="activator" style="max-height:350px;" src="<%#Eval("ruta_imagen")%>">
-                                                                    <img class="activator" style="max-height:350px;" src="<%#Eval("ruta_imagen_2")%>">
-                                                                    <img class="activator" style="max-height:350px;" src="<%#Eval("ruta_imagen_3")%>">
+                                                                    <img class="activator" style="max-height:350px;" src="<%# GetImageUrl(Eval("ruta_imagen").ToString()) %>">
+                                                                    <img class="activator" style="max-height:350px;" src="<%# GetImageUrl(Eval("ruta_imagen_2").ToString()) %>">
+                                                                    <img class="activator" style="max-height:350px;" src="<%# GetImageUrl(Eval("ruta_imagen_3").ToString()) %>">
                                                                 </div>
                                                             </div>
 

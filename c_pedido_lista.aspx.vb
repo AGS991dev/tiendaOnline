@@ -1,4 +1,5 @@
 ﻿Imports System.Data
+Imports System.IO
 
 Partial Class c_pedido_lista
     Inherits System.Web.UI.Page
@@ -46,7 +47,18 @@ Partial Class c_pedido_lista
         If formulario = "" AndAlso Request.QueryString("formulario") <> "" Then formulario = Request.QueryString("formulario")
         If Titulo = "" AndAlso Request.QueryString("Titulo") <> "" Then Titulo = Request.QueryString("Titulo")
     End Sub
-
+    Public Shared Function GetImageUrl(imagePath As String) As String
+        Try
+            Dim serverPath As String = HttpContext.Current.Server.MapPath(imagePath)
+            If File.Exists(serverPath) Then
+                Return imagePath
+            Else
+                Return "static\img\imagen_vacia.png"
+            End If
+        Catch ex As Exception
+            Return "static\img\imagen_vacia.png"
+        End Try
+    End Function
     Overridable Sub inicializar_controles()
 
     End Sub

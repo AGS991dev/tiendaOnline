@@ -1,4 +1,5 @@
 ﻿Imports System.Data
+Imports System.IO
 
 Partial Class Grilla_caja
     Inherits System.Web.UI.Page
@@ -59,7 +60,7 @@ Partial Class Grilla_caja
             Dim tamaño As String = dt.Rows(0).ItemArray(4)
             Dim categoria As String = dt.Rows(0).ItemArray(5)
             Dim color As String = dt.Rows(0).ItemArray(6)
-            Dim ruta_imagen As String = dt.Rows(0).ItemArray(7)
+            Dim ruta_imagen As String = GetImageUrl(dt.Rows(0).ItemArray(7))
             Dim precio As String = dt.Rows(0).ItemArray(8)
             Dim codigo_barra As String = dt.Rows(0).ItemArray(9)
             string_articulo = articulo & "|" & descripcion & "|" & cantidad & "|" & tamaño & "|" & categoria & "|" & color & "|" & ruta_imagen & "|" & precio & "|" & codigo_barra
@@ -73,7 +74,18 @@ Partial Class Grilla_caja
 
         Return "true"
     End Function
-
+    Public Shared Function GetImageUrl(imagePath As String) As String
+        Try
+            Dim serverPath As String = HttpContext.Current.Server.MapPath(imagePath)
+            If File.Exists(serverPath) Then
+                Return imagePath
+            Else
+                Return "static\img\imagen_vacia.png"
+            End If
+        Catch ex As Exception
+            Return "static\img\imagen_vacia.png"
+        End Try
+    End Function
     <System.Web.Services.WebMethod(EnableSession:=True)> Public Shared Function registrar_compra(ByVal articulos As String) As String
         Dim sql As New cls_db
         Dim array_articulos As Array

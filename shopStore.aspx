@@ -54,7 +54,7 @@
                                                     <div style="width: 170px; height: 260px;"> <%--  class="img_producto" --%>
                                                         <div>
                                                             <div style="text-align: center;">
-                                                                <img src="<%#Eval("ruta_imagen")%>" width="150" height="150" alt="">
+                                                                <img src="<%# GetImageUrl(Eval("ruta_imagen").ToString()) %>" width="150" height="150" alt="">
                                                                 <%--<img style="max-height: 200px;" class="activator img_producto" src="<%#Eval("ruta_imagen_2")%>" descripcion="<%#Eval("descripcion")%>" id="<%#Eval("id")%>" nombre="<%#Eval("nombre")%>" precio="<%#Eval("precio")%>" categoria="<%#Eval("categoria")%>" /><img style="max-height: 200px;" class="activator img_producto" src="<%#Eval("ruta_imagen_3")%>" descripcion="<%#Eval("descripcion")%>" id="<%#Eval("id")%>" nombre="<%#Eval("nombre")%>" precio="<%#Eval("precio")%>" categoria="<%#Eval("categoria")%>" />--%>
                                                             </div>
                                                             <div>
@@ -70,7 +70,7 @@
                                                         
                                                         <span id='btn_comprar' url='Grilla_carrito.aspx'
                                                             obj_id='<%#Eval("id")%>'
-                                                            img="<%#Eval("ruta_imagen")%>"
+                                                            img="<%# GetImageUrl(Eval("ruta_imagen").ToString()) %>"
                                                             art_id="<%#Eval("id")%>"
                                                             precio="<%#Eval("precio")%>"
                                                             class="btn_mas_shopStore"
@@ -123,9 +123,10 @@
 
     <style>
         .btn_menu_mobile nav ul a:hover {
-           border-radius: 5px !important;
-           background: #e9eaf2 !important;
+            border-radius: 5px !important;
+            background: #e9eaf2 !important;
         }
+
         .btn_mas_shopStore {
             display: flex;
             justify-content: end;
@@ -353,9 +354,7 @@
             overflow: auto;
         }
 
-        .compartir_store {
-            cursor: pointer;
-        }
+
 
 
         @media screen and (max-width: 600px) {
@@ -499,19 +498,15 @@
 
         .enviar_whatsapp {
             position: relative;
-            height: 95px;
-            border-radius: 80px;
-            width: 95px;
+            height: 53px;
+            border-radius: 10px;
+            width: 200px;
             top: 25px;
-            box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
-            background: white;
+            background: #10383a;
             margin: auto;
+            cursor:pointer;
         }
 
-            .enviar_whatsapp:hover {
-                transform: scale(1.05);
-                box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-            }
 
 
         .input_cant_tel_virtual:hover {
@@ -642,13 +637,6 @@
             var selector = $('.stripedShopStore')
             inicializar_grilla(selector);
 
-
-
-            $('.compartir_store').click(function () {
-                compartir_tienda_por_wpp("https://w340207.ferozo.com/projectos/shopStore.aspx")
-            })
-
-
             $('.agregar_al_carrito').click(function () {
                 var _articulo = this.parentElement.parentElement.parentElement
                 //console.log(_articulo)
@@ -724,7 +712,7 @@
                         info_pedido.push(calle_numero)
                         //REGISTA COMPRA/PEDIDO
                         registrar_pedido(carrito, info_pedido)
-                        
+
                     } else if (result.isDenied) {
                         Swal.fire('No se realizo el pedido', '', 'warning')
                     } else if (result.dismiss == 'cancel') {
@@ -788,7 +776,7 @@
                 carrito = JSON.parse(carrito)
             }
             // si el articulo ya existe en el changuito
-            
+
             if (si_ya_existe_el_articulo_en_el_carrito(carrito, articulo) == false) {
                 return
             }
@@ -813,7 +801,7 @@
                 data: '{art_id: "' + art_id + '" }',
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                success: function (response) {}
+                success: function (response) { }
             });
         }
 
@@ -923,24 +911,6 @@
             a.click();
         }
 
-        function compartir_tienda_por_wpp(msg) {
-            var msgEnChat = ""
-            msg = msg.split(" ").join("%20");
-            console.log(msg);
-            var href = 'https://api.whatsapp.com/send?text='
-            href = href + msg;
-            console.log(href)
-            $('#whatsappMsg').attr('href', href);
-            $('.waMsg').val('');
-            $("<p class='textoEnviado'>" + msgEnChat + "</p>").appendTo(".chat");
-            var a = document.createElement('a');
-            a.target = '_blank';
-            a.href = href;
-            a.click();
-            //settimeout(location.href = 'shop.aspx',5000)
-        }
-
-
 
         function vaciar_carrito() {
             Swal.fire({
@@ -981,7 +951,7 @@
                 $('.tbody_refresh').append("<tr class='fila_table'><td class='td_virtual_phone'>" + carrito[i].articulo + "</td><td style='width: 70px;' class='td_virtual_phone'><div style='display:flex;'><div class='flechas' style='display: flex; flex-direction: column; position: relative; left: -5px; top: -1px;'><img class='flecha_arriba' onclick='flecha_arriba(this)' style='filter: grayscale(1);width:25px;transform: rotateZ(90deg);margin:3px 0' src='static/img/arrow.png' /><img class='flecha_abajo' onclick='flecha_abajo(this)' style='filter: grayscale(1);width:25px;transform: rotateZ(270deg)' src='static/img/arrow.png' /></div><input style='border-bottom: 0px; width: 60px; font-size: 30px; text-align: center; font-family: bangers; position: relative; top: 7px; color: #383838; left: -10px; cursor:pointer' type='number' art_id='" + carrito[i].articulo + "' precio_unitario='" + carrito[i].precio + "' onChange='telefono_virtual_actualizar_precio_respecto_a_cantidad(this)' value='" + carrito[i].cantidad + "' readOnly/></div></td><td class='articulo_de_telefono_virtual td_virtual_phone' art_id='" + carrito[i].articulo + "' precio_unitario='" + carrito[i].precio + "'img='" + carrito[i].img + "' cantidad='" + carrito[i].cantidad + "' onclick='quitar_producto_de_celular(this)'><img class='img_producto_telefono_virtual' src='" + carrito[i].img + "' class='table_ruta_imagen' id='txt_ruta_imagen'/></td><td class='td_virtual_phone'><span style='color: #383838; position: relative; font-size: 20px; font-weight: 500; }'>$" + carrito[i].precio + ".00</span></td></tr>")
             }
         }
-        
+
 
 
 

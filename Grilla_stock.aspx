@@ -24,16 +24,21 @@
 
                                                                                          
                                             <ul id="tabs-swipe-demo" class="tabs center">
-                                            <li class="tab"><a class="active" href="#myChart-2" style="display:flex;"><img src="static/img/bar.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRÁFICO BARRAS</span></a></li>
+                                            <li class="tab"><a class="active" href="#grilla" style="display:flex;"><img src="static/img/mesa.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRILLA</span></a></li>
                                             <li class="tab"><a href="#grilla_imagen" style="display:flex;"><img src="static/img/imagen.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>IMAGEN</span></a></li>
-                                            <li class="tab"><a href="#grilla" style="display:flex;"><img src="static/img/mesa.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRILLA</span></a></li>
+                                            <li class="tab"><a href="#myChart-2" style="display:flex;"><img src="static/img/bar.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRÁFICO BARRAS</span></a></li>
                                             <li class="tab"><a href="#myChart-1" style="display:flex;"><img src="static/img/dona.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRÁFICO CIRCULAR</span></a></li>
                                             </ul>
                                             <br />
                                            <div style="position:relative;">
-                                               <div style="display:flex;justify-content:space-between">
+                                               <div style="display:flex;display: flex;align-items: center">
                                                     <p style="margin-left:10px">FILTRÁ LOS ARTÍCULOS POR CATEGORÍAS</p>
-                                                    <asp:Button ID="btn_filter" runat="server" Text="FILTRAR 🔍" CssClass="btn btn_refrescar_grafico" Style="position: relative;top: 5px;"/>
+
+                                                    <span style="display: flex;margin-left: auto;">
+                                                        <asp:Button ID="btnExportarExcel_stock" runat="server" Text="Excel" OnClick="btnExportarExcel_stock_Click" CssClass="btn btn-primary btnExportarExcel_stock" style="width: 110px; text-align: left;" />
+                                                        <img src="static/img/excel.png" alt="Exportar a Excel" style="width: 30px; height: 30px; position: relative; left: -45px; top: 2px;" />
+                                                    </span>
+                                                    <asp:Button ID="btn_filter" runat="server" Text="FILTRAR 🔍" CssClass="btn btn_refrescar_grafico" Style="display: flex;margin-left: auto;"/>
                                                 </div>
                                                 <br />
                                                 <div class="card menu_filtro" style="padding-bottom: 10px;padding: 15px 15px;">
@@ -60,11 +65,6 @@
                                                     <asp:UpdatePanel ID="Update_grilla" runat="server" UpdateMode="Conditional">
                                                         <ContentTemplate>
                                                             <br />
-                                                            <span style="display: flex; position: relative; left: 50px; top: 10px;">
-                                                                <asp:Button ID="btnExportarExcel_stock" runat="server" Text="Excel" OnClick="btnExportarExcel_stock_Click" CssClass="btn btn-primary btnExportarExcel_stock" style="width: 110px; text-align: left;" />
-                                                                <img src="static/img/excel.png" alt="Exportar a Excel" style="width: 30px; height: 30px; position: relative; left: -45px; top: 2px;" />
-                                                            </span>
-                                                            <br /><br />
                                                             <%=tabla %>
                                                         </ContentTemplate>
                                                         <Triggers>
@@ -124,6 +124,8 @@
 
 
                                                                 </Columns>
+
+
                                                              </asp:GridView>
                                                              <!---->
                                                              </ContentTemplate>

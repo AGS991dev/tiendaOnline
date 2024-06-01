@@ -65,7 +65,7 @@ Partial Class Grilla_pedidos
                 sql.parametros.Add("cantidad", row("cantidad"))
                 sql.parametros.Add("venta_id", identity)
                 sql.parametros.Add("cantidad_total", 1)
-                sql.ejecutar_sp("SP_ticket_INSERT")
+                sql.ejecutar_sp("SP_ticket_INSERT", sql.parametros)
                 cantidad_total += row("cantidad")
 
                 sql.parametros.Clear()
