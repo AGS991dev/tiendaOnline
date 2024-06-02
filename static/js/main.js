@@ -24,6 +24,8 @@ function inicializar_grilla(selector, callback, primer_columna_visible) { //SIN 
         "order": [[0, 'desc']],
         "bLengthChange": true,
         "pageLength": 50,
+        "pagingType": "full_numbers", // Esto muestra primero, anterior, siguiente, último
+        "lengthMenu": [5, 10, 25, 50], // Opciones para cambiar la cantidad de filas por página
         "drawCallback": function (settings) {
             var pagination = $(this).closest('.dataTables_wrapper').find('.dataTables_paginate');
             pagination.toggle(this.api().page.info().pages > 1);
@@ -89,6 +91,8 @@ function inicializar_grilla_orderBy(selector, callback, primer_columna_visible, 
         "order": [[orderByNcolumn, orderDir]],
         "bLengthChange": true,
         "pageLength": 50,
+        "pagingType": "full_numbers", // Esto muestra primero, anterior, siguiente, último
+        "lengthMenu": [5, 10, 25, 50], // Opciones para cambiar la cantidad de filas por página
         "drawCallback": function (settings) {
             var pagination = $(this).closest('.dataTables_wrapper').find('.dataTables_paginate');
             pagination.toggle(this.api().page.info().pages > 1);

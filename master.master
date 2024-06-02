@@ -11,6 +11,7 @@
     <link rel = "stylesheet" href="static/img/logo.png" />
      <!-- Custom CSS -->
     <link href="static/css/material-icon.css" rel="stylesheet">
+    <link href="static/css/material-icon.css" rel="stylesheet">
     <link href="static/css/efectos_elementos.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/animate.min.css" />
     <link rel="stylesheet" href="static/css/mstepper.min.css" />
@@ -24,6 +25,7 @@
     <link rel="stylesheet" href="static/css/theAppGuruz.css" />
     <link rel="stylesheet" href="static/css/main_FA.css" />
     <link rel="stylesheet" href="static/css/leaflet.css" />
+    <link rel="stylesheet" href="static/css/jquery.dataTables.min.css" />
     <link href="static/fontawesome/css/all.css" rel="stylesheet" type="text/css" />
     <link href="static/fontawesome/css/courier-new.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -399,8 +401,9 @@
     <script type="text/javascript" src="static/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" src="static/js/jszip.min.js"></script>
     <script type="text/javascript" src="static/js/buttons.html5.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
-
+    <script type="text/javascript" src="static/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.dataTables.js"></script>
+    
     <%--<script type="text/javascript" src="static/js/jquery.inputmask.bundle.js"></script>--%>
     <script src="static/js/cleave.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -520,7 +523,7 @@
             css_empresa_li()
             //Compartir tienda
             $('.compartir_store').click(function () {
-                compartir_tienda_por_wpp("https://w340207.ferozo.com/projectos/shopStore.aspx")
+                compartir_tienda_por_wpp("https://w340207.ferozo.com/cape/shopStore.aspx")
             })
 
             // REFRESCAR CANTIDAD DE PEDIDOS EN NAV

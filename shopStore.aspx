@@ -1005,9 +1005,7 @@
                     if (response) {
                         if (response.d) {
                             var redaccion = []
-                            //console.log("QQQ", response.d)
                             redaccion = response.d.split("|")
-                            //console.log(redaccion)
                             enviar_whatsapp(redaccion[1])
 
                             $('.monedas').prop("volume", 0.3);

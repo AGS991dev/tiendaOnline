@@ -181,7 +181,7 @@
             setTimeout(function () { addMarker = true }, 750)
 
             $('#addMarkerBtn').click(function () {
-                setTimeout(function () { addMarker = true }, 250)
+                setTimeout(function () { addMarker = true }, 500)
                 $(this).prop('disabled', true);
                 $('#map_local').addClass('crosshair-cursor'); // Añadir clase para cambiar el cursor
             });

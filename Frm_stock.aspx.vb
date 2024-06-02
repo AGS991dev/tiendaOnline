@@ -7,7 +7,7 @@ Partial Class Frm_stock
     Inherits System.Web.UI.Page
     Public nombre_objeto As String = "Stock"
     Public pagina_grilla As String = "Grilla_stock.aspx"
-
+    Public own_folder_name As String = ConfigurationManager.AppSettings("own_folder_name").ToString()
     Public post_msg_error As String = ""
 
     ReadOnly Property pk As String
@@ -50,7 +50,7 @@ Partial Class Frm_stock
     Sub btnGuardarImagenes()
         If imgInput1.PostedFile IsNot Nothing AndAlso imgInput1.PostedFile.ContentLength > 0 Then
             Try
-                Dim nombreCarpetaSave As String = "App1"
+                Dim nombreCarpetaSave As String = own_folder_name
                 ' Obtener la ruta de la carpeta donde se guardará la imagen
                 Dim rutaCarpeta As String = Server.MapPath("~/static/Articulos/" & nombreCarpetaSave)
 
@@ -96,7 +96,7 @@ Partial Class Frm_stock
 
         If imgInput2.PostedFile IsNot Nothing AndAlso imgInput2.PostedFile.ContentLength > 0 Then
             Try
-                Dim nombreCarpetaSave As String = "App1"
+                Dim nombreCarpetaSave As String = own_folder_name
                 ' Obtener la ruta de la carpeta donde se guardará la imagen
                 Dim rutaCarpeta As String = Server.MapPath("~/static/Articulos/" & nombreCarpetaSave)
 
@@ -141,7 +141,7 @@ Partial Class Frm_stock
         End If
         If imgInput3.PostedFile IsNot Nothing AndAlso imgInput3.PostedFile.ContentLength > 0 Then
             Try
-                Dim nombreCarpetaSave As String = "App1"
+                Dim nombreCarpetaSave As String = own_folder_name
                 ' Obtener la ruta de la carpeta donde se guardará la imagen
                 Dim rutaCarpeta As String = Server.MapPath("~/static/Articulos/" & nombreCarpetaSave)
 
@@ -226,7 +226,7 @@ Partial Class Frm_stock
 
     Function insertar() As Boolean
         Dim sql As New cls_db
-        Dim app As String = "App1"
+        Dim app As String = own_folder_name
 
         Dim path1 As String = IIf(imgInput1.Value.ToString = "", img1.Src, imgInput1.Value.ToString)
         Dim path2 As String = IIf(imgInput2.Value.ToString = "", img2.Src, imgInput2.Value.ToString)
@@ -252,7 +252,7 @@ Partial Class Frm_stock
 
     Function actualizar() As Boolean
         Dim sql As New cls_db
-        Dim app As String = "App1"
+        Dim app As String = own_folder_name
 
         Dim path1 As String = IIf(imgInput1.Value.ToString = "", img1.Src, imgInput1.Value.ToString)
         Dim path2 As String = IIf(imgInput2.Value.ToString = "", img2.Src, imgInput2.Value.ToString)

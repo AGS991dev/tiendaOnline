@@ -4,6 +4,7 @@ Partial Class master
     Inherits System.Web.UI.MasterPage
     Public title_name As String = ConfigurationManager.AppSettings("title").ToString() '"FirmaNativa" 'San Antonio 'para cambiar titulo
     Public system_name As String = ConfigurationManager.AppSettings("system_name").ToString() '"firma_nativa" ' esta variable cambia la estetica de la pagina , firma_nativa, san_antonio
+    Public own_folder_name As String = ConfigurationManager.AppSettings("own_folder_name").ToString() '"firma_nativa" ' esta variable cambia la estetica de la pagina , firma_nativa, san_antonio
     Public archivo_main_css As String = ConfigurationManager.AppSettings("main_style").ToString()
     Public page_name As String
     Public page_name_full As String
