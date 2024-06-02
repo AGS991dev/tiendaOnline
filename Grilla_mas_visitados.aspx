@@ -199,7 +199,7 @@
 
             function refresh_filter() {
                 var selector = $('.table')
-                inicializar_grilla_orderBy(selector, console.log('Grilla Visitados'), true, 4, "desc")
+                inicializar_grilla_orderBy(selector, undefined, true, 4, "desc")
             }
             refresh_filter()
 

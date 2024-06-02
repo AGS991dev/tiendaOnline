@@ -57,9 +57,9 @@ Partial Class grilla_ranking
 
         ' Modificar la columna "puesto" según las condiciones requeridas
         For Each row As DataRow In dt.Rows
-            If row("puesto").ToString() = "1°" Then row("puesto") = "<b style='font-size: 26px;'>1° 🏆</b>"
-            If row("puesto").ToString() = "2°" Then row("puesto") = "<span style='font-size: 24px;'>2° 🥈</span>"
-            If row("puesto").ToString() = "3°" Then row("puesto") = "<span style='font-size: 22px;'>3° 🥉</span>"
+            If row("puesto").ToString() = "1º" Then row("puesto") = "<b style='font-size: 26px;'>1° 🏆</b>"
+            If row("puesto").ToString() = "2º" Then row("puesto") = "<span style='font-size: 24px;'>2° 🥈</span>"
+            If row("puesto").ToString() = "3º" Then row("puesto") = "<span style='font-size: 22px;'>3° 🥉</span>"
         Next
 
         Dim grilla As New cls_grid(dt, formulario)

@@ -44,19 +44,19 @@
                                 
                                            <ASP:TemplateField HeaderText="Pedidos">
                                                 <ItemTemplate>
-                                                    <div class="card" style="display: flex; width: 220px; height: 250px; z-index: 1;">
-                                                        <div class="card-content">
-                                                            <a href='c_pedido_lista.aspx?id=<%#Eval("id")%>' style="display: flex; flex-direction: column; position: absolute; left: 40px; top: 10px;">
-                                                                <span  style="display: flex; position: relative; left: -18px;">
-                                                                    <span  style="display: flex;"><span><img src="./static/img/pedido.png" style="width: 25px; position: relative; left: -10px;"/><span style="font-size: 18px;color:black" >Pedido <b><%#Eval("id")%></b></span><br />
-                                                                    <span  style="display: flex;"><span><img src="./static/img/man.png" style="width: 25px; position: relative; left: -10px;"/><span onclick="mostrarPopup('<%#Eval("nombre_cliente")%>', '<%#Eval("celular")%>', '<%#Eval("direccion")%>'); return false;" style="font-size: 18px;color:black" id="btnVerInfo" ><%#Eval("nombre_cliente")%></span><br />
-                                                                    <span  style="display: flex;"><span><img src="./static/img/calendar.png" style="width: 25px; position: relative; left: -10px;"/></span> <p style="font-size: 18px;color:black"><%#Eval("fecha")%></p></span>
-                                                                    <span  style="display: flex;"><span><img src="./static/img/pedido_desc.png" style="width: 25px; position: relative; left: -10px;"/></span> <p style="font-size: 18px;color:black"><%#Eval("Cantidad Total")%> Artículos</p></span>
-                                                                    <span  style="display: flex; position: relative; justify-content: center; top: 10px;"><span><img src="./static/img/money.png" style="width: 35px; position: relative; left: -10px; bottom: -2px;"/></span> <span style="font-size: 20px;color:black"><b>$<%#Eval("monto")%>.00</b></span></span><br />
+                                                    <div class="card" style="width: 220px; height: 250px; z-index: 1;">
+                                                        <div style="margin:auto;text-align: left;">
+                                                            <a href='c_pedido_lista.aspx?id=<%#Eval("id")%>' style="">
+                                                                <div style="padding: 0px 5px;position: relative; top: 10px;">
+                                                                    <span  style="display: flex;"><span><img src="./static/img/calendar.png" style="width: 25px;   margin: 0px 10px;"/><span style="color:black;position: relative; top: -5px;" ><%#Eval("fecha")%></span><br />
+                                                                    <span  style="display: flex;"><span><img src="./static/img/man.png" style="width: 25px;margin: 0px 10px;"/><span onclick="mostrarPopup('<%#Eval("nombre_cliente")%>', '<%#Eval("celular")%>', '<%#Eval("direccion")%>'); return false;" style="color:black;position: relative; top: -5px;" id="btnVerInfo" ><%#Eval("nombre_cliente")%></span><br />
+                                                                    <span  style="display: flex;"><span><img src="./static/img/pedido.png" style="width: 25px;   margin: 0px 10px;"/><span style="color:black;position: relative; top: -5px;" >Pedido <b><%#Eval("id")%></b></span><br />
+                                                                    <span  style="display: flex;"><span><img src="./static/img/pedido_desc.png" style="width: 25px;margin: 0px 10px;"/></span> <p style="color:black;position: relative; top: -5px;"><%#Eval("Cantidad Total")%> Artículos</p></span>
+                                                                    <span  style="display: flex;"><span><img src="./static/img/money.png" style="width: 25px;margin: 0px 10px;"/></span> <span style="color: black; font-size: 20px; position: relative; top: -5px;"><b>$<%#Eval("monto")%>.00</b></span></span><br />
                                                                 </span>
                                                             </a>
-                                                            <span pedido="<%#Eval("id")%>" class="pendiente <%#Eval("s")%>" style="box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px; padding: 10px; border-radius: 3px; position: relative; left: 85px; bottom: -185px; color: black;"><%#Eval("status")%></span>
                                                         </div>
+                                                        <center pedido="<%#Eval("id")%>" class="pendiente <%#Eval("s")%>" style="position: relative; top: 18px;box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px; padding: 10px; border-radius: 3px; color: black; font-size: 12px;"><%#Eval("status")%></center>
                                                     </div>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
@@ -67,6 +67,10 @@
                                      <!---->
                                             </ContentTemplate>
                                      </asp:UpdatePanel>
+
+                <audio class="monedas">
+                    <source src="static/audio/monedas.mp3" type="audio/mp3">
+                </audio>
                 </form>
             </div>
         </div>
@@ -117,7 +121,7 @@
 
         $('document').ready(function () {
             var selector = $('#contenido_body_GV_pedidos')
-            inicializar_grilla(selector)
+            inicializar_grilla_orderBy(selector, undefined, true, 10, "desc")
             //$('td:nth-child(1)').hide()//
             //$('th:nth-child(1)').hide()//borro primera columna
 
@@ -158,6 +162,8 @@
                         $(obj).html('<b>ENTREGADO</b>')
                         $(obj).removeClass('P')
                         $(obj).addClass('E')
+                        $('.monedas').prop("volume", 0.3);
+                        $(".monedas")[0].play();
                     } else if (result.isDenied) {//en proceso
                         ir_al_back_actualizar_pedido_enproceso(pedido)
                         $(obj).css('background', '#ffd40033')

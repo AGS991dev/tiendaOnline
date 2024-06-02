@@ -20,7 +20,7 @@
 
 
 
-            <div style="display: flex; flex-wrap: wrap; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; border-radius: 3px;padding: 10px 0px;justify-content:center;; margin: auto;width: 100%;">
+            <div style="display: flex; flex-wrap: wrap; ;padding: 10px 0px;justify-content:center;; margin: auto;width: 100%;">
 
                     <div class="inputs_filtros_css" style="margin: 0 20px;width:110px">
                             <label for="txt_desde" class="txt_desde" style="min-width: 90px;margin: 8px;position: relative;top: 5px;">Desde:</label>
@@ -70,7 +70,7 @@
 
             </div>
             <br />
-            <ASP:GridView ID ="GV_registros" runat="server" class="table striped" AutoGenerateColumns="false"  CellSpacing='0' style='margin: auto; box-shadow: rgb(0 0 0 / 25%) 0px 0.0625em 0.0625em, rgb(0 0 0 / 25%) 0px 0.125em 0.5em, rgb(255 255 255 / 10%) 0px 0px 0px 1px inset; }'>
+            <ASP:GridView ID ="GV_registros" runat="server" class="table striped" AutoGenerateColumns="false"  CellSpacing='0' style='margin: auto;padding:8px;padding: 10px;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;'>
             <Columns>
                                 
                 <ASP:BoundField DataField = "id" htmlencode="false" HeaderText="ID" />
