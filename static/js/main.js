@@ -77,34 +77,56 @@ function inicializar_grilla_asc(selector, callback, primer_columna_visible) {
     });
 }
 function inicializar_grilla_orderBy(selector, callback, primer_columna_visible, orderByNcolumn, orderDirection) {
+    try {
+        if (primer_columna_visible == undefined) primer_columna_visible = true;
+        if (selector == undefined) selector = 'striped';
+        if (GRILLA_OFF == true) return;
 
-    if (primer_columna_visible == undefined) primer_columna_visible = true;
-    if (selector == undefined) selector = 'striped';
-    if (GRILLA_OFF == true) return;
-
-    var orderDir = orderDirection === 'desc' ? 'desc' : 'asc';
-
-    GRILLA_ACTUAL = $(selector).dataTable({
-        "language": { "url": "table_spanish.txt" },
-        "columnDefs": [{ "targets": [0], "visible": primer_columna_visible, "searchable": true }],
-        "info": true,
-        "order": [[orderByNcolumn, orderDir]],
-        "bLengthChange": true,
-        "pageLength": 50,
-        "pagingType": "full_numbers", // Esto muestra primero, anterior, siguiente, último
-        "lengthMenu": [5, 10, 25, 50], // Opciones para cambiar la cantidad de filas por página
-        "drawCallback": function (settings) {
-            var pagination = $(this).closest('.dataTables_wrapper').find('.dataTables_paginate');
-            pagination.toggle(this.api().page.info().pages > 1);
-        },
-        "initComplete": function (settings, json) {
-            slap_loading_hide();
-            div = $(selector).closest("div")
-            div.find("input[type='search']").focus();
-            if (callback != undefined) callback();
+        // Validate orderByNcolumn
+        if (orderByNcolumn == undefined || isNaN(orderByNcolumn)) {
+            console.warn("orderByNcolumn is undefined or not a number, defaulting to 0");
+            orderByNcolumn = 0;
         }
-    });
+
+        var orderDir = orderDirection === 'desc' ? 'desc' : 'asc';
+
+
+
+        GRILLA_ACTUAL = $(selector).dataTable({
+            "language": { "url": "table_spanish.txt" },
+            "columnDefs": [{ "targets": [0], "visible": primer_columna_visible, "searchable": true }],
+            "info": true,
+            "bLengthChange": true,
+            "pageLength": 50,
+            "pagingType": "full_numbers", // Esto muestra primero, anterior, siguiente, último
+            "lengthMenu": [5, 10, 25, 50], // Opciones para cambiar la cantidad de filas por página
+            "drawCallback": function (settings) {
+                var pagination = $(this).closest('.dataTables_wrapper').find('.dataTables_paginate');
+                pagination.toggle(this.api().page.info().pages > 1);
+            },
+            "initComplete": function (settings, json) {
+                slap_loading_hide();
+                var div = $(selector).closest("div");
+                div.find("input[type='search']").focus();
+                if (callback != undefined) callback();
+                var table = $(selector).DataTable();
+                table.order([orderByNcolumn, orderDir]).draw();
+            }
+        });
+        return GRILLA_ACTUAL
+    } catch (e) {
+        // Debug log for initial parameters
+        console.warn("Problemas para generar grilla: ", e.message);
+        console.log("Initializing DataTable with params:", {
+            selector: selector,
+            primer_columna_visible: primer_columna_visible,
+            orderByNcolumn: orderByNcolumn,
+            orderDirection: orderDirection
+        });
+        return GRILLA_ACTUAL
+    }
 }
+
 function mostrarPopup(nombre,celular, direccion) {
     var contenido = '<img src="./static/img/man.png" style="width: 60px; float: left;margin:0px 10px 10px 45px;">' +
         '<div style="text-align:left">' +

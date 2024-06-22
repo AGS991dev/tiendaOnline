@@ -13,7 +13,7 @@
 
             <br />
             <div style="display: flex; justify-content: center; gap: 10px">
-                <img class="tada logo_inicio" src="./static/img/mercadoshop.png" style="width: 25vw" />
+                <img class="tada logo_inicio" src="./static/img/cape1.png" style="width: 14vw" />
             </div>
             <br />
             <br />
@@ -51,7 +51,7 @@
                                         <asp:TemplateField HeaderText="Productos">
                                             <ItemTemplate>
                                                 <div style="box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px; margin: 1px; padding: 0 4px;">
-                                                    <div style="width: 170px; height: 260px;"> <%--  class="img_producto" --%>
+                                                    <div style="width: 170px; height: 220px; padding: 10px 0px; margin: 10px 10px;"> <%--  class="img_producto" --%>
                                                         <div>
                                                             <div style="text-align: center;">
                                                                 <img src="<%# GetImageUrl(Eval("ruta_imagen").ToString()) %>" width="150" height="150" alt="">
@@ -60,7 +60,8 @@
                                                             <div>
                                                                 <a href="#"><%#Eval("nombre")%> <b><%#Eval("categoria")%></b></a>
                                                                 <div>
-                                                                    <span>Envío gratis</span>
+                                                                    <p><%#Eval("descripcion")%></p>
+                                                                    <p style="display:none"><b>$</b> <%#Eval("precio")%>.00</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -75,7 +76,7 @@
                                                             precio="<%#Eval("precio")%>"
                                                             class="btn_mas_shopStore"
                                                             onclick='agregar_al_carrito_busqueda(this,"Producto agregado Correctamente");'>
-                                                            <span style="color: white; padding: 5px 10px; background: #29357d; position: absolute; left: -8px; font-family: cursive; font-size: large;"><b>$</b> <%#Eval("precio")%>.00</span>
+                                                            <span style="color: white; padding: 5px 10px; background: #29357d; position: absolute; left: 12px; font-family: cursive; font-size: large;"><b>$</b> <%#Eval("precio")%>.00</span>
                                                             <span class='tooltipped' data-position='right' data-tooltip='Agregar'>
                                                                 <!-- IMAGEN MAS -->
                                                                 <img class="zoom css_cesta lazy" src="./static/img/cesta4.png" style="width: 35px;" />

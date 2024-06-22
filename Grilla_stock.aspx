@@ -89,7 +89,7 @@
                                                                             <div style="width: 170px; height: 260px;"> <%--  class="img_producto" --%>
                                                                                 <div>
                                                                                     <div style="text-align: center;">
-                                                                                        <img src="<%#Eval("ruta_imagen")%>" width="150" class="lazy" height="150" alt="">
+                                                                                        <img src="<%# GetImageUrl(Eval("ruta_imagen").ToString()) %>" width="150" class="lazy" height="150" alt="">
                                                                                         <%--<img style="max-height: 200px;" class="activator img_producto" src="<%#Eval("ruta_imagen_2")%>" descripcion="<%#Eval("descripcion")%>" id="<%#Eval("id")%>" nombre="<%#Eval("nombre")%>" precio="<%#Eval("precio")%>" categoria="<%#Eval("categoria")%>" /><img style="max-height: 200px;" class="activator img_producto" src="<%#Eval("ruta_imagen_3")%>" descripcion="<%#Eval("descripcion")%>" id="<%#Eval("id")%>" nombre="<%#Eval("nombre")%>" precio="<%#Eval("precio")%>" categoria="<%#Eval("categoria")%>" />--%>
                                                                                     </div>
                                                                                     <div>

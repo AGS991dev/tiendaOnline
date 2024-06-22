@@ -64,7 +64,7 @@
 
 
                             <% If Session("system_name") = "firma_nativa" Then %>
-                            <img src="static/img/mercadoshop.png" style="max-width: 80%" alt="FirmaNativa" />
+                            <img src="static/img/cape1.png" style="max-width: 80%" alt="FirmaNativa" />
                             <% End If %>
                     </div>
                         

@@ -122,6 +122,8 @@
         $('document').ready(function () {
             var selector = $('#contenido_body_GV_pedidos')
             inicializar_grilla_orderBy(selector, undefined, true, 10, "desc")
+            //table.order(10, "desc").draw();
+            //inicializar_grilla(selector)
             //$('td:nth-child(1)').hide()//
             //$('th:nth-child(1)').hide()//borro primera columna
 
