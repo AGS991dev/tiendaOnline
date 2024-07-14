@@ -104,7 +104,7 @@
                           <!--  -->
                           <div class="bg-secondary mb-3" style="margin-left: 15px;padding: 8px;border-radius: 20px;background: #fff;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
                             <div class="col-12 row ml-1 pt-2 pb-1" style="position: relative;border-top-left-radius: 15px;border-top-right-radius: 15px;background: #ededed;margin: 0 0px;">
-                              <div style="position: relative; top: 20px; color: black; left: 12px;"><img style="width: 100px; position: relative; top: -10px; border-radius: 15px;"  src="./static/img/cape1.png" alt=""><span style="position: relative; top: -20px; left: 10px;">GONZALO LOPEZ</span></div>
+                              <div style="position: relative; top: 20px; color: black; left: 12px;"><img style="width: 30px; position: relative; top: -10px; border-radius: 15px;"  src="./static/img/cape1.png" alt=""><span style="position: relative; top: -20px; left: 10px;">GONZALO LOPEZ</span></div>
                             </div>
                             <div class="waChat ">
                               <div class="chat" style="width: 100%; height: 350px; padding: 15px; position: relative; left:0px;">
@@ -274,7 +274,7 @@
         }
 
         .badge_pendientes {
-            background: #ed3446;
+            background: #b18754;
             position: absolute;
             padding: 0px 18px 0px 15px;
             border-radius: 25px;

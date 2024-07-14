@@ -58,7 +58,7 @@
                                                                     <asp:Button ID="btnExportarExcel_consul" EnableViewState="false" runat="server" Text="Excel" OnClick="btnExportarExcel_consul_Click" CssClass="btn btn-primary btnExportarExcel_consul" style="width: 110px; text-align: left;" />
                                                                     <img src="static/img/excel.png" alt="Exportar a Excel" style="width: 30px; height: 30px; position: relative; left: -45px; top: 2px;" />
                                                                 </span>
-                                                                <asp:Button AutoPostBack="true" style="margin: 0px 20px; position: relative; top: 10px; height: 36px; background: #29357d;" ID="btn_filtrar" runat="server" name="btn_filtrar" CssClass="btn btn_filtrar" Text="Consultar" />
+                                                                <asp:Button AutoPostBack="true" style="margin: 0px 20px; position: relative; top: 10px; height: 36px; background: #397156;" ID="btn_filtrar" runat="server" name="btn_filtrar" CssClass="btn btn_filtrar" Text="Consultar" />
                                                             </div>
                                                         </ContentTemplate>
                                                         <Triggers>

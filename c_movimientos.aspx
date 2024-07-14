@@ -108,7 +108,7 @@
             padding: 5px 0px 0px 20px;
         }
         .S{
-            color:#29357d
+            color:#397156
         }
         .R{
             color:#db5461

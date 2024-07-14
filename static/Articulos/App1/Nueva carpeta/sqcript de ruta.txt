@@ -1,0 +1,55 @@
+INSERT INTO [dbo].[productos]
+           ([nombre]
+           ,[descripcion]
+           ,[cantidad]
+           ,[tamaño]
+           ,[categoria]
+           ,[color]
+           ,[ruta_imagen]
+           ,[precio]
+           ,[codigo_barra]
+           ,[precio_costo]
+           ,[ruta_imagen_2]
+           ,[ruta_imagen_3]
+           ,[producto_visitado])
+     VALUES
+           ('7Up Light'
+           ,'Bebida gaseosa sin azúcar'
+           ,100
+           ,'1.5 L'
+           ,'Bebida'
+           ,'Verde'
+           ,'B_7upLight.png'
+           ,50.00
+           ,1234567890123
+           ,45
+           ,'ruta/imagen/2.png'
+           ,'ruta/imagen/3.png'
+           ,0),
+           ('Coca Cola Light'
+           ,'Bebida gaseosa light'
+           ,150
+           ,'1.75 L'
+           ,'Bebida'
+           ,'Rojo'
+           ,'B_cocacolaLight.png'
+           ,60.00
+           ,1234567890124
+           ,55
+           ,'ruta/imagen/2.png'
+           ,'ruta/imagen/3.png'
+           ,0),
+           ('Corona'
+           ,'Cerveza importada'
+           ,200
+           ,'355 ml'
+           ,'Cerveza'
+           ,'Dorado'
+           ,'B_corona.png'
+           ,70.00
+           ,1234567890125
+           ,65
+           ,'ruta/imagen/2.png'
+           ,'ruta/imagen/3.png'
+           ,0);
+GO

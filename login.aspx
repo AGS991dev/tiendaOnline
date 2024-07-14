@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="center-align col s12" style="margin-bottom: 50px; margin-top: 20px;">
-                            <asp:Button ID="btn_aceptar" runat="server" Text="Ingresar" CssClass="btn" Style="background:#29357d" />
+                            <asp:Button ID="btn_aceptar" runat="server" Text="Ingresar" CssClass="btn" Style="background:#397156" />
                         </div>
 
                         <%If show_alert_error.Value = "true" Then%>

@@ -113,8 +113,8 @@
                                                                                     precio="<%#Eval("precio")%>"
                                                                                     class="btn_mas_shopStore lazy"
                                                                                     onclick='agregar_al_carrito_busqueda(this,"Producto agregado Correctamente");'>
-                                                                                    <span style="background: #ed3446 !important; color: white; padding: 4px 10px; border-radius: 2px; position: relative; left: -10px; font-family: cursive; font-size: large; bottom: 10px;"><b>$</b> <%#Eval("precio")%>.00</span>
-                                                                                    <a style="position: relative; top: -14px;background: #ed3446 !important" href='Frm_stock.aspx?id=<%#Eval("id")%>' ><span class='waves-effect waves-light btn-small tooltipped card_color' syule="padding: 0px 20px 0px 20px;height: 35px;background: #ed3446 !important;" data-position='top' data-tooltip='Editar <%#Eval("nombre")%>' ><i class='material-icons'>edit</i></a>
+                                                                                    <span style="background: #b18754 !important; color: white; padding: 4px 10px; border-radius: 2px; position: relative; left: -10px; font-family: cursive; font-size: large; bottom: 10px;"><b>$</b> <%#Eval("precio")%>.00</span>
+                                                                                    <a style="position: relative; top: -14px;background: #b18754 !important" href='Frm_stock.aspx?id=<%#Eval("id")%>' ><span class='waves-effect waves-light btn-small tooltipped card_color' syule="padding: 0px 20px 0px 20px;height: 35px;background: #b18754 !important;" data-position='top' data-tooltip='Editar <%#Eval("nombre")%>' ><i class='material-icons'>edit</i></a>
                                                                                 </span>
                                                                             </div>
                                                                         </div>
@@ -162,8 +162,8 @@
 
     <style>
         [type="checkbox"].filled-in:checked+span:not(.lever):after {
-            border: 2px solid #29357d !important;
-            background-color: #29357d !important;
+            border: 2px solid #397156 !important;
+            background-color: #397156 !important;
         }
         td:nth-child(1), th:nth-child(1), td:nth-child(2), th:nth-child(2), td:nth-child(5), th:nth-child(5), td:nth-child(6), th:nth-child(6), td:nth-child(7), th:nth-child(7) {
             text-align: center;

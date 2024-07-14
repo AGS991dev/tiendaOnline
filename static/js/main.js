@@ -96,7 +96,7 @@ function inicializar_grilla_orderBy(selector, callback, primer_columna_visible, 
             "language": { "url": "table_spanish.txt" },
             "columnDefs": [{ "targets": [0], "visible": primer_columna_visible, "searchable": true }],
             "info": true,
-            "bLengthChange": true,
+            "bLengthChang#ed3446e": true,
             "pageLength": 50,
             "pagingType": "full_numbers", // Esto muestra primero, anterior, siguiente, último
             "lengthMenu": [5, 10, 25, 50], // Opciones para cambiar la cantidad de filas por página
