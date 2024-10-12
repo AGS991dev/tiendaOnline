@@ -77,7 +77,8 @@ Partial Class shopStore
             Dim tabla = "<br/><center><h4>No hay Resultados para esta Búsqueda</h4></center><br/>"
         End If
     End Function
-    <System.Web.Services.WebMethod(EnableSession:=True)> Public Shared Function registrar_pedido(ByVal articulos As String) As String
+    <System.Web.Services.WebMethod(EnableSession:=True)>
+    Public Shared Function registrar_pedido(ByVal articulos As String) As String
         Dim sql As New cls_db
         Dim array_articulos As Array
         array_articulos = articulos.Split(",")
@@ -98,7 +99,19 @@ Partial Class shopStore
         sql.parametros.Add("direccion_numero", direccion_numero)
         sql.parametros.Add("monto", monto)
 
-        Dim redaccion_mensaje As String = "Hola 👋🏻​ quiero hacerte el siguiente pedido... %0A"
+        ' Nueva estructura del mensaje de WhatsApp con emojis
+        Dim redaccion_mensaje As String = "📦 *¡Pedido Recibido! 🎉* %0A%0A" &
+                                          "👤 *Cliente:* " & nombre_cliente & " %0A" &
+                                          "📞 *Teléfono:* " & celular & " %0A"
+
+        ' Verificar si la dirección es TAKEAWAY
+        If direccion_calle = "0" Or direccion_numero = 0 Then
+            redaccion_mensaje &= "🚶‍♂️ *Dirección:* TAKE-AWAY %0A%0A"
+        Else
+            redaccion_mensaje &= "🏠 *Dirección:* " & direccion_calle & " " & direccion_numero & " %0A%0A"
+        End If
+
+        redaccion_mensaje &= "🛒 *Resumen de tu pedido:* %0A"
 
         Dim dt As DataTable = sql.ejecutar_sp("SP_pedidos_INSERT")
         Dim pedido_id As Integer = dt(0)(0)
@@ -108,36 +121,46 @@ Partial Class shopStore
             Dim cantidad As String = ""
             Dim nombre_articulo As String = ""
             Dim monto_articulo As String = ""
-            For i As Integer = 0 To array_articulos.Length - 6 'resta stock
-                If i Mod 2 = 0 Then 'en el string de dato el primer dato es el articulo y segundo la cantidad y el ultimo el monto
+
+            ' Procesar cada artículo y cantidad del pedido
+            For i As Integer = 0 To array_articulos.Length - 6
+                If i Mod 2 = 0 Then
                     sql.parametros.Clear()
                     articulo_id = array_articulos(i)
                     sql.parametros.Add("articulo_id", articulo_id)
                     dt = sql.ejecutar_sp("SP_stock_Consul_ID")
-                    'Dim img_art As String = dt(0).ItemArray(7)
                     monto_articulo = dt(0).ItemArray(8)
                     nombre_articulo = dt(0).ItemArray(1)
 
                     sql.parametros.Clear()
                     sql.parametros.Add("pedido_id", pedido_id)
                     sql.parametros.Add("articulo_id", articulo_id)
-                    'AQUI REDACTO MENSAJE DE WHATSAPP
 
                 Else
                     cantidad = array_articulos(i)
                     sql.parametros.Add("cantidad", CInt(cantidad))
                     sql.ejecutar_sp("SP_PEDIDOLISTA_INSERT")
-                    'sql.parametros.Add("cantidad", cantidad) 'cantidad
-                    redaccion_mensaje = redaccion_mensaje + "%0A ➖ " + cantidad + " Unidades de ➖ " + nombre_articulo + " de $" + monto_articulo + ".00 c/u"
+
+                    ' Agregar información del artículo al mensaje
+                    redaccion_mensaje &= "➖ *" & cantidad & " x " & nombre_articulo & "* ➡️ *$" & monto_articulo & ".00* c/u %0A"
                 End If
             Next
+
+            ' Agregar total y número de pedido al mensaje
             Dim total As String = array_articulos(array_articulos.Length - 1)
-            redaccion_mensaje = redaccion_mensaje + "%0A%0A TOTAL = 💲​" + total + ".00"
+            redaccion_mensaje &= "%0A💵 *Total a pagar:* 💲" & total & ".00 %0A"
+            redaccion_mensaje &= "%0A🧾 *N° de Pedido:* " & pedido_id.ToString & " %0A"
+            redaccion_mensaje &= "%0A✨ *Gracias por tu compra* ✨ Ya recibimos tu pedido!"
+            redaccion_mensaje &= "%0A Enviá éste mensaje si querés estar en contacto hasta recibirlo."
+            redaccion_mensaje &= "%0A Si tienes alguna duda, estamos a tu disposición. 😊"
+
         Catch ex As Exception
             Return False
         End Try
-        Return pedido_id.ToString + "|" + redaccion_mensaje + "%0A %0A 🧾​​​​ N°PEDIDO - " + pedido_id.ToString '+ celular.ToString + " es el número de " + nombre_cliente.ToString
 
+        ' Retornar el ID del pedido y el mensaje formateado para WhatsApp
+        Return pedido_id.ToString & "|" & redaccion_mensaje & "%0A %0A"
     End Function
+
 
 End Class
