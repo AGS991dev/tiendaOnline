@@ -151,52 +151,75 @@ Public Class cls_db
 
 
     Public Function ejecutar_sp(procedimiento As String, Optional ByVal parametros As Dictionary(Of String, Object) = Nothing) As DataTable
-
-        If IsNothing(Me.parametros) OrElse Me.parametros.Count = 0 Then
-            Me.parametros = parametros
-        End If
-
-
-        Dim conn As System.Data.OleDb.OleDbConnection = conectar()
-
-        Dim myCMD As System.Data.OleDb.OleDbCommand
-        Dim myda As System.Data.OleDb.OleDbDataAdapter
         Dim dt As New DataTable
-
-
-        myCMD = New System.Data.OleDb.OleDbCommand(procedimiento, conn)
-        myCMD.CommandType = CommandType.StoredProcedure
-
-        If Not IsNothing(Me.parametros) Then
-
-            For Each p As KeyValuePair(Of String, Object) In Me.parametros
-                If IsNothing(p.Value) Then
-                    myCMD.Parameters.AddWithValue(p.Key, DBNull.Value)
-                Else
-                    myCMD.Parameters.AddWithValue(p.Key, p.Value)
-                End If
-
-            Next
-
-        End If
-
-        myda = New System.Data.OleDb.OleDbDataAdapter(myCMD)
-
-        myda.Fill(dt)
-
-        conn.Close()
-        conn.Dispose()
-
         Try
+            Dim diaFechaHora As String = DateTime.Now.ToString("dddd, dd/MM/yyyy HH:mm:ss")
+            cls_utils.LogSP(procedimiento.ToString + " - " + diaFechaHora)
+
+            ' Verificar si los parámetros están inicializados
+            If IsNothing(Me.parametros) OrElse Me.parametros.Count = 0 Then
+                Me.parametros = parametros
+            End If
+
+            ' Crear conexión
+            Dim conn As System.Data.OleDb.OleDbConnection = conectar()
+
+            Dim myCMD As System.Data.OleDb.OleDbCommand
+            Dim myda As System.Data.OleDb.OleDbDataAdapter
+
+            ' Comando para ejecutar el procedimiento almacenado
+            myCMD = New System.Data.OleDb.OleDbCommand(procedimiento, conn)
+            myCMD.CommandType = CommandType.StoredProcedure
+
+            ' Agregar parámetros si los hay
+            If Not IsNothing(Me.parametros) Then
+                For Each p As KeyValuePair(Of String, Object) In Me.parametros
+                    If IsNothing(p.Value) Then
+                        myCMD.Parameters.AddWithValue(p.Key, DBNull.Value)
+                    Else
+                        myCMD.Parameters.AddWithValue(p.Key, p.Value)
+                    End If
+                Next
+            End If
+
+            ' Ejecutar y llenar la tabla con los datos
+            myda = New System.Data.OleDb.OleDbDataAdapter(myCMD)
+            myda.Fill(dt)
+
+            ' Cerrar la conexión
             conn.Close()
             conn.Dispose()
+
+            Return dt
+
         Catch ex As Exception
-
+            ' Llamar a la función que maneja el error y retorna la tabla con los detalles del error
+            cls_utils.Log(ex.ToString)
+            ' Lanza un error que puede ser manejado a nivel superior
+            Return GenerarTablaError(ex)
         End Try
-
-        Return dt
-
     End Function
+    Private Function GenerarTablaError(ex As Exception) As DataTable
+        ' Crear la tabla para almacenar la información del error
+        Dim dtError As New DataTable
+        dtError.Columns.Add("ErrorMessage", GetType(String))
+        dtError.Columns.Add("ErrorType", GetType(String))
+        dtError.Columns.Add("StackTrace", GetType(String))
+
+        ' Crear una fila con los detalles del error
+        Dim row As DataRow = dtError.NewRow()
+        row("ErrorMessage") = ex.Message
+        row("ErrorType") = ex.GetType().ToString()
+        row("StackTrace") = ex.StackTrace
+
+        ' Agregar la fila a la tabla
+        dtError.Rows.Add(row)
+
+        ' Retornar la tabla con los detalles del error
+        Return dtError
+    End Function
+
+
     Public Function ejecutar_sp_identity(consulta As String, Optional ByVal parametros As List(Of OleDbParameter) = Nothing) As Integer
 
         Dim identity As Integer

@@ -201,7 +201,7 @@
 
             function refresh_filter() {
                 var selector = $('.table')
-                inicializar_grilla_orderBy(selector, undefined, true, 5, "desc")
+                inicializar_grilla_orderBy(selector, undefined, true, 6, "desc")
             }
             refresh_filter()
 

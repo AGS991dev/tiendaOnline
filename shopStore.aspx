@@ -13,7 +13,7 @@
 
             <br />
             <div style="display: flex; justify-content: center; gap: 10px">
-                <img class="tada logo_inicio" src="./static/img/cape1.png" style="width: 14vw" />
+                <img class="tada logo_inicio" src="./static/img/powerGirl.png" style="width: 14vw" />
             </div>
             <br />
             <br />
@@ -22,10 +22,10 @@
             </center>
             <br />
             <br />
-            <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; margin: 0 10px; padding: 10px 0px 0px 10px;; width: 100%; background: #3971561a; border-radius: 5px 5px 0px 0px;">
+            <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; margin: 0 10px; padding: 10px 0px 0px 10px;; width: 100%; background: #ff76a21a; border-radius: 5px 5px 0px 0px;">
                 <span>Filtrá por categorías:</span>
             </div>
-            <div style="    display: flex;     justify-content: flex-start;     flex-wrap: wrap;     margin: 0 0px 20px 10px;     padding: 5px;     width: 100%;     background: #3971561a;     border-radius: 0px 0px 5px 5px; }">
+            <div style="    display: flex;     justify-content: flex-start;     flex-wrap: wrap;     margin: 0 0px 20px 10px;     padding: 5px;     width: 100%;     background: #ff76a21a;     border-radius: 0px 0px 5px 5px; }">
                 <%For Each categoria As String In categorias%>
                 <span style="margin: 10px" class="btn btn_categoria_buscar" cat="<%=categoria%>"><%=categoria%></span>
                 <%Next%>
@@ -76,7 +76,7 @@
                                                             precio="<%#Eval("precio")%>"
                                                             class="btn_mas_shopStore"
                                                             onclick='agregar_al_carrito_busqueda(this,"Producto agregado Correctamente");'>
-                                                            <span style="color: white; padding: 5px 10px; background: #397156; position: absolute; left: 12px; font-family: cursive; font-size: large;"><b>$</b> <%#Eval("precio")%>.00</span>
+                                                            <span style="color: white; padding: 5px 10px; background: #ff76a2; position: absolute; left: 12px; font-family: cursive; font-size: large;"><b>$</b> <%#Eval("precio")%>.00</span>
                                                             <span class='tooltipped' data-position='right' data-tooltip='Agregar'>
                                                                 <!-- IMAGEN MAS -->
                                                                 <img class="zoom css_cesta lazy" src="./static/img/cesta4.png" style="width: 35px;" />
@@ -145,14 +145,14 @@
         }
 
         .btn_categoria_buscar {
-            background: #397156 !important;
+            background: #ff76a2 !important;
             min-width: 170px;
             cursor: pointer;
             box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         }
 
             .btn_categoria_buscar:hover {
-                background: #397156 !important;
+                background: #ff76a2 !important;
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
             }
 

@@ -15,7 +15,19 @@ Partial Class login
             Session("usuario_actual") = Nothing
             Response.Redirect("login.aspx")
         End If
+        ' Verificar si se ha pasado el parámetro Acc con valor "logout"
+        If Not String.IsNullOrEmpty(Request.QueryString("Acc")) AndAlso Request.QueryString("Acc") = "logout" Then
+            ' Limpiar la sesión del usuario actual
+            System.Web.HttpContext.Current.Session("usuario_actual") = Nothing
+            ' Redirigir al inicio de sesión
+            Response.Redirect("login.aspx")
+        End If
 
+        ' Verificar si se ha pasado el parámetro logout=true (esto lo puedes mantener si también necesitas esta lógica)
+        If Request.QueryString("logout") = "true" Then
+            Session("usuario_actual") = Nothing
+            Response.Redirect("login.aspx")
+        End If
     End Sub
 
     Protected Sub btn_aceptar_Click(sender As Object, e As EventArgs) Handles btn_aceptar.Click

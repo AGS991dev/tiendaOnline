@@ -39,9 +39,9 @@ Partial Class Frm_Categorias
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        If pk <> "" Then
-            recurso_valido(cls_security.usuario_actual.empresa_id, pk) 'tabla usuarios
-        End If
+        'If pk <> "" Then
+        '    recurso_valido(cls_security.usuario_actual.empresa_id, pk) 'tabla usuarios
+        'End If
 
         If Not IsPostBack Then
             'inicializar_controles()

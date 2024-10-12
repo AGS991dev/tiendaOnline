@@ -83,7 +83,7 @@
                 </Columns>
              </asp:GridView>
 
-            <p>Para registrar tu moviemiento elegí el concepto, el concepto determina la operación.</p>
+            <p>Para registrar tu moviemiento elegí el concepto, el mismo determinará si es ingreso o egreso.</p>
             <div class="box_inputs">
                 <label for="cbo_concepto" style="position: relative; top: 10px; font-size: 18px; right: 5px;">CONCEPTO</label>
                 <asp:DropDownList runat='server' ID='cbo_concepto' style="margin: 0 5px;width: 130px;" type='text' />
@@ -108,7 +108,7 @@
             padding: 5px 0px 0px 20px;
         }
         .S{
-            color:#397156
+            color:#ff76a2
         }
         .R{
             color:#db5461

@@ -206,6 +206,8 @@ Public Class cls_security
                         Return True
                     End If
                 End If
+            Else
+                System.Web.HttpContext.Current.Session("usuario_actual") = Nothing
             End If
 
             Return False

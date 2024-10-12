@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="center-align col s12" style="margin-bottom: 50px; margin-top: 20px;">
-                            <asp:Button ID="btn_aceptar" runat="server" Text="Ingresar" CssClass="btn" Style="background:#397156" />
+                            <asp:Button ID="btn_aceptar" runat="server" Text="Ingresar" CssClass="btn" Style="background:#ff76a2" />
                         </div>
 
                         <%If show_alert_error.Value = "true" Then%>
@@ -64,7 +64,7 @@
 
 
                             <% If Session("system_name") = "firma_nativa" Then %>
-                            <img src="static/img/cape1.png" style="max-width: 80%" alt="FirmaNativa" />
+                            <img src="static/img/powerGirl.png" style="max-width: 80%" alt="FirmaNativa" />
                             <% End If %>
                     </div>
                         

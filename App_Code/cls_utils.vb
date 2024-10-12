@@ -23,22 +23,68 @@ Public Class cls_utils
     '    Return obj
     'End Function
 
-
-
     Public Shared Function Log(texto As String)
         Dim activar_logs = ConfigurationManager.AppSettings("activar_logs").ToString() 'string true o false
         If activar_logs = "true" Then
-            Dim strFile As String = System.Web.HttpContext.Current.Server.MapPath("~/logg.txt") '  MapPath("~/") + "log.txt"
-            Dim fileExists As Boolean = File.Exists(strFile)
+            Dim strFile As String = System.Web.HttpContext.Current.Server.MapPath("~/log.txt")
+            Dim maxLines As Integer = 2000
 
+            ' Verificar si el archivo existe
+            If File.Exists(strFile) Then
+                ' Leer todas las líneas del archivo
+                Dim lines As List(Of String) = File.ReadAllLines(strFile).ToList()
 
-            Dim sw As New StreamWriter(strFile, True)
-            sw.WriteLine(texto & "    <----  " & DateTime.Now)
-            sw.WriteLine("          -               -               -             ")
-            sw.Close()
+                ' Si el archivo tiene más de 2000 líneas, eliminar las más antiguas
+                If lines.Count >= maxLines Then
+                    ' Eliminar las líneas más antiguas hasta que queden 1998 líneas (dos líneas por cada nuevo log)
+                    lines = lines.Skip(lines.Count - maxLines + 2).ToList()
+                End If
+
+                ' Agregar las nuevas líneas al final
+                lines.Add(texto & "    <----  " & DateTime.Now)
+                lines.Add("          -               -               -             ")
+
+                ' Sobrescribir el archivo con las líneas actualizadas
+                File.WriteAllLines(strFile, lines)
+            Else
+                ' Si el archivo no existe, crear y escribir las nuevas líneas
+                Dim sw As New StreamWriter(strFile, False) ' Se crea un nuevo archivo si no existe
+                sw.WriteLine(texto & "    <----  " & DateTime.Now)
+                sw.WriteLine("          -               -               -             ")
+                sw.Close()
+            End If
         End If
-
     End Function
+
+    Public Shared Function LogSP(texto As String)
+        Dim activar_logs = ConfigurationManager.AppSettings("activar_logs").ToString() 'string true o false
+        If activar_logs = "true" Then
+            Dim strFile As String = System.Web.HttpContext.Current.Server.MapPath("~/logSP.txt")
+            Dim maxLines As Integer = 1000
+
+            ' Verificar si el archivo existe
+            If File.Exists(strFile) Then
+                ' Leer todas las líneas del archivo
+                Dim lines As List(Of String) = File.ReadAllLines(strFile).ToList()
+
+                ' Si el archivo tiene más de 2000 líneas, eliminar las más antiguas
+                If lines.Count >= maxLines Then
+                    ' Eliminar las líneas más antiguas hasta que queden 1999 líneas
+                    lines = lines.Skip(lines.Count - maxLines + 1).ToList()
+                End If
+
+                ' Agregar la nueva línea al final
+                lines.Add(texto)
+
+                ' Sobrescribir el archivo con las líneas actualizadas
+                File.WriteAllLines(strFile, lines)
+            Else
+                ' Si el archivo no existe, crear y escribir la nueva línea
+                File.WriteAllText(strFile, texto)
+            End If
+        End If
+    End Function
+
     Public Shared Function capitalize(text As String) As String
         Return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(text)
     End Function
