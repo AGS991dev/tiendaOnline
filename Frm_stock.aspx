@@ -23,6 +23,7 @@
 
                     <div class="row">
                         <div class="input-field col m4 s12">
+                            <a style="position: absolute; top: -60px; left: 20px;" href="grilla_categorias.aspx" class="btn_agregar_articulo tooltipped boton_stock" data-position='bottom' data-tooltip='Agregá una nueva categoría' ><img src="static/img/categorias.png"/ width="40px"></a>
                             <asp:DropDownList ID="cbo_categoria" runat="server"></asp:DropDownList>
                             <label for="cbo_categoria">Categoría</label>
                         </div>

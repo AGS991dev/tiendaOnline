@@ -4,7 +4,7 @@ Imports System.IO
 Partial Class shopStore
     Inherits System.Web.UI.Page
 
-    Public sp As String = "SP_stock_GRILLA"
+    Public sp As String = "SP_stock_shopStore_GRILLA"
     Public table As DataTable
     Public formulario As String = "Frm_stock.aspx"
     Public numero_whatsapp As String = ""

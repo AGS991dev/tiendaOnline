@@ -110,7 +110,8 @@ function inicializar_grilla_orderBy(selector, callback, primer_columna_visible, 
                 div.find("input[type='search']").focus();
                 if (callback != undefined) callback();
                 var table = $(selector).DataTable();
-                table.order([orderByNcolumn, orderDir]).draw();
+                table.order([[orderByNcolumn, orderDir], [1, orderDir]]).draw();
+
             }
         });
         return GRILLA_ACTUAL

@@ -25,7 +25,7 @@
 
                                                                                          
                                             <ul id="tabs-swipe-demo" class="tabs center">
-                                            <li class="tab"><a class="active"href="#grilla_imagen" style="display:flex;"><img src="static/img/imagen.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>IMAGEN</span></a></li>
+                                            <li class="tab"><a class="active"href="#grilla_imagen" style="display:flex;"><img src="static/img/product.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>PRODUCTO</span></a></li>
                                             <li class="tab"><a href="#grilla" style="display:flex;"><img src="static/img/mesa.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRILLA</span></a></li>
                                             <li class="tab"><a href="#myChart-2" style="display:flex;"><img src="static/img/bar.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRÁFICO BARRAS</span></a></li>
                                             <li class="tab"><a href="#myChart-1" style="display:flex;"><img src="static/img/dona.png" style="width: 50px; padding: 5px; margin-right: 10px;" /><span>GRÁFICO CIRCULAR</span></a></li>

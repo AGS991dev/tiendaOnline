@@ -571,7 +571,7 @@
                         // Asegúrate de que el valor de timeInterval no sea mayor que el máximo permitido
                         timeInterval = Math.min(timeInterval, 45000);
                         var hora = obtener_hora()
-                        console.log(timeInterval, hora);
+                        //console.log(timeInterval, hora);
                     }
                     // Esperar antes de la siguiente iteración
                     await new Promise(resolve => setTimeout(resolve, timeInterval));

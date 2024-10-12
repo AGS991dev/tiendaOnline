@@ -813,7 +813,7 @@
                     //console.log("comparacion: ",articulo.articulo, carrito[i].articulo)
                     if (articulo.articulo == carrito[i].articulo) {
 
-                        console.log("este articulo ya esta en el carrito")
+                        //console.log("este articulo ya esta en el carrito")
                         art_id = articulo.articulo
                         //const index = carrito.find(art_id);
                         //console.log("index: ",index)
