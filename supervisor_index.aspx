@@ -135,7 +135,7 @@
                 </a>
             </div>
 
-            <div class="col m4 s6 zoom tooltipped" " data-position="top" data-tooltip="Productos más visitados">
+            <div class="col m4 s6 zoom">
                 <a href="./grilla_mas_visitados.aspx">
                     <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
                         <img src="./static/img/amor.png" style="width: 60px;"/>
@@ -145,7 +145,7 @@
                 </a>
             </div>
 
-            <div class="col m4 s6 zoom tooltipped" " data-position="top" data-tooltip="Productos más visitados">
+            <div class="col m4 s6 zoom">
                 <a href="./Contacto.aspx">
                     <div class="card-panel card-menu center white-text hoverable" style="max-height: 165px;">
                         <img src="./static/img/pinMapColor.png" style="width: 60px;"/>

@@ -45,24 +45,40 @@
 </head>
 <body>
 
+    <% If cls_security.usuario_actual IsNot Nothing Then%>
+    <% If cls_security.usuario_actual.es_supervisor Then%>
+    <div style="display:none" class="isUser" value="true"><%= cls_security.usuario_actual.nombre %></div>
+        <% End If %>
+    <% End If %>
+
     <nav class="nav nav_master">
     <div class="nav-wrapper" style="display: flex; align-items: center; position: relative; top: 7px;">
             <span class="iconos_nav">
-                    <a href="login.aspx" ><img class="tooltipped" src="static/img/login.png"  data-position='bottom' data-tooltip="Login" style="height: 28px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
-                    <a href="shopStore.aspx" ><img class="tooltipped" src="static/img/nav_4.png"  data-position='bottom' data-tooltip="Ir a la Tienda" style="height: 30px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+
+                     <% If cls_security.usuario_actual Is Nothing Then%>
+                            <a href="login.aspx" ><img class="tooltipped" src="static/img/login.png"  data-position='bottom' data-tooltip="Login" style="height: 28px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+                     <% End If %>
+
                     <% If cls_security.usuario_actual IsNot Nothing Then%>
                         <% If cls_security.usuario_actual.es_supervisor Then%>
-                            <a href="supervisor_index.aspx" ><img class="tooltipped" src="static/img/nav_3.png"  data-position='bottom' data-tooltip="Ir al Inicio" style="height: 28px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
                             <a href="Grilla_pedidos.aspx" ><img class="tooltipped" src="static/img/nav_2.png"  data-position='bottom' data-tooltip="Pedidos" style="height: 28px; margin: 3px 0px 0px 15px;filter:invert(1)" /><span class="badge_pendientes_nav rubberBand"><span class="n_pedido_nav"></span></span></a>
+                            <a href="supervisor_index.aspx" ><img class="tooltipped" src="static/img/nav_3.png"  data-position='bottom' data-tooltip="Panel de Control" style="height: 28px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
                          <% End If %>
                      <% End If %>
-                    <a href="Contacto.aspx" ><img class="tooltipped" src="static/img/info.png"  data-position='bottom' data-tooltip="Contacto" style="height: 28px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+
+
+                    <a href="shopStore.aspx" ><img class="tooltipped" src="static/img/nav_4.png"  data-position='bottom' data-tooltip="Tienda WEB" style="height: 30px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
                     <span class="compartir_store"><img class="tooltipped" src="static/img/shared.png"  data-position='bottom' data-tooltip="Compartir tienda" style="height: 27px; margin: 3px 0px 0px 15px;filter:invert(1)" /></span>
+                    <a href="Contacto.aspx" ><img class="tooltipped" src="static/img/info.png"  data-position='bottom' data-tooltip="Contacto" style="height: 28px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+
+
                     <% If cls_security.usuario_actual IsNot Nothing Then%>
                         <% If cls_security.usuario_actual.es_supervisor Then%>
-                            <a href="login.aspx?Acc=logout" ><img class="tooltipped" src="static/img/exit.png"  data-position='bottom' data-tooltip="Salir" style="height: 30px; margin: 3px 0px 0px 15px;filter:invert(1)" /></a>
+                            <a href="login.aspx?Acc=logout" ><img class="tooltipped" src="static/img/exit.png"  data-position='bottom' data-tooltip="Salir" style="height: 30px; margin: 3px 0px 0px 15px;filter:invert(1);position: relative; top: 1px;" /></a>
                         <% End If %>
                     <% End If %>
+
+
 
             </span>
              <!--<div  class="btn_menu_desktop" id="btn_menu_desktop" runat="server" style="margin-left:auto">
@@ -529,7 +545,9 @@
             css_empresa_li()
             //Compartir tienda
             $('.compartir_store').click(function () {
-                compartir_tienda_por_wpp("https://w340207.ferozo.com/cape/shopStore.aspx")
+                var currentUrl = window.location.href;
+                var baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf("/")) + "/shopStore.aspx";
+                compartir_tienda_por_wpp(baseUrl)
             })
 
             // REFRESCAR CANTIDAD DE PEDIDOS EN NAV

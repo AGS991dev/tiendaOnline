@@ -1,5 +1,6 @@
 ﻿Imports System.Data
 Imports System.IO
+Imports Newtonsoft.Json
 
 Partial Class Grilla_caja
     Inherits System.Web.UI.Page
@@ -15,7 +16,7 @@ Partial Class Grilla_caja
     Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             inicializar_variables()
-            inicializar_controles()
+            'inicializar_controles()
             'llenar_grilla()
         End If
     End Sub
@@ -74,6 +75,27 @@ Partial Class Grilla_caja
 
         Return "true"
     End Function
+    <System.Web.Services.WebMethod(EnableSession:=True)>
+    Public Shared Function refrescar_cbo_productos(ByVal codigo As Integer) As String
+        Dim sql As New cls_db
+        Dim dt_art As DataTable
+        dt_art = sql.ejecutar_sp("SP_stock_CBO_buscador_articulos")
+
+        ' Convertir DataTable a un JSON string
+        Dim productos As New List(Of Object)
+
+        For Each dr As DataRow In dt_art.Rows
+            Dim producto As New Dictionary(Of String, String)
+            producto("nombre") = dr("nombre").ToString()
+            producto("codigo_barra") = dr("codigo_barra").ToString()
+            productos.Add(producto)
+        Next
+
+        ' Retorna la lista de productos como JSON
+        Return (Newtonsoft.Json.JsonConvert.SerializeObject(productos))
+    End Function
+
+
     Public Shared Function GetImageUrl(imagePath As String) As String
         Try
             Dim serverPath As String = HttpContext.Current.Server.MapPath(imagePath)

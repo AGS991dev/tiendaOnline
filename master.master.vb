@@ -15,7 +15,7 @@ Partial Class master
     Public badgeCount As New List(Of String)
     Public perfil As Integer
     Public pedidos_pendientes As Integer
-    Public numero_whatsapp As String
+    Public numero_whatsapp As String = ""
 
 
     ReadOnly Property pk As String
@@ -35,7 +35,9 @@ Partial Class master
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        inicializar_variables()
+        If numero_whatsapp = "" Then
+            inicializar_variables()
+        End If
 
         If Request.Url.ToString.Contains("shopStore.aspx") Then
             btn_menu_mobile.Visible = True

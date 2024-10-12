@@ -70,9 +70,7 @@
                                                     <p class="btn escanear" title="Escanear">█│║▌</p>
                                                     </div>
                                                                      <div>
-                                                                         <div class="contenedor_buscador" style="max-width:18em;">
                                                                             <asp:DropDownList ID="cbo_buscador_articulos" runat="server" class="cbo_buscador_articulos" ></asp:DropDownList>
-                                                                         </div>
                                                                       <!--<ul class="tabs" style="display: flex; justify-content: center;">
                                                                         <li class="tab col m6"><a  class="active" href="#tab_producto">Producto</a></li>
                                                                         <li class="tab col m6"><a href="#tab_camara">Cámara</a></li>
@@ -265,11 +263,9 @@
 
 <asp:Content runat="server" ContentPlaceHolderID="contenido_js">
     <script type="text/javascript">
+
         $('document').ready(function () {
             
- 
-
-
             function refresh_filter() {
                 var selector = $('.striped')
                 inicializar_grilla_btn_excel(selector);
@@ -319,15 +315,28 @@
             })
 
             $('.ingresar').click(function () {
-                var carrito = sessionStorage.getItem("carrito")
+                // Obtener el carrito del sessionStorage
+                var carrito = sessionStorage.getItem("carrito");
+
+                // Verificar si el carrito está vacío o no está definido
                 if (carrito == null || carrito == "" || carrito == undefined) {
-                return false
+                    procesar_toast("El carrito está vacío.", "warning");
+                    return false;
                 } else {
-                    carrito = JSON.parse(carrito)
-                    registrar_compra(carrito)
+                    // Convertir el carrito a un array de objetos
+                    carrito = JSON.parse(carrito);
+
+                    // Verificar si el carrito tiene artículos
+                    if (carrito.length === 0) {
+                        procesar_toast("No hay artículos en el carrito.","warning");
+                        return false;
+                    }
+
+                    // Llamar a la función para registrar la compra si hay artículos
+                    registrar_compra(carrito);
                 }
-                
-            })
+            });
+
             
             $('.agregar_al_carrito').click(function () {
                 var articulo = {
@@ -438,6 +447,48 @@
                 });
             }
 
+            function inicializar_cbo_productos() {
+                $.ajax({
+                    type: "POST",
+                    url: "Grilla_caja.aspx/refrescar_cbo_productos",
+                    data: JSON.stringify({ codigo: 1 }),  // Pasar el código como entero
+                    async: false,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                        // Convertir el string JSON en array de objetos
+                        var productos = JSON.parse(response.d);
+
+                        if (productos.length === 0) {
+                            show_alert("Error", "Artículo no encontrado", "error");
+                            return false;
+                        }
+                        // Limpiar el combo antes de agregar nuevos elementos
+                        $(".cbo_buscador_articulos").empty();
+
+                        $(".cbo_buscador_articulos").append(
+                            $('<option>', {
+                                value: -1,
+                                text: "Sin Seleccionar"
+                            })
+                        );
+                        // Recorrer los productos y agregarlos al combo
+                        $.each(productos, function (index, producto) {
+                            $(".cbo_buscador_articulos").append(
+                                $('<option>', {
+                                    value: producto.codigo_barra,
+                                    text: producto.nombre
+                                })
+                            );
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        show_alert("Error", "No se pudo cargar los productos", "error");
+                    }
+                });
+            }
+
+
             function registrar_compra(carrito) {
                 var articulos = []
                 var monto = 0
@@ -476,6 +527,7 @@
                                 $('.cantidad_cesta').html(0)
                                 procesar_toast("Venta n°" + response.d + " registrada", "success")
                             }
+                            inicializar_cbo_productos()
                             return false
                         }
                     }
@@ -635,6 +687,9 @@
             }
 
 
+            //INICIALIZAR CONTROL CBO PRODUCTOS
+            inicializar_cbo_productos();
+
             // Start/stop scanner
             //document.getElementById("btn").addEventListener("click", function () {
             //    if (_scannerIsRunning) {
@@ -644,5 +699,5 @@
             //    }
             //}, false);
         });
-     </script>
+    </script>
 </asp:Content>

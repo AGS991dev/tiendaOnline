@@ -170,6 +170,7 @@
 <asp:Content runat="server" ContentPlaceHolderID="contenido_js">
     <script>
         var map
+        var clickToAddMarker = false
         $('document').ready(function () {
             let contactCards = [];
             // la funcion  contactCards recolecta la info de las CARDS y las guarda en el array para trasnformarlos en MARKERS
@@ -181,7 +182,9 @@
             setTimeout(function () { addMarker = true }, 750)
 
             $('#addMarkerBtn').click(function () {
+                procesar_toast("Ubicá en el mapa el marcador","success")
                 setTimeout(function () { addMarker = true }, 500)
+                setTimeout(function () { clickToAddMarker = true }, 500)
                 $(this).prop('disabled', true);
                 $('#map_local').addClass('crosshair-cursor'); // Añadir clase para cambiar el cursor
             });
@@ -215,9 +218,24 @@
                                `);
             });
 
+            var isFirstClick = true; // Variable para rastrear si es el primer clic
+            var isUser = $('.isUser').text()
             map.on('click', function (e) {
+                // Ignorar el primer clic
+                if (!isUser) {
+                    return;
+                }
+                
+                if (isFirstClick) {
+                    isFirstClick = false; // Marcar que el primer clic ya se ha realizado
+                    return; // Ignorar el primer clic
+                }
+
+                if (!clickToAddMarker) return;
+                clickToAddMarker = false
+
                 if (addMarker) {
-                    var popupText = $('.Popup_title').val() || $('.Nombre_tienda').val() || "Colocá in título de POPUP";
+                    var popupText = $('.Popup_title').val() || $('.Nombre_tienda').val() || "Colocá un título de POPUP";
 
                     // Eliminar todos los marcadores existentes
                     markers.forEach(function (marker) {
@@ -230,17 +248,18 @@
                         .bindPopup(popupText)
                         .openPopup();
 
-
                     markers.push(marker);
-                    // COLOCA LAS COORDENADAS EN EL INPUT DE GUARDADO
-                    $('.Coordenadas').val(e.latlng)
-                    //console.log('Coordinates:', e.latlng);
+
+                    // Coloca las coordenadas en el input de guardado
+                    $('.Coordenadas').val(e.latlng);
+
                     addMarker = false;
                     $('#addMarkerBtn').prop('disabled', false);
                     $('#popupText').val('');
                     $('#map_local').removeClass('crosshair-cursor'); // Quitar clase cuando se coloca el marcador
                 }
-            });///FIN MAPS
+            });
+
         })
 
 
