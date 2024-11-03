@@ -152,15 +152,18 @@ Public Class cls_db
 
     Public Function ejecutar_sp(procedimiento As String, Optional ByVal parametros As Dictionary(Of String, Object) = Nothing) As DataTable
         Dim dt As New DataTable
+        Dim string_parametros As New StringBuilder() ' Inicializamos el StringBuilder
+
         Try
             Dim diaFechaHora As String = DateTime.Now.ToString("dddd, dd/MM/yyyy HH:mm:ss")
-            cls_utils.LogSP(procedimiento.ToString + " - " + diaFechaHora)
+            cls_utils.LogSP("")
+            cls_utils.LogSP("   🎯 " + diaFechaHora)
+            cls_utils.LogSP(procedimiento.ToString)
 
             ' Verificar si los parámetros están inicializados
             If IsNothing(Me.parametros) OrElse Me.parametros.Count = 0 Then
                 Me.parametros = parametros
             End If
-
             ' Crear conexión
             Dim conn As System.Data.OleDb.OleDbConnection = conectar()
 
@@ -178,9 +181,14 @@ Public Class cls_db
                         myCMD.Parameters.AddWithValue(p.Key, DBNull.Value)
                     Else
                         myCMD.Parameters.AddWithValue(p.Key, p.Value)
+                        string_parametros.AppendLine(String.Format("{0} [{1}] = {2}",
+                                p.Key,
+                                p.Value.GetType().Name,
+                                p.Value.ToString()))
                     End If
                 Next
             End If
+
 
             ' Ejecutar y llenar la tabla con los datos
             myda = New System.Data.OleDb.OleDbDataAdapter(myCMD)
@@ -190,6 +198,10 @@ Public Class cls_db
             conn.Close()
             conn.Dispose()
 
+            If Not IsNothing(Me.parametros) Then
+                cls_utils.LogSP("Parámetros:")
+                cls_utils.LogSP(string_parametros.ToString())
+            End If
             Return dt
 
         Catch ex As Exception

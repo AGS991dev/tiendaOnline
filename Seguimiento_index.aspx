@@ -16,7 +16,7 @@
     <%Else %>
     <center>
         <br/>
-    <img src="./static/img/powerGirl.png" style="width: 250px;"/>
+    <img src="./static/img/olivia.png" style="width: 250px;"/>
     </center>
     <br />
     <h4 style="margin: 30px 20px ; text-align: center;display:none"><%=cls_security.usuario_actual.razon_social%></h4>

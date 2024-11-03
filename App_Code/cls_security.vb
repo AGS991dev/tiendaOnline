@@ -139,13 +139,17 @@ Public Class cls_security
                 Me.empresa_cuil = IIf(IsDBNull(dr("empresa_cuil")), Nothing, dr("empresa_cuil"))
                 Me.fecha_registro = IIf(IsDBNull(dr("fecha_registro")), Nothing, dr("fecha_registro"))
 
-                If dr("debe_generar_pass") Is DBNull.Value Or dr("debe_generar_pass") = True Then
-                    Me.debe_generar_pass = 1
-                Else
-                    If dr("debe_generar_pass") = False Then
-                        Me.debe_generar_pass = 0
+                Try
+                    If dr("debe_generar_pass") Is DBNull.Value Or dr("debe_generar_pass") = True Then
+                        Me.debe_generar_pass = 1
+                    Else
+                        If dr("debe_generar_pass") = False Then
+                        End If
                     End If
-                End If
+                Catch ex As Exception
+                    Me.debe_generar_pass = 0
+                End Try
+
 
                 'Me.debe_generar_pass = IIf(IsDBNull(dr("debe_generar_pass")), Nothing, dr("debe_generar_pass"))
 

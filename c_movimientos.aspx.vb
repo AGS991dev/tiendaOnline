@@ -39,7 +39,7 @@ Partial Class c_movimientos
         ' Establecer el texto en el campo txt_desde
         txt_desde.Text = primerDiaDelMes.ToString("yyyy-MM-dd")
         ' Establecer el texto en el campo txt_hasta con la fecha actual
-        txt_hasta.Text = DateTime.Now.ToString("yyyy-MM-dd")
+        txt_hasta.Text = DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")
     End Sub
     Sub cargar_cbo_concepto()
         Dim sql As New cls_db
@@ -56,13 +56,13 @@ Partial Class c_movimientos
         If desde = "" Then
             sql.parametros.Add("desde", DBNull.Value)
         Else
-            Dim _desde As Date = cls_utils.string_to_date(desde)
+            Dim _desde As DateTime = DateTime.ParseExact(desde, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture)
             sql.parametros.Add("desde", _desde)
         End If
         If hasta = "" Then
             sql.parametros.Add("hasta", DBNull.Value)
         Else
-            Dim _hasta As Date = cls_utils.string_to_date(hasta)
+            Dim _hasta As DateTime = DateTime.ParseExact(hasta, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture)
             sql.parametros.Add("hasta", _hasta)
         End If
         Dim dt As DataTable = sql.ejecutar_sp(sp, sql.parametros)
@@ -74,7 +74,7 @@ Partial Class c_movimientos
             GV_registros.DataSource = dt
             GV_registros.DataBind()
             GV_registros.HeaderRow.TableSection = TableRowSection.TableHeader
-            lbl_total.InnerText = dt(0)(6).ToString().Replace("$", "").Trim()
+            lbl_total.InnerText = dt(0)("total").ToString().Replace("$", "").Trim()
             Update_txt_desde.Update()
             Update_txt_hasta.Update()
             panel_consultas.Update()
@@ -115,13 +115,13 @@ Partial Class c_movimientos
             If desde = "" Then
                 sql.parametros.Add("desde", DBNull.Value)
             Else
-                Dim _desde As Date = cls_utils.string_to_date(desde)
+                Dim _desde As DateTime = DateTime.ParseExact(desde, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture)
                 sql.parametros.Add("desde", _desde)
             End If
             If hasta = "" Then
                 sql.parametros.Add("hasta", DBNull.Value)
             Else
-                Dim _hasta As Date = cls_utils.string_to_date(hasta)
+                Dim _hasta As DateTime = DateTime.ParseExact(hasta, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture)
                 sql.parametros.Add("hasta", _hasta)
             End If
 

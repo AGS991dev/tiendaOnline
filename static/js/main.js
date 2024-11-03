@@ -405,13 +405,20 @@ function subtotal_y_total_RESTA(precio, cantidad) {
     //console.log("che",sub_articulos,tot_articulos)
     var total_fila_eliminada = (parseInt(precio) * parseInt(cantidad))
     //console.log(total_fila_eliminada)
-    var subtotal = parseInt(total_fila_eliminada) - parseInt(tot_articulos)
-    var total = parseInt(total_fila_eliminada) - parseInt(tot_articulos)
+    var subtotal = Math.floor((parseInt(tot_articulos) - parseInt(total_fila_eliminada)) * 0.79)
+    var total = parseInt(tot_articulos) - parseInt(total_fila_eliminada)
+
+    // Calcular la diferencia (ambos valores como enteros)
+    var diferencia = parseInt(total) - parseInt(subtotal);
+    // Asignar los atributos dinámicamente
+    $('.subtotal').attr({
+        'data-tooltip': 'Diferencia: $ ' + diferencia + '.00'
+    });
     //console.log(subtotal,total)
     $('td[sub]').attr('sub', subtotal)
     $('td[tot]').attr('tot', total)
-    $('td[sub]').html(subtotal)
-    $('td[tot]').html(total)
+    $('td[sub]').html('$' + subtotal + '.00')
+    $('td[tot]').html('$' + total + '.00')
 }
 
 

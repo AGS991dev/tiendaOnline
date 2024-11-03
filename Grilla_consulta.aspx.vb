@@ -40,7 +40,7 @@ Partial Class Grilla_consulta
         ' Establecer el texto en el campo txt_desde
         txt_desde.Text = primerDiaDelMes.ToString("yyyy-MM-dd")
         ' Establecer el texto en el campo txt_hasta con la fecha actual
-        txt_hasta.Text = DateTime.Now.ToString("yyyy-MM-dd")
+        txt_hasta.Text = DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")
         panel_btn_filtrar.Update()
     End Sub
 

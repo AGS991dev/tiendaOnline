@@ -6,6 +6,7 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="contenido_body">
+    <div class="overlay" style="display:none;"></div>
 
     <h1 style="text-align:center">Menu de Caja</h1>
     
@@ -30,6 +31,63 @@
                                         </div>
 
                                     </div>
+                                        <div class="info_pago" style="max-width: 350px; border: 1px solid gainsboro; border-radius: 3px; padding: 15px;display:none">
+                                            <form class="pago_form">
+                                                <!-- Select para id_forma_pago -->
+                                                <div class="form-group">
+                                                    <label for="cbo_id_forma_pago">Forma de Pago:</label>
+                                                    <select id="cbo_id_forma_pago" name="id_forma_pago" class="form-control">
+                                                        <option value="1">Efectivo</option>
+                                                        <option value="2">Mercado Pago</option>
+                                                        <option value="4">Tarjeta</option>
+                                                    </select>
+                                                </div>
+                                               <!-- Select para tipo_tarjeta -->
+                                                <div class="form-group form-group-tarjeta">
+                                                    <label for="cbo_tipo_tarjeta">Tipo de Tarjeta:</label>
+                                                    <select id="cbo_tipo_tarjeta" name="tipo_tarjeta" class="form-control">
+                                                        <option value="Visa">Visa</option>
+                                                        <option value="AMEX">AMEX</option>
+                                                        <option value="MasterCard">MasterCard</option>
+                                                    </select>
+                                                </div>
+                                               <div class="form-group form-group-tarjeta" style="display:none">
+                                                    <div class="card-container">
+                                                        <div class="credit-card">
+                                                            <p style="color: white; margin-left: 10px;" class="credit-card-typeName">VISA</p>
+                                                            <div class="credit-card__number">
+                                                                <input type="text" id="txt_n_tarjeta" name="n_tarjeta" class="card-input" maxlength="19" placeholder="xxxx xxxx xxxx 1234" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Inputs para n_lote, n_terminal, n_autorizacion, n_tarjeta -->
+                                                <div class="form-group form-group-tarjeta" style="display:none">
+                                                    <label for="txt_n_lote">N° Lote:</label>
+                                                    <input type="text" id="txt_n_lote" name="txt_n_lote" class="form-control">
+                                                </div>
+                                                <div class="form-group form-group-tarjeta" style="display:none">
+                                                    <label for="txt_n_terminal">N° Terminal:</label>
+                                                    <input type="text" id="txt_n_terminal" name="txt_n_terminal" class="form-control">
+                                                </div>
+                                                <div class="form-group form-group-tarjeta" style="display:none">
+                                                    <label for="txt_n_autorizacion">N° Autorización:</label>
+                                                    <input type="text" id="txt_n_autorizacion" name="txt_n_autorizacion" class="form-control">
+                                                </div>
+                                                <div class="form-group form-group-tarjeta" style="display:none">
+                                                    <label for="txt_n_cupon">N° Cupón:</label>
+                                                    <input type="text" id="txt_n_cupon" name="txt_n_cupon" class="form-control">
+                                                </div>
+                                                <br />
+                                                <!-- Botón para ir atrás -->
+                                                <div style="display: flex;justify-content:end;gap: 10px;">
+                                                    <button type="button" class="btn btn-secondary registrarCompra">Registrar Compra</button>
+                                                    <button type="button" class="btn btn-secondary atras">Atrás</button>
+                                                </div>
+                                            </form>
+                                        </div>
+
                                         <div class="card" style="min-height:76vh;padding: 40px;">
                                             <div class="row">
                                                 <div class="col s12 m6 l9 col_table">
@@ -66,7 +124,7 @@
                                                 </div>
                                                 <div class="col s12 m4 l3">
                                                     <div style="display:flex">
-                                                    <input type="text" id="txt_codigo" class="txt_codigo" style="margin-right:10px" placeholder="Código Producto"/>
+                                                    <input type="text" id="txt_codigo" class="txt_codigo" style="margin-right:10px;padding-left: 10px" placeholder="Código Producto"/>
                                                     <p class="btn escanear" title="Escanear">█│║▌</p>
                                                     </div>
                                                                      <div>
@@ -106,7 +164,7 @@
                                                                     <p class="btn agregar_al_carrito" style="width: 100%;">Agregar</p>
                                                                             <div style="display: flex; justify-content:space-around">
                                                                                 <p style="margin-right:5px" class="btn vaciar">Vaciar Carrito</p>
-                                                                                <p class="btn ingresar">Registrar Compra</p>
+                                                                                <p class="btn cobrar">Cobrar</p>
                                                                             </div>
                                                                         <br />
                                                                               <table class="table_totales">
@@ -118,7 +176,8 @@
                                                                                         <td>Total</td>
                                                                                     </tr>
                                                                                     <tr style="background:gainsboro;position: ; bottom: ; right: ; width: ; display: flex; justify-content: space-around;">
-                                                                                        <td class="subtotal" sub="0">$0</td>
+                                                                                        <td class="tooltipped subtotal" data-position="bottom" data-tooltip="$0" sub="0">$0</td>
+
                                                                                         <td class="total" tot="0">$0</td>
                                                                                     </tr>
                                                                                 </tbody>
@@ -172,6 +231,29 @@
         </div>
 
     <style>
+        /* Estilo para el overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            z-index: 1000; /* Asegurarse de que esté sobre todo */
+        }
+
+        /* Centrar el contenedor de pago */
+        .info_pago {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centrar vertical y horizontalmente */
+            background: white; /* Fondo blanco */
+            z-index: 1001; /* Un nivel más alto que el overlay */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el formulario */
+        }
+
         .select2-selection select2-selection--single{
             position:relative;
             top:15px !important;
@@ -256,7 +338,60 @@
             }
         }
 
+        .card-container {
+            width: 320px;
+            margin: 20px auto;
+            perspective: 1000px;
+        }
 
+        .credit-card {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #8e44ad, #c0392b);
+            color: white;
+            position: relative;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .credit-card__number {
+            margin-top: 30px;
+        }
+
+        .card-input {
+            font-size: 24px;
+            background: transparent;
+            color: white;
+            border: none;
+            width: 100%;
+            letter-spacing: 2px;
+            outline: none;
+            padding: 10px 0;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .card-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .credit-card__number input::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .card-input:focus {
+            border-bottom: 2px solid #ecf0f1;
+        }
+        .caret{
+            display:none
+        }
     </style>
 </asp:Content>
 
@@ -265,7 +400,56 @@
     <script type="text/javascript">
 
         $('document').ready(function () {
-            
+
+            // Inicializamos una variable para llevar el contador de las teclas
+            let comboCounter = 0;
+
+            $(document).on('keydown', function (e) {
+                // Tecla "-"
+                if (e.key === "-") {
+                    e.preventDefault(); // Evita que se escriba el guion en el input
+                    comboCounter++; // Incrementamos el contador
+
+                    // Si es la primera vez que presionas la tecla "-", selecciona el primer combo (.txt_codigo)
+                    if (comboCounter === 1) {
+                        $('.txt_codigo').focus().css('border', '3px solid #ff76a2');
+                        $('.txt_codigo').focus().css('border-radius', '5px');
+
+                        // Quitar el borde después de 1 segundo
+                        setTimeout(function () {
+                            $('.txt_codigo').css('border', '');
+                        }, 3000);
+                    }
+                    // Si es la segunda vez que presionas la tecla "-", selecciona el segundo combo (.cbo_buscador_articulos)
+                    else if (comboCounter === 2) {
+                        $('.cbo_buscador_articulos').focus().css('border', '2px solid red');
+
+                        // Quitar el borde después de 1 segundo
+                        setTimeout(function () {
+                            $('.cbo_buscador_articulos').css('border', '');
+                        }, 1000);
+
+                        // Resetear el contador después de seleccionar el segundo combo
+                        comboCounter = 0;
+                    }
+                }
+
+                // Tecla "ENTER"
+                if (e.key === "Enter") {
+                    e.preventDefault(); // Evita el comportamiento por defecto del +
+                    // Trigger de click en el botón/agregar al carrito
+                    $('.agregar_al_carrito').trigger('click');
+                }
+            });
+
+            $('.txt_codigo').on('keydown', function (e) {
+                if (e.key === "+") {
+                    e.preventDefault(); // Evita el comportamiento por defecto del Enter
+                    $('.escanear').trigger('click'); // Dispara el click en el botón .escanear
+                    $('.txt_codigo').val(''); 
+                }
+            });
+
             function refresh_filter() {
                 var selector = $('.striped')
                 inicializar_grilla_btn_excel(selector);
@@ -314,7 +498,27 @@
                 }
             })
 
-            $('.ingresar').click(function () {
+            $('.cobrar').click(function () {
+                $('.info_pago').fadeIn(250)
+                $('.overlay').fadeIn(250);
+
+                $('#cbo_id_forma_pago').select2()
+                $('#cbo_tipo_tarjeta').select2()
+                $('.form-group-tarjeta').hide()
+            })
+
+            $('.atras').click(function () {
+                $('.info_pago').fadeOut(250)
+                $('.overlay').fadeOut(250);
+                // Vaciar los campos de texto
+                $('#txt_n_lote, #txt_n_terminal, #txt_n_autorizacion, #txt_n_cupon').val('');
+
+                // Reiniciar los select a su primera opción
+                $('#cbo_id_forma_pago').prop('selectedIndex', 0).trigger('change');  // Reinicia el select a la primera opción
+                $('#cbo_tipo_tarjeta').prop('selectedIndex', 0).trigger('change');  // Reinicia el select a la primera opción
+            })
+
+            $('.registrarCompra').click(function () {
                 // Obtener el carrito del sessionStorage
                 var carrito = sessionStorage.getItem("carrito");
 
@@ -334,6 +538,13 @@
 
                     // Llamar a la función para registrar la compra si hay artículos
                     registrar_compra(carrito);
+                    // Vaciar los campos de texto
+                    $('#txt_n_lote, #txt_n_terminal, #txt_n_autorizacion, #txt_n_cupon').val('');
+                    // Reiniciar los select a su primera opción
+                    $('#cbo_id_forma_pago').prop('selectedIndex', 0).trigger('change'); // Reinicia el select a la primera opción
+                    $('#cbo_tipo_tarjeta').prop('selectedIndex', 0).trigger('change');  // Reinicia el select a la primera opción
+                    $('.info_pago').fadeOut(250)
+                    $('.overlay').fadeOut(250);
                 }
             });
 
@@ -404,8 +615,8 @@
                         sessionStorage.carrito = JSON.stringify(carrito)
                         $('td[sub]').attr('sub', 0)
                         $('td[tot]').attr('tot', 0)
-                        $('td[sub]').html("$0")
-                        $('td[tot]').html("$0")
+                        $('td[sub]').html("$0.00")
+                        $('td[tot]').html("$0.00")
                         $('.cantidad_cesta').html(0)
                         $('.cbo').prop("volume", 0.3);
                         $(".cbo")[0].play();
@@ -540,13 +751,20 @@
                 //console.log(sub_articulos,tot_articulos)
                 var total_escaneado = (parseInt(precio) * parseInt(cantidad))
                 //console.log(total_escaneado)
-                var subtotal = parseInt(tot_articulos) + parseInt(total_escaneado)
+                var subtotal = Math.floor((parseInt(tot_articulos) + parseInt(total_escaneado)) * 0.79)
                 var total = parseInt(tot_articulos) + parseInt(total_escaneado)
+                // Calcular la diferencia (ambos valores como enteros)
+                var diferencia = parseInt(total) - parseInt(subtotal);
+
+                // Asignar los atributos dinámicamente
+                $('.subtotal').attr({
+                    'data-tooltip': 'IVA Diferencia: $ ' + diferencia + '.00'
+                });
                 //console.log(subtotal,total)
                 $('td[sub]').attr('sub', subtotal)
                 $('td[tot]').attr('tot', total)
-                $('td[sub]').html(subtotal)
-                $('td[tot]').html(total)
+                $('td[sub]').html('$ ' + subtotal+'.00')
+                $('td[tot]').html('$ '+total+'.00')
             }
 
             function ver_articulos_en_pantalla(articulo) {
@@ -689,6 +907,49 @@
 
             //INICIALIZAR CONTROL CBO PRODUCTOS
             inicializar_cbo_productos();
+
+            //INICIALIZAR CLEAVE
+            var cleave = new Cleave('#txt_n_tarjeta', {
+                creditCard: true,
+                delimiter: ' ',
+                onCreditCardTypeChanged: function (type) {
+                    console.log(type);
+                }
+            });
+            $('#txt_n_tarjeta').on('input', function () {
+                var value = $(this).val().replace(/\s+/g, ''); // Elimina espacios
+
+                if (value.length > 3) {
+                    // Obtiene los últimos 4 dígitos
+                    var lastFour = value.slice(-4);
+                    // Reemplaza los primeros dígitos con 'xxxx'
+                    var maskedValue = 'xxxx xxxx xxxx ' + lastFour;
+                    // Asigna el valor formateado al input
+                    $(this).val(maskedValue);
+                }
+            });
+
+
+            // Escuchar el evento change del select de forma de pago
+            $('#cbo_id_forma_pago').change(function () {
+                var formaPagoSeleccionada = $(this).val();
+
+                // Si selecciona Mercado Pago (valor 2) o Cupón (valor 3)
+                if (formaPagoSeleccionada != "1" && formaPagoSeleccionada != "2") {
+                    // Mostrar los campos de tarjeta
+                    $('.form-group-tarjeta').fadeIn(250);
+                } else {
+                    // Si selecciona otra opción, ocultar los campos de tarjeta
+                    $('.form-group-tarjeta').fadeOut(250);
+                }
+            });
+
+            // Escuchar el evento change del select de forma de pago
+            $('#cbo_tipo_tarjeta').change(function () {
+                var nombreTarjeta = $('#cbo_tipo_tarjeta option:selected').text();
+                $('.credit-card-typeName').text(nombreTarjeta)
+            });
+            
 
             // Start/stop scanner
             //document.getElementById("btn").addEventListener("click", function () {

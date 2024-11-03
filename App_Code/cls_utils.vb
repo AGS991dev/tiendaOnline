@@ -84,7 +84,18 @@ Public Class cls_utils
             End If
         End If
     End Function
-
+    Public Shared Function string_to_date(ByVal fecha As String, Optional ByVal format As String = "dd/MM/yyyy") As DateTime
+        If fecha.Trim = "" Then
+            Return New DateTime(1899, 12, 30)
+        Else
+            Dim dte As DateTime = (fecha)
+            Try
+                Return dte.ToString(format)
+            Catch ex As Exception
+                Return New DateTime(1899, 12, 30)
+            End Try
+        End If
+    End Function
     Public Shared Function capitalize(text As String) As String
         Return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(text)
     End Function
@@ -421,18 +432,7 @@ Public Class cls_utils
 
     End Function
 
-    Public Shared Function string_to_date(ByVal fecha As String, Optional ByVal format As String = "dd/MM/yyyy") As DateTime
-        If fecha.Trim = "" Then
-            Return New DateTime(1899, 12, 30)
-        Else
-            Dim dte As DateTime = (fecha)
-            Try
-                Return dte.ToString(format)
-            Catch ex As Exception
-                Return New DateTime(1899, 12, 30)
-            End Try
-        End If
-    End Function
+
 
     Public Shared Function check_documentos(path_files As List(Of String), documentos_id As List(Of String), legajo As List(Of String)) As List(Of String)
         Try

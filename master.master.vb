@@ -15,7 +15,6 @@ Partial Class master
     Public badgeCount As New List(Of String)
     Public perfil As Integer
     Public pedidos_pendientes As Integer
-    Public numero_whatsapp As String = ""
 
 
     ReadOnly Property pk As String
@@ -35,9 +34,6 @@ Partial Class master
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        If numero_whatsapp = "" Then
-            inicializar_variables()
-        End If
 
         If Request.Url.ToString.Contains("shopStore.aspx") Then
             btn_menu_mobile.Visible = True
@@ -92,11 +88,6 @@ Partial Class master
 
         'Return New Random().Next(0, 10)
     End Function
-    Sub inicializar_variables()
-        Dim sql As New cls_db
-        Dim dt As DataTable = sql.ejecutar_sp("SP_WHATSAPP_CONSUL")
-        numero_whatsapp = dt(0)(1)
-    End Sub
 
 
     Public Function empresas_de_empleado() As Boolean

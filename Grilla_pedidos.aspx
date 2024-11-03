@@ -6,6 +6,8 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="contenido_body">
+    <div class="overlay" style="display:none;"></div>
+
     <br />
     <center>
     <div class="contenedor_icon_pedido" style="display: flex; justify-content: center;">
@@ -17,6 +19,62 @@
     <div class="container">
         <br />
         <div >
+            <div class="info_pago" style="max-width: 350px; border: 1px solid gainsboro; border-radius: 3px; padding: 15px;display:none">
+                <form class="pago_form">
+                    <!-- Select para id_forma_pago -->
+                    <div class="form-group">
+                        <label for="cbo_id_forma_pago">Forma de Pago:</label>
+                        <select id="cbo_id_forma_pago" name="id_forma_pago" class="form-control">
+                            <option value="1">Efectivo</option>
+                            <option value="2">Mercado Pago</option>
+                            <option value="3">Tarjeta</option>
+                        </select>
+                    </div>
+                    <!-- Select para tipo_tarjeta -->
+                    <div class="form-group form-group-tarjeta">
+                        <label for="cbo_tipo_tarjeta">Tipo de Tarjeta:</label>
+                        <select id="cbo_tipo_tarjeta" name="tipo_tarjeta" class="form-control">
+                            <option value="Visa">Visa</option>
+                            <option value="AMEX">AMEX</option>
+                            <option value="MasterCard">MasterCard</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-group-tarjeta" style="display:none">
+                        <div class="card-container">
+                            <div class="credit-card">
+                                <p style="color: white; margin-left: 10px;" class="credit-card-typeName">VISA</p>
+                                <div class="credit-card__number">
+                                    <input type="text" id="txt_n_tarjeta" name="n_tarjeta" class="card-input" maxlength="19" placeholder="xxxx xxxx xxxx 1234" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inputs para n_lote, n_terminal, n_autorizacion, n_tarjeta -->
+                    <div class="form-group form-group-tarjeta" style="display:none">
+                        <label for="txt_n_lote">N° Lote:</label>
+                        <input type="text" id="txt_n_lote" name="txt_n_lote" class="form-control">
+                    </div>
+                    <div class="form-group form-group-tarjeta" style="display:none">
+                        <label for="txt_n_terminal">N° Terminal:</label>
+                        <input type="text" id="txt_n_terminal" name="txt_n_terminal" class="form-control">
+                    </div>
+                    <div class="form-group form-group-tarjeta" style="display:none">
+                        <label for="txt_n_autorizacion">N° Autorización:</label>
+                        <input type="text" id="txt_n_autorizacion" name="txt_n_autorizacion" class="form-control">
+                    </div>
+                    <div class="form-group form-group-tarjeta" style="display:none">
+                        <label for="txt_n_cupon">N° Cupón:</label>
+                        <input type="text" id="txt_n_cupon" name="txt_n_cupon" class="form-control">
+                    </div>
+                    <br />
+                    <!-- Botón para ir atrás -->
+                    <div style="display: flex;justify-content:end;gap: 10px;">
+                        <button type="button" class="btn btn-secondary registrarCompra">Registrar Compra</button>
+                        <button type="button" class="btn btn-secondary atras">Atrás</button>
+                    </div>
+                </form>
+            </div>
         <form id="Form_fv_empresas" runat="server">
             <!-- Definición del popup -->
 
@@ -112,6 +170,82 @@
         .swal2-styled.swal2-confirm {
             background: #4caf50 !important;
         }
+        /* Estilo para el overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            z-index: 1000; /* Asegurarse de que esté sobre todo */
+        }
+
+        /* Centrar el contenedor de pago */
+        .info_pago {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centrar vertical y horizontalmente */
+            background: white; /* Fondo blanco */
+            z-index: 1001; /* Un nivel más alto que el overlay */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el formulario */
+        }
+        .card-container {
+            width: 320px;
+            margin: 20px auto;
+            perspective: 1000px;
+        }
+
+        .credit-card {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #8e44ad, #c0392b);
+            color: white;
+            position: relative;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .credit-card__number {
+            margin-top: 30px;
+        }
+
+        .card-input {
+            font-size: 24px;
+            background: transparent;
+            color: white;
+            border: none;
+            width: 100%;
+            letter-spacing: 2px;
+            outline: none;
+            padding: 10px 0;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .card-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .credit-card__number input::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .card-input:focus {
+            border-bottom: 2px solid #ecf0f1;
+        }
+        .caret{
+            display:none
+        }
     </style>
 </asp:Content>
 
@@ -152,20 +286,34 @@
                     title: '¿En qué estado está este pedido?',
                     showDenyButton: true,
                     showCancelButton: true,
-                    confirmButtonText: 'Entregado',
+                    confirmButtonText: 'Cobrar y Despachar',
                     cancelButtonText: 'Salir',
                     denyButtonText: `En Proceso`,
                 }).then((result) => {
                     /* Read more about isConfirmed, isDenied below */
                     if (result.isConfirmed) {//entregado
-                        ir_al_back_actualizar_pedido_entregado(pedido)
-                        Swal.fire('¡Pedido cobrado!', 'Stock descontado', 'success')
-                        $(obj).css('background', '#7ec0023b')
-                        $(obj).html('<b>ENTREGADO</b>')
-                        $(obj).removeClass('P')
-                        $(obj).addClass('E')
-                        $('.monedas').prop("volume", 0.3);
-                        $(".monedas")[0].play();
+                        $('.info_pago').fadeIn(250)
+                        $('.overlay').fadeIn(250);
+
+                        $('.form-group-tarjeta').hide()
+                        $('.registrarCompra').click(function () {
+                            ir_al_back_actualizar_pedido_entregado(pedido)
+                            Swal.fire('¡Pedido cobrado!', 'Stock descontado', 'success')
+                            $(obj).css('background', '#7ec0023b')
+                            $(obj).html('<b>ENTREGADO</b>')
+                            $(obj).removeClass('P')
+                            $(obj).addClass('E')
+                            $('.monedas').prop("volume", 0.3);
+                            $(".monedas")[0].play();
+
+                            $('.info_pago').fadeOut(250)
+                            $('.overlay').fadeOut(250);
+                            // Vaciar los campos de texto
+                            $('#txt_n_lote, #txt_n_terminal, #txt_n_autorizacion, #txt_n_cupon').val('');
+
+                            // Reiniciar los select a su primera opción
+                            $('#cbo_id_forma_pago').prop('selectedIndex', 0).trigger('change');  // Reinicia el select a la primera opción
+                        })
                     } else if (result.isDenied) {//en proceso
                         ir_al_back_actualizar_pedido_enproceso(pedido)
                         $(obj).css('background', '#ffd40033')
@@ -228,6 +376,60 @@
                 var categoria_a_buscar = $(obj).attr("cat")
                 $('input[type="search"]').val(categoria_a_buscar).keyup();
             })
+
+            $('.atras').click(function () {
+                $('.info_pago').fadeOut(250)
+                $('.overlay').fadeOut(250);
+                // Vaciar los campos de texto
+                $('#txt_n_lote, #txt_n_terminal, #txt_n_autorizacion, #txt_n_cupon').val('');
+
+                // Reiniciar los select a su primera opción
+                $('#cbo_id_forma_pago').prop('selectedIndex', 0).trigger('change');  // Reinicia el select a la primera opción
+
+            })
+
+            //INICIALIZAR CLEAVE
+            var cleave = new Cleave('#txt_n_tarjeta', {
+                creditCard: true,
+                delimiter: ' ',
+                onCreditCardTypeChanged: function (type) {
+                    console.log(type);
+                }
+            });
+            $('#txt_n_tarjeta').on('input', function () {
+                var value = $(this).val().replace(/\s+/g, ''); // Elimina espacios
+
+                if (value.length > 3) {
+                    // Obtiene los últimos 4 dígitos
+                    var lastFour = value.slice(-4);
+                    // Reemplaza los primeros dígitos con 'xxxx'
+                    var maskedValue = 'xxxx xxxx xxxx ' + lastFour;
+                    // Asigna el valor formateado al input
+                    $(this).val(maskedValue);
+                }
+            });
+
+
+            // Escuchar el evento change del select de forma de pago
+            $('#cbo_id_forma_pago').change(function () {
+                var formaPagoSeleccionada = $(this).val();
+
+                // Si selecciona Mercado Pago (valor 2) o Cupón (valor 3)
+                if (formaPagoSeleccionada != "1" && formaPagoSeleccionada != "2") {
+                    // Mostrar los campos de tarjeta
+                    $('.form-group-tarjeta').fadeIn(250);
+                } else {
+                    // Si selecciona otra opción, ocultar los campos de tarjeta
+                    $('.form-group-tarjeta').fadeOut(250);
+                }
+            });
+
+            // Escuchar el evento change del select de forma de pago
+            $('#cbo_tipo_tarjeta').change(function () {
+                var nombreTarjeta = $('#cbo_tipo_tarjeta option:selected').text();
+                $('.credit-card-typeName').text(nombreTarjeta)
+            });
+
         });
 
     </script>

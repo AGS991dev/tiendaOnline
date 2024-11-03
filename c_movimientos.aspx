@@ -78,6 +78,7 @@
                 <ASP:BoundField DataField = "descripcion" htmlencode="false" HeaderText="Descripcion" />
                 <ASP:BoundField DataField = "fecha" htmlencode="false" HeaderText="Fecha 📆" />
                 <ASP:BoundField DataField = "operacion" htmlencode="false" HeaderText="Operacion" />
+                <ASP:BoundField DataField = "Pago" htmlencode="false" HeaderText="Pago 💰" />
                 <ASP:BoundField DataField = "monto" htmlencode="false" HeaderText="Monto 💲" />
 
                 </Columns>

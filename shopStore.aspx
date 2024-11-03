@@ -13,7 +13,7 @@
 
             <br />
             <div style="display: flex; justify-content: center; gap: 10px">
-                <img class="tada logo_inicio" src="./static/img/powerGirl.png" style="width: 14vw" />
+                <img class="tada logo_inicio" src="./static/img/olivia.png" style="width: 14vw" />
             </div>
             <br />
             <br />

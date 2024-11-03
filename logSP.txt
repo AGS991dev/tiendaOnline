@@ -1,1000 +1,797 @@
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:46:33
-SP_Categorias_CONSUL - sábado, 12/10/2024 16:46:34
-SP_RANKING_FILTRAR - sábado, 12/10/2024 16:46:34
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:46:34
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:46:35
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:46:35
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:46:47
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:46:59
-SP_Categorias_CONSUL - sábado, 12/10/2024 16:46:59
-SP_RANKING_FILTRAR - sábado, 12/10/2024 16:46:59
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:46:59
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:47:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:47:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:47:14
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:47:27
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:47:40
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:47:54
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:48:10
-SP_Categorias_CONSUL - sábado, 12/10/2024 16:48:24
-SP_RANKING_FILTRAR - sábado, 12/10/2024 16:48:24
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:48:24
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:48:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:48:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:48:41
-SP_Categorias_CONSUL - sábado, 12/10/2024 16:48:44
-SP_RANKING_FILTRAR - sábado, 12/10/2024 16:48:44
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:48:44
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:48:44
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:48:45
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:48:56
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:49:08
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:49:19
-SP_RANKING_FILTRAR - sábado, 12/10/2024 16:49:19
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:49:21
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:49:23
-SP_RANKING_FILTRAR - sábado, 12/10/2024 16:49:23
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:49:26
-SP_RANKING_FILTRAR - sábado, 12/10/2024 16:49:27
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:49:29
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:49:29
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:49:30
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:49:30
-SP_Categorias_CONSUL - sábado, 12/10/2024 16:49:31
-SP_MAS_VISITADOS_FILTRAR - sábado, 12/10/2024 16:49:31
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:49:31
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:49:31
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:49:32
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:49:43
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:49:56
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:50:10
-SP_Categorias_CONSUL - sábado, 12/10/2024 16:50:17
-SP_MAS_VISITADOS_FILTRAR - sábado, 12/10/2024 16:50:18
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:50:18
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:50:19
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:50:19
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:50:30
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:50:43
-SP_Categorias_CONSUL - sábado, 12/10/2024 16:50:54
-SP_MAS_VISITADOS_FILTRAR - sábado, 12/10/2024 16:50:55
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:50:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:50:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:50:56
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:51:12
-SP_Categorias_CONSUL - sábado, 12/10/2024 16:51:17
-SP_MAS_VISITADOS_FILTRAR - sábado, 12/10/2024 16:51:17
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:51:18
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:51:18
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:51:19
-SP_Categorias_CONSUL - sábado, 12/10/2024 16:51:27
-SP_MAS_VISITADOS_FILTRAR - sábado, 12/10/2024 16:51:27
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:51:27
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:51:28
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:51:28
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:51:39
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:51:39
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:51:39
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:51:40
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 16:51:44
-SP_stock_GRILLA - sábado, 12/10/2024 16:51:44
-SP_stock_GRILLA_table - sábado, 12/10/2024 16:51:44
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:51:45
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:51:45
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:51:45
-SP_stock_GRILLA - sábado, 12/10/2024 16:51:46
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:51:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:52:10
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 16:52:26
-SP_stock_GRILLA - sábado, 12/10/2024 16:52:27
-SP_stock_GRILLA_table - sábado, 12/10/2024 16:52:27
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:52:28
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:52:28
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:52:30
-SP_cargar_usuario_Consul - sábado, 12/10/2024 16:52:30
-SP_Perfiles_CONSUL - sábado, 12/10/2024 16:52:30
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:52:31
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:52:31
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:52:31
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:52:32
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 16:52:32
-SP_stock_GRILLA - sábado, 12/10/2024 16:52:32
-SP_stock_GRILLA_table - sábado, 12/10/2024 16:52:32
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:52:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:52:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:52:33
-SP_stock_GRILLA - sábado, 12/10/2024 16:52:34
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:52:44
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:52:56
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:53:10
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:53:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:53:41
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 16:56:10
-SP_stock_GRILLA - sábado, 12/10/2024 16:56:12
-SP_stock_GRILLA_table - sábado, 12/10/2024 16:56:12
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:56:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:56:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:56:13
-SP_stock_GRILLA - sábado, 12/10/2024 16:56:14
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:56:24
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:56:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:56:51
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:57:06
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:57:22
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:57:39
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:57:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:58:16
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:58:36
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:58:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:59:19
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 16:59:35
-SP_stock_GRILLA - sábado, 12/10/2024 16:59:35
-SP_stock_GRILLA_table - sábado, 12/10/2024 16:59:36
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 16:59:36
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:59:36
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:59:37
-SP_stock_GRILLA - sábado, 12/10/2024 16:59:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 16:59:49
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:00:02
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:00:16
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:00:30
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 17:00:33
-SP_stock_GRILLA - sábado, 12/10/2024 17:00:33
-SP_stock_GRILLA_table - sábado, 12/10/2024 17:00:33
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:00:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:00:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:00:34
-SP_stock_GRILLA - sábado, 12/10/2024 17:00:35
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:00:45
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:00:57
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:00:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:00:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:00:58
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 17:01:04
-SP_stock_GRILLA - sábado, 12/10/2024 17:01:05
-SP_stock_GRILLA_table - sábado, 12/10/2024 17:01:05
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:01:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:01:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:01:06
-SP_stock_GRILLA - sábado, 12/10/2024 17:01:06
-SP_categorias_GRILLA - sábado, 12/10/2024 17:01:07
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:01:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:01:08
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:01:08
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:01:11
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:01:11
-SP_stock_GRILLA - sábado, 12/10/2024 17:01:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:01:23
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:01:36
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:01:50
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:02:05
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:02:11
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:02:11
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:02:11
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:02:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:02:23
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:02:35
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:02:49
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:04
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:03:05
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:03:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:06
-SP_categorias_GRILLA - sábado, 12/10/2024 17:03:07
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:03:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:08
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:21
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:03:26
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:03:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:27
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:39
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:03:40
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:03:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:03:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:04:04
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:04:18
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:04:32
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:04:47
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:05:04
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:05:21
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:05:21
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:05:22
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:05:22
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:05:22
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:05:34
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:05:44
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:05:45
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:05:45
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:05:45
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:05:58
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:05:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:05:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:05:59
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:05:59
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:10
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:23
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:06:30
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:06:32
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:32
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:32
-SP_categorias_GRILLA - sábado, 12/10/2024 17:06:36
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:06:36
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:37
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:06:39
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:06:39
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:40
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:40
-SP_categorias_GRILLA - sábado, 12/10/2024 17:06:41
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:06:42
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:42
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:43
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:06:48
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:06:48
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:48
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:06:49
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:00
-SP_categorias_GRILLA - sábado, 12/10/2024 17:07:00
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:07:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:01
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:01
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:07:02
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:03
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:03
-SP_categorias_GRILLA - sábado, 12/10/2024 17:07:04
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:07:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:05
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:07:08
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:07:08
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:08
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:09
-SP_categorias_GRILLA - sábado, 12/10/2024 17:07:11
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:07:11
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:11
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:12
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:07:14
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:07:14
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:15
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:15
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:39
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:07:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:08:06
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:08:21
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:08:38
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:08:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:09:14
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:09:34
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:09:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:10:16
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:10:18
-SP_stock_INSERT - sábado, 12/10/2024 17:10:19
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 17:10:19
-SP_stock_GRILLA - sábado, 12/10/2024 17:10:19
-SP_stock_GRILLA_table - sábado, 12/10/2024 17:10:19
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:10:20
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:10:20
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:10:20
-SP_stock_GRILLA - sábado, 12/10/2024 17:10:21
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:10:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:10:46
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:11:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:11:15
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:11:31
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:11:48
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:12:48
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:12:49
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:12:49
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:12:54
-SP_cargar_usuario_Consul - sábado, 12/10/2024 17:12:54
-SP_Perfiles_CONSUL - sábado, 12/10/2024 17:12:54
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:12:54
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:12:54
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:12:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:12:55
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 17:12:57
-SP_stock_GRILLA - sábado, 12/10/2024 17:12:57
-SP_stock_GRILLA_table - sábado, 12/10/2024 17:12:57
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:12:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:12:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:12:58
-SP_stock_GRILLA - sábado, 12/10/2024 17:12:59
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:12:59
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:13:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:13:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:13:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:13:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:13:24
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:13:35
-SP_stock_INSERT - sábado, 12/10/2024 17:13:35
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 17:13:36
-SP_stock_GRILLA - sábado, 12/10/2024 17:13:36
-SP_stock_GRILLA_table - sábado, 12/10/2024 17:13:36
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:13:36
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:13:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:13:37
-SP_stock_GRILLA - sábado, 12/10/2024 17:13:38
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:13:49
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:14:02
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:14:15
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:14:19
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:14:19
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:14:19
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:14:20
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:14:32
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:14:44
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:14:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:15:13
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:15:29
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:15:46
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:16:04
-SP_categorias_GRILLA - sábado, 12/10/2024 17:16:12
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:16:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:16:13
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:16:13
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:16:14
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:16:14
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:16:14
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:16:15
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:16:26
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:16:38
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:16:38
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:16:39
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:16:45
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:16:45
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:16:45
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:16:46
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:16:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:17:10
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:17:24
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:17:39
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:17:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:18:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:18:30
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:18:49
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:29
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:19:30
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:19:30
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:19:33
-SP_cargar_usuario_Consul - sábado, 12/10/2024 17:19:33
-SP_Perfiles_CONSUL - sábado, 12/10/2024 17:19:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:33
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:19:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:34
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:34
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 17:19:36
-SP_stock_GRILLA - sábado, 12/10/2024 17:19:36
-SP_stock_GRILLA_table - sábado, 12/10/2024 17:19:36
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:19:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:38
-SP_stock_GRILLA - sábado, 12/10/2024 17:19:38
-SP_stock_CBO_categorias - sábado, 12/10/2024 17:19:39
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:19:39
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:39
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:40
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:51
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:19:52
-SP_stock_INSERT - sábado, 12/10/2024 17:19:52
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 17:19:53
-SP_stock_GRILLA - sábado, 12/10/2024 17:19:53
-SP_stock_GRILLA_table - sábado, 12/10/2024 17:19:53
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:19:53
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:54
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:19:54
-SP_stock_GRILLA - sábado, 12/10/2024 17:19:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:20:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:20:18
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:20:32
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:20:47
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:21:03
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:21:20
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:21:38
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:21:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:22:16
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:22:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:22:59
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:23:22
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:23:46
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:24:11
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:24:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:25:04
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:25:32
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:26:01
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:26:31
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:27:02
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:27:34
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:28:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:28:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:29:16
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:29:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:30:29
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:31:08
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:31:47
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:31:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:32:08
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:32:21
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:32:35
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:32:50
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:33:06
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:33:23
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:33:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:34:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:34:20
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:34:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:35:03
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:35:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:35:50
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:36:15
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:36:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 17:37:08
-SP_stock_shopStore_GRILLA - sábado, 12/10/2024 17:37:15
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:37:15
-SP_Categorias_GRILLA - sábado, 12/10/2024 17:37:16
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 17:37:16
-SP_stock_UPDATE_producto_visitado - sábado, 12/10/2024 17:37:19
-SP_stock_UPDATE_producto_visitado - sábado, 12/10/2024 17:37:20
-SP_stock_UPDATE_producto_visitado - sábado, 12/10/2024 17:37:21
-SP_stock_UPDATE_producto_visitado - sábado, 12/10/2024 17:37:21
-SP_pedidos_INSERT - sábado, 12/10/2024 17:37:35
-SP_stock_Consul_ID - sábado, 12/10/2024 17:37:35
-SP_PEDIDOLISTA_INSERT - sábado, 12/10/2024 17:37:36
-SP_stock_Consul_ID - sábado, 12/10/2024 17:37:36
-SP_PEDIDOLISTA_INSERT - sábado, 12/10/2024 17:37:36
-SP_stock_Consul_ID - sábado, 12/10/2024 17:37:36
-SP_PEDIDOLISTA_INSERT - sábado, 12/10/2024 17:37:36
-SP_stock_Consul_ID - sábado, 12/10/2024 17:37:37
-SP_PEDIDOLISTA_INSERT - sábado, 12/10/2024 17:37:37
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:00:49
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:00:53
-SP_cargar_usuario_Consul - sábado, 12/10/2024 18:00:54
-SP_Perfiles_CONSUL - sábado, 12/10/2024 18:00:54
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:00:54
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:00:54
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:00:54
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:00:55
-SP_pedidos_GRILLA - sábado, 12/10/2024 18:00:56
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:00:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:00:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:00:57
-SP_pedido_lista_GRILLA - sábado, 12/10/2024 18:01:02
-SP_registro_INSERT - sábado, 12/10/2024 18:01:02
-SP_pedido_lista_GRILLA - sábado, 12/10/2024 18:01:02
-SP_stock_RESTAR - sábado, 12/10/2024 18:01:02
-SP_ticket_INSERT - sábado, 12/10/2024 18:01:02
-SP_pedidos_UPDATE_to_ENTREGADO - sábado, 12/10/2024 18:01:03
-SP_pedidos_UPDATE_cantidad_total - sábado, 12/10/2024 18:01:03
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:05
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:01:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:06
-SP_pedidos_GRILLA - sábado, 12/10/2024 18:01:07
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:01:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:08
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:19
-SP_pedido_lista_GRILLA - sábado, 12/10/2024 18:01:28
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:01:29
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:29
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:29
-SP_pedidos_GRILLA - sábado, 12/10/2024 18:01:36
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:01:36
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:36
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:46
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:01:46
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:46
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:47
-SP_ContactoInfo_SELECT - sábado, 12/10/2024 18:01:55
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:01:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:56
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:01:56
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:02:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:02:20
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:02:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:02:47
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:03:02
-SP_ContactoInfo_INSERT - sábado, 12/10/2024 18:03:08
-SP_ContactoInfo_SELECT - sábado, 12/10/2024 18:03:12
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:03:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:03:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:03:13
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:03:24
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:03:36
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:03:38
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:03:39
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:03:41
-SP_cargar_usuario_Consul - sábado, 12/10/2024 18:03:42
-SP_Perfiles_CONSUL - sábado, 12/10/2024 18:03:42
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:03:42
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:03:42
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:03:42
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:03:43
-SP_pedidos_GRILLA - sábado, 12/10/2024 18:03:44
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:03:44
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:03:45
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:03:45
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:03:56
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:04:07
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:04:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:04:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:04:08
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:04:08
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:04:08
-SP_stock_CBO_buscador_articulos - sábado, 12/10/2024 18:04:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:04:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:04:20
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:04:32
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:04:45
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:09
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:05:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:09
-SP_tickets_CBO - sábado, 12/10/2024 18:05:10
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:05:11
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:05:11
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:11
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:22
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:05:24
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:05:24
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:05:27
-SP_REGISTRO_FILTRAR_EXCEL - sábado, 12/10/2024 18:05:28
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:35
-SP_ticket_GRILLA - sábado, 12/10/2024 18:05:47
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:05:48
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:48
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:48
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:49
-SP_tickets_CBO - sábado, 12/10/2024 18:05:57
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:05:57
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:05:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:05:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:06:00
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:06:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:06:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:06:01
-SP_concepto_cbo - sábado, 12/10/2024 18:06:01
-SP_REGISTRO_MOV_GRILLA_FILTRAR - sábado, 12/10/2024 18:06:01
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:06:01
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:06:02
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:06:02
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:06:13
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:06:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:06:39
-SP_concepto_cbo - sábado, 12/10/2024 18:06:41
-SP_REGISTRO_MOV_GRILLA_FILTRAR - sábado, 12/10/2024 18:06:41
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:06:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:06:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:06:42
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:06:54
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:07:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:07:21
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:07:36
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:07:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:08:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:08:27
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:08:46
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:09:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:09:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:09:48
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:10:11
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:10:35
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:10:59
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:11:24
-SP_concepto_cbo - sábado, 12/10/2024 18:11:40
-SP_REGISTRO_MOV_GRILLA_FILTRAR - sábado, 12/10/2024 18:11:40
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:11:40
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:11:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:11:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:11:53
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:00
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:12:01
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:01
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:01
-SP_tickets_CBO - sábado, 12/10/2024 18:12:02
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:12:03
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:12:03
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:03
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:04
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:08
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:12:08
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:09
-SP_tickets_CBO - sábado, 12/10/2024 18:12:12
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:12:12
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:12:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:13
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:13
-SP_concepto_cbo - sábado, 12/10/2024 18:12:16
-SP_REGISTRO_MOV_GRILLA_FILTRAR - sábado, 12/10/2024 18:12:16
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:12:16
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:17
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:17
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:28
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:12:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:10
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:26
-SP_pedidos_GRILLA - sábado, 12/10/2024 18:13:40
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:13:40
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:42
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:13:42
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:42
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:43
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 18:13:43
-SP_stock_GRILLA - sábado, 12/10/2024 18:13:43
-SP_stock_GRILLA_table - sábado, 12/10/2024 18:13:44
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:13:44
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:44
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:45
-SP_stock_GRILLA - sábado, 12/10/2024 18:13:45
-SP_stock_CBO_categorias - sábado, 12/10/2024 18:13:49
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:13:49
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:49
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:50
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:55
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:13:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:56
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:13:56
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:14:04
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:04
-SP_stock_CBO_buscador_articulos - sábado, 12/10/2024 18:14:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:05
-SP_stock_consul_codigo_barra - sábado, 12/10/2024 18:14:11
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:16
-SP_registro_INSERT - sábado, 12/10/2024 18:14:21
-SP_stock_RESTAR - sábado, 12/10/2024 18:14:21
-SP_ticket_INSERT - sábado, 12/10/2024 18:14:22
-SP_stock_CBO_buscador_articulos - sábado, 12/10/2024 18:14:23
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:28
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:14:28
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:28
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:29
-SP_tickets_CBO - sábado, 12/10/2024 18:14:29
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:14:29
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:14:29
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:30
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:30
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:31
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:51
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:14:51
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:51
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:52
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:14:53
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:54
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:54
-SP_stock_CBO_buscador_articulos - sábado, 12/10/2024 18:14:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:57
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:14:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:58
-SP_tickets_CBO - sábado, 12/10/2024 18:14:59
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:14:59
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:14:59
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:14:59
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:15:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:15:11
-SP_ticket_GRILLA - sábado, 12/10/2024 18:15:13
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:15:14
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:15:14
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:15:14
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:15:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:15:38
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:15:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:16:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:16:23
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:16:40
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:16:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:17:17
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:17:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:17:48
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:17:48
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:17:49
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:17:49
-SP_tickets_CBO - sábado, 12/10/2024 18:17:50
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:17:50
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:17:50
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:17:50
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:17:51
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:17:52
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:17:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:17:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:17:53
-SP_concepto_cbo - sábado, 12/10/2024 18:17:53
-SP_REGISTRO_MOV_GRILLA_FILTRAR - sábado, 12/10/2024 18:17:54
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:19:20
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:19:21
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:19:21
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:19:22
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:19:24
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:19:24
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:19:24
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:19:25
-SP_concepto_cbo - sábado, 12/10/2024 18:19:25
-SP_REGISTRO_MOV_GRILLA_FILTRAR - sábado, 12/10/2024 18:19:25
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:19:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:19:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:19:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:19:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:19:49
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:02
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:20:02
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:03
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:03
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:04
-SP_tickets_CBO - sábado, 12/10/2024 18:20:06
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:20:06
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:20:06
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:06
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:07
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:20:10
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:20:10
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:18
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:18
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:25
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:20:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:26
-SP_concepto_cbo - sábado, 12/10/2024 18:20:27
-SP_REGISTRO_MOV_GRILLA_FILTRAR - sábado, 12/10/2024 18:20:28
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:20:28
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:28
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:29
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:34
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:40
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:46
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:20:47
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:47
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:47
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:20:51
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:51
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:51
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:20:51
-SP_stock_CBO_buscador_articulos - sábado, 12/10/2024 18:20:52
-SP_stock_consul_codigo_barra - sábado, 12/10/2024 18:20:56
-SP_registro_INSERT - sábado, 12/10/2024 18:21:03
-SP_stock_RESTAR - sábado, 12/10/2024 18:21:03
-SP_ticket_INSERT - sábado, 12/10/2024 18:21:03
-SP_stock_CBO_buscador_articulos - sábado, 12/10/2024 18:21:03
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:21:04
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:21:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:21:16
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:21:28
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:21:29
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:21:43
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:21:48
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:21:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:22:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:22:15
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:22:31
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:22:32
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:22:50
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:22:51
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:22:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:22:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:22:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:22:54
-SP_Categorias_CONSUL - sábado, 12/10/2024 18:22:56
-SP_RANKING_FILTRAR - sábado, 12/10/2024 18:22:57
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:22:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:22:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:22:58
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:09
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:10
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:23:10
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:10
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:11
-SP_categorias_GRILLA - sábado, 12/10/2024 18:23:12
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:23:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:12
-SP_stock_CBO_categorias - sábado, 12/10/2024 18:23:15
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:23:15
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:15
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:16
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:18
-SP_categorias_GRILLA - sábado, 12/10/2024 18:23:19
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:23:19
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:19
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:20
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:21
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:23:21
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:22
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:22
-SP_Categorias_CONSUL - sábado, 12/10/2024 18:23:23
-SP_MAS_VISITADOS_FILTRAR - sábado, 12/10/2024 18:23:24
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:23:24
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:24
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:32
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:23:32
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:32
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:33
-SP_ContactoInfo_SELECT - sábado, 12/10/2024 18:23:34
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:23:35
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:35
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:35
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:43
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:47
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:56
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:23:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:57
-SP_stock_categorias_CONSUL - sábado, 12/10/2024 18:23:58
-SP_stock_GRILLA - sábado, 12/10/2024 18:23:58
-SP_stock_GRILLA_table - sábado, 12/10/2024 18:23:59
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:23:59
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:23:59
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:00
-SP_stock_GRILLA - sábado, 12/10/2024 18:24:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:01
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:24:01
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:01
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:02
-SP_whatsapp_GRILLA - sábado, 12/10/2024 18:24:07
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:24:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:08
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:09
-SP_whatsapp_Consul_ID - sábado, 12/10/2024 18:24:09
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:24:10
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:10
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:10
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:24:12
-SP_whatsapp_UPDATE - sábado, 12/10/2024 18:24:13
-SP_whatsapp_GRILLA - sábado, 12/10/2024 18:24:13
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:24:13
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:13
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:14
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:36
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:37
-SP_stock_shopStore_GRILLA - sábado, 12/10/2024 18:24:41
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:24:41
-SP_Categorias_GRILLA - sábado, 12/10/2024 18:24:41
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:24:42
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:42
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:42
-SP_stock_UPDATE_producto_visitado - sábado, 12/10/2024 18:24:45
-SP_stock_UPDATE_producto_visitado - sábado, 12/10/2024 18:24:46
-SP_stock_UPDATE_producto_visitado - sábado, 12/10/2024 18:24:47
-SP_pedidos_INSERT - sábado, 12/10/2024 18:24:53
-SP_stock_Consul_ID - sábado, 12/10/2024 18:24:53
-SP_PEDIDOLISTA_INSERT - sábado, 12/10/2024 18:24:53
-SP_stock_Consul_ID - sábado, 12/10/2024 18:24:53
-SP_PEDIDOLISTA_INSERT - sábado, 12/10/2024 18:24:54
-SP_stock_Consul_ID - sábado, 12/10/2024 18:24:54
-SP_PEDIDOLISTA_INSERT - sábado, 12/10/2024 18:24:54
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:24:54
-SP_pedidos_GRILLA - sábado, 12/10/2024 18:25:02
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:25:02
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:02
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:03
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:04
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:14
-SP_pedido_lista_GRILLA - sábado, 12/10/2024 18:25:16
-SP_registro_INSERT - sábado, 12/10/2024 18:25:16
-SP_pedido_lista_GRILLA - sábado, 12/10/2024 18:25:17
-SP_stock_RESTAR - sábado, 12/10/2024 18:25:17
-SP_ticket_INSERT - sábado, 12/10/2024 18:25:17
-SP_pedidos_UPDATE_to_ENTREGADO - sábado, 12/10/2024 18:25:17
-SP_pedidos_UPDATE_cantidad_total - sábado, 12/10/2024 18:25:17
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:23
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:25:23
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:24
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:24
-SP_tickets_CBO - sábado, 12/10/2024 18:25:24
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:25:25
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:25:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:28
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:25:28
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:28
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:29
-SP_concepto_cbo - sábado, 12/10/2024 18:25:29
-SP_REGISTRO_MOV_GRILLA_FILTRAR - sábado, 12/10/2024 18:25:29
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:25:30
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:30
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:30
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:34
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:25:35
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:35
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:35
-SP_tickets_CBO - sábado, 12/10/2024 18:25:37
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:25:37
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:25:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:37
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:38
-SP_ticket_GRILLA - sábado, 12/10/2024 18:25:39
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:25:39
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:40
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:40
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:25:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:26:03
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:26:05
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:26:12
-SP_REGISTRO_MOV_GRILLA_FILTRAR_EXCEL - sábado, 12/10/2024 18:26:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:26:19
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:26:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:26:34
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:26:50
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:27:05
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:27:07
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:27:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:27:37
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:27:41
-SP_REGISTRO_MOV_GRILLA_FILTRAR_EXCEL - sábado, 12/10/2024 18:27:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:27:44
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:28:04
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:28:11
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:28:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:28:46
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:28:47
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:28:55
-SP_REGISTRO_MOV_GRILLA_FILTRAR_EXCEL - sábado, 12/10/2024 18:28:55
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:10
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:17
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:29:17
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:18
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:18
-SP_tickets_CBO - sábado, 12/10/2024 18:29:19
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:29:19
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:29:19
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:19
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:20
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:24
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:29:24
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:25
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:29:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:26
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:26
-SP_pedidos_GRILLA - sábado, 12/10/2024 18:29:28
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:29:29
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:29
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:29
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:34
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:46
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:29:46
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:47
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:47
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:29:48
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:48
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:48
-SP_stock_CBO_buscador_articulos - sábado, 12/10/2024 18:29:49
-SP_stock_consul_codigo_barra - sábado, 12/10/2024 18:29:54
-SP_stock_consul_codigo_barra - sábado, 12/10/2024 18:29:56
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:29:59
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:30:00
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:30:12
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:30:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:30:25
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:30:41
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:30:52
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:30:57
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:31:14
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:31:20
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:31:32
-SP_tickets_CBO - sábado, 12/10/2024 18:31:32
-SP_REGISTRO_FILTRAR - sábado, 12/10/2024 18:31:33
-SP_WHATSAPP_CONSUL - sábado, 12/10/2024 18:31:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:31:33
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:31:34
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:31:45
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:31:51
-SP_Pedidos_pendientes_contador - sábado, 12/10/2024 18:31:57
+
+   🎯 domingo, 03/11/2024 11:44:48
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:44:55
+SP_WHATSAPP_CONSUL
+
+   🎯 domingo, 03/11/2024 11:44:55
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:44:56
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:44:56
+SP_stock_CBO_buscador_articulos
+
+   🎯 domingo, 03/11/2024 11:45:07
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:45:08
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:45:08
+SP_WHATSAPP_CONSUL
+
+   🎯 domingo, 03/11/2024 11:45:08
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:45:09
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:45:20
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:45:33
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:45:47
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:46:02
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:46:18
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:46:35
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:46:53
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:47:12
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:47:32
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:47:53
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:48:15
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:48:46
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:48:46
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:48:48
+SP_cargar_usuario_Consul
+Parámetros:
+cuil [String] = 555
+
+
+   🎯 domingo, 03/11/2024 11:48:48
+SP_Perfiles_CONSUL
+Parámetros:
+codigo [String] = 2
+
+
+   🎯 domingo, 03/11/2024 11:48:48
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:48:49
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:48:49
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:48:56
+SP_stock_shopStore_GRILLA
+
+   🎯 domingo, 03/11/2024 11:48:57
+SP_WHATSAPP_CONSUL
+
+   🎯 domingo, 03/11/2024 11:48:57
+SP_Categorias_GRILLA
+
+   🎯 domingo, 03/11/2024 11:48:57
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:48:58
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:49:09
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:49:21
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:49:35
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:49:35
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:49:36
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:49:36
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:49:40
+SP_cargar_usuario_Consul
+Parámetros:
+cuil [String] = 2414
+
+
+   🎯 domingo, 03/11/2024 11:49:40
+SP_Perfiles_CONSUL
+Parámetros:
+codigo [String] = 2
+
+
+   🎯 domingo, 03/11/2024 11:51:15
+SP_cargar_usuario_Consul
+Parámetros:
+cuil [String] = 2414
+
+
+   🎯 domingo, 03/11/2024 11:51:16
+SP_Perfiles_CONSUL
+Parámetros:
+codigo [String] = 2
+
+
+   🎯 domingo, 03/11/2024 11:51:16
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:51:17
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:51:17
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:51:30
+SP_cargar_usuario_Consul
+Parámetros:
+cuil [String] = 2456
+
+
+   🎯 domingo, 03/11/2024 11:51:33
+SP_cargar_usuario_Consul
+Parámetros:
+cuil [String] = 2414
+
+
+   🎯 domingo, 03/11/2024 11:51:33
+SP_Perfiles_CONSUL
+Parámetros:
+codigo [String] = 2
+
+
+   🎯 domingo, 03/11/2024 11:51:34
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:51:34
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:51:34
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:51:38
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:51:38
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:51:39
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:51:40
+SP_stock_shopStore_GRILLA
+
+   🎯 domingo, 03/11/2024 11:51:40
+SP_WHATSAPP_CONSUL
+
+   🎯 domingo, 03/11/2024 11:51:40
+SP_Categorias_GRILLA
+
+   🎯 domingo, 03/11/2024 11:51:41
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:51:41
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:51:52
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:52:05
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:52:10
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:52:10
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:52:11
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:52:22
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:52:35
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:52:49
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:53:04
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:53:20
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:53:37
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:53:55
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:54:14
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:54:34
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:54:55
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:55:17
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:55:40
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:56:04
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:56:29
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:56:55
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:22
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:31
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:31
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:32
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:35
+SP_cargar_usuario_Consul
+Parámetros:
+cuil [String] = 455
+
+
+   🎯 domingo, 03/11/2024 11:57:36
+SP_Perfiles_CONSUL
+Parámetros:
+codigo [String] = 2
+
+
+   🎯 domingo, 03/11/2024 11:57:36
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:36
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:37
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:39
+SP_stock_shopStore_GRILLA
+
+   🎯 domingo, 03/11/2024 11:57:39
+SP_WHATSAPP_CONSUL
+
+   🎯 domingo, 03/11/2024 11:57:39
+SP_Categorias_GRILLA
+
+   🎯 domingo, 03/11/2024 11:57:40
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:40
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:52
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:57
+SP_empleados_GRILLA_filtro
+Parámetros:
+empresa_id [Int32] = 1
+estado [String] = 1
+
+
+   🎯 domingo, 03/11/2024 11:57:57
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:57:57
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:58:06
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:58:06
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:58:08
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:58:08
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:58:20
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:58:33
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:58:47
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:59:02
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:59:08
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:59:08
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:59:20
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:59:32
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:59:45
+SP_empleados_INSERT
+Parámetros:
+nombre [String] = BELEN TEST
+apellido [String] = MM
+legajo [String] = FRUTILLA
+email [String] = TEST@HOTMAIL.COM
+cuil [String] = 455
+perfil_codigo [Int32] = 3
+empresa_id [Int32] = 1
+uuid [String] = 0a82e87d-0ca1-4f9b-b430-47ef260ad538
+
+
+   🎯 domingo, 03/11/2024 11:59:45
+SP_UsuariosLogin_ConsulByCuil
+Parámetros:
+cuil [String] = 455
+
+
+   🎯 domingo, 03/11/2024 11:59:46
+SP_UsuariosLogin_INSERT
+Parámetros:
+cuil [String] = 455
+pass [DBNull] = 
+
+
+   🎯 domingo, 03/11/2024 11:59:46
+SP_Empresas_Consul_ID
+Parámetros:
+empresa_id [Int32] = 1
+
+
+   🎯 domingo, 03/11/2024 11:59:46
+SP_empleados_GRILLA_filtro
+Parámetros:
+empresa_id [Int32] = 1
+estado [String] = 1
+
+
+   🎯 domingo, 03/11/2024 11:59:46
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:59:47
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:59:48
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:59:52
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 11:59:52
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:00:04
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:00:17
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:00:31
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:00:46
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:01:02
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:01:19
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:01:37
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:01:46
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:01:46
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:01:58
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:10
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:23
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:23
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:27
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:27
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:31
+SP_cargar_usuario_Consul
+Parámetros:
+cuil [String] = 2414
+
+
+   🎯 domingo, 03/11/2024 12:02:31
+SP_Perfiles_CONSUL
+Parámetros:
+codigo [String] = 2
+
+
+   🎯 domingo, 03/11/2024 12:02:32
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:32
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:32
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:37
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:37
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:39
+SP_cargar_usuario_Consul
+Parámetros:
+cuil [String] = 555
+
+
+   🎯 domingo, 03/11/2024 12:02:43
+SP_cargar_usuario_Consul
+Parámetros:
+cuil [String] = 2414
+
+
+   🎯 domingo, 03/11/2024 12:02:43
+SP_Perfiles_CONSUL
+Parámetros:
+codigo [String] = 2
+
+
+   🎯 domingo, 03/11/2024 12:02:43
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:44
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:44
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:02:55
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:08
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:13
+SP_Categorias_CONSUL
+
+   🎯 domingo, 03/11/2024 12:03:13
+SP_RANKING_FILTRAR
+Parámetros:
+categoria_id [String] = -1
+
+
+   🎯 domingo, 03/11/2024 12:03:14
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:14
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:15
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:15
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:16
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:16
+SP_categorias_GRILLA
+
+   🎯 domingo, 03/11/2024 12:03:17
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:17
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:18
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:18
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:19
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:19
+SP_concepto_cbo
+
+   🎯 domingo, 03/11/2024 12:03:20
+SP_REGISTRO_MOV_GRILLA_FILTRAR
+Parámetros:
+desde [DateTime] = 1/11/2024 00:00:00
+hasta [DateTime] = 4/11/2024 00:00:00
+
+
+   🎯 domingo, 03/11/2024 12:03:20
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:21
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:21
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:22
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:22
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:23
+SP_stock_categorias_CONSUL
+
+   🎯 domingo, 03/11/2024 12:03:23
+SP_stock_GRILLA
+
+   🎯 domingo, 03/11/2024 12:03:23
+SP_stock_GRILLA_table
+
+   🎯 domingo, 03/11/2024 12:03:23
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:24
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:24
+SP_stock_GRILLA
+
+   🎯 domingo, 03/11/2024 12:03:25
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:25
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:26
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:37
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:03:49
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:04:02
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:04:17
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:04:33
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:04:50
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:05:07
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:05:25
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:05:44
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:06:05
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:06:27
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:06:50
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:07:14
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:07:39
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:08:05
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:08:32
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:09:00
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:09:29
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:09:59
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:10:30
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:11:02
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:11:35
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:12:09
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:12:44
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:13:21
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:13:58
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:14:36
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:15:15
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:15:55
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:16:36
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:17:18
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:18:01
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:18:45
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:19:30
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:20:16
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:21:02
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:21:48
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:22:33
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:23:19
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:24:05
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:24:52
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:25:38
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:26:24
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:27:10
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:27:56
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:28:42
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:29:28
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:30:14
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:30:59
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:31:45
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:32:30
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:33:15
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:34:00
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:34:46
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:35:31
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:36:17
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:36:58
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:36:58
+SP_Pedidos_pendientes_contador
+
+   🎯 domingo, 03/11/2024 12:36:59
+SP_Pedidos_pendientes_contador
